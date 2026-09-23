@@ -113,6 +113,8 @@ html { scroll-behavior: smooth; }
 .dark .card-hover:hover { box-shadow: 0 8px 24px rgba(0,0,0,.5); }
 .filter-btn.active { border-color: #3b82f6; background: rgba(59,130,246,.08); color: #3b82f6; font-weight: 600; }
 .dark .filter-btn.active { color: #60a5fa; }
+.archive-row .row-arrow { transition: transform .15s ease, color .15s ease; }
+.archive-row:hover .row-arrow { transform: translateX(4px); color: #3b82f6; }
 """
 
 APP_JS = r"""
@@ -378,8 +380,25 @@ if(t==="dark")document.documentElement.classList.add("dark");})();
     </button>
   </header>
 
-  <h1 class="text-lg font-bold mb-4">Daily archive <span class="text-slate-400 font-normal text-sm">(__N__ days)</span></h1>
-  <div class="space-y-2.5">
+  <div class="mb-8">
+    <h1 class="text-3xl font-extrabold tracking-tight">Archive<span class="text-blue-500">.</span></h1>
+    <p class="text-sm text-slate-500 dark:text-slate-400 mt-1.5">Every daily snapshot, newest first.</p>
+  </div>
+  <div class="grid grid-cols-3 gap-3 mb-8">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl px-4 py-3">
+      <div class="text-2xl font-extrabold">__NDAYS__</div>
+      <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Days tracked</div>
+    </div>
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl px-4 py-3">
+      <div class="text-2xl font-extrabold">__NITEMS__</div>
+      <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Items collected</div>
+    </div>
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl px-4 py-3">
+      <div class="text-2xl font-extrabold text-rose-500">__NCROSS__</div>
+      <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Cross-source hits</div>
+    </div>
+  </div>
+  <div class="space-y-3">
 __ROWS__
   </div>
 </div>
@@ -421,23 +440,55 @@ def render_day(date: str, snap: dict, base: str, dates: list[str],
 
 
 def render_archive(dates: list[str], snaps: dict[str, dict], tailwind: str) -> str:
+    payloads = {d: snapshot_payload(snaps[d]) for d in dates}
+    n_items = sum(len(s["github"]) + len(s["hn"]) + len(s["reddit"]) for s in payloads.values())
+    n_cross = sum(len(s["cross"]) for s in payloads.values())
+
+    pill = {
+        "github": ("bg-blue-50 text-blue-600 dark:bg-blue-950 dark:text-blue-300", "bg-blue-500"),
+        "hn": ("bg-amber-50 text-amber-700 dark:bg-amber-950 dark:text-amber-300", "bg-amber-500"),
+        "reddit": ("bg-orange-50 text-orange-600 dark:bg-orange-950 dark:text-orange-300", "bg-orange-500"),
+    }
+    label = {"github": "GitHub", "hn": "HN", "reddit": "Reddit"}
+
     rows = []
     for d in reversed(dates):
-        s = snapshot_payload(snaps[d])
-        n_cross = len(s["cross"])
+        s = payloads[d]
+        dt = datetime.strptime(d, "%Y-%m-%d")
+        counts = {k: len(s[k]) for k in ("github", "hn", "reddit")}
+        total = sum(counts.values()) or 1
+        pills = "".join(
+            f'<span class="px-2 py-0.5 rounded-full font-semibold {pill[k][0]}">{label[k]} {counts[k]}</span>'
+            for k in ("github", "hn", "reddit"))
+        bar = "".join(
+            f'<div class="{pill[k][1]}" style="width:{counts[k] / total * 100:.1f}%"></div>'
+            for k in ("github", "hn", "reddit"))
+        cross = (f'<span class="px-2 py-0.5 rounded-full font-semibold '
+                 f'bg-rose-50 text-rose-600 dark:bg-rose-950 dark:text-rose-300">'
+                 f'{len(s["cross"])} cross-source</span>') if s["cross"] else ""
         rows.append(f"""    <a href="daily/{d}.html"
-       class="card-hover flex items-center gap-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl px-5 py-4">
-      <div class="font-mono font-bold text-lg w-32 shrink-0">{d}</div>
-      <div class="flex gap-3 text-sm text-slate-500 dark:text-slate-400 flex-wrap">
-        <span>GitHub {len(s["github"])}</span><span>HN {len(s["hn"])}</span><span>Reddit {len(s["reddit"])}</span>
-        {f'<span class="text-rose-500 font-semibold">{n_cross} cross-source</span>' if n_cross else ""}
+       class="archive-row card-hover flex items-center gap-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl px-5 py-4">
+      <div class="w-14 shrink-0 text-center rounded-xl bg-gradient-to-b from-blue-500 to-indigo-600 text-white py-2 shadow-sm">
+        <div class="text-xl font-extrabold leading-none">{dt.day:02d}</div>
+        <div class="text-[10px] uppercase tracking-widest mt-1 opacity-90">{dt.strftime('%b')}</div>
       </div>
-      <div class="flex-1"></div>
-      <span class="text-slate-400">→</span>
+      <div class="min-w-0 flex-1">
+        <div class="flex items-baseline gap-2">
+          <span class="font-mono font-bold">{d}</span>
+          <span class="text-xs text-slate-400 dark:text-slate-500">{dt.strftime('%A')}</span>
+        </div>
+        <div class="flex gap-1.5 mt-2 text-xs flex-wrap">{pills}{cross}</div>
+        <div class="h-1.5 rounded-full overflow-hidden flex bg-slate-100 dark:bg-slate-800 mt-2.5">
+          {bar}
+        </div>
+      </div>
+      <span class="row-arrow text-slate-300 dark:text-slate-600 text-lg font-bold">→</span>
     </a>""")
     return (ARCHIVE_TMPL
             .replace("__TAILWIND__", tailwind)
-            .replace("__N__", str(len(dates)))
+            .replace("__NDAYS__", str(len(dates)))
+            .replace("__NITEMS__", str(n_items))
+            .replace("__NCROSS__", str(n_cross))
             .replace("__ROWS__", "\n".join(rows)))
 
 
