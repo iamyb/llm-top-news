@@ -16,6 +16,7 @@
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import os
 import re
@@ -80,7 +81,12 @@ def http_json(url: str) -> object:
 
 def load_config() -> dict:
     with open(CONFIG_FILE, encoding="utf-8") as f:
-        return yaml.safe_load(f)
+        cfg = yaml.safe_load(f)
+    # 环境变量覆盖 Reddit 代理: 本机用 config.yaml 的 127.0.0.1 代理;
+    # GitHub Actions 上设 REDDIT_PROXY="" 强制直连（runner 在美国, 无需代理）
+    if "REDDIT_PROXY" in os.environ and isinstance(cfg.get("reddit"), dict):
+        cfg["reddit"]["proxy"] = os.environ["REDDIT_PROXY"]
+    return cfg
 
 
 # ───────────────────────── GitHub Search ─────────────────────────
@@ -216,10 +222,21 @@ def _parse_rss(xml_bytes: bytes) -> list[dict]:
         pub = (item.findtext("a:published", namespaces=ns)
                or item.findtext("a:updated", namespaces=ns) or "").strip() or None
         content = item.findtext("a:content", namespaces=ns) or ""
-        # content 是 HTML 实体转义的表格; 帖子链接在 [comments] 锚点里
-        # （Atom 的 <link> 是外部链接, 不是帖子页）
-        m_thread = re.search(r'href=&quot;(https://www\.reddit\.com/r/[^&]+/comments/[^&]+)&quot;[^>]*>\[comments\]', content)
+        # content 是 HTML 表格（ET 解析后引号已反转义）; 帖子链接在 [comments] 锚点里
+        # （Atom 的 <link> 通常就是帖子页, 此处作为兜底）
+        m_thread = re.search(r'href="(https://www\.reddit\.com/r/[^"]+/comments/[^"]+)"[^>]*>\[comments\]', content)
         thread_url = m_thread.group(1) if m_thread else link
+        # 缩略图: content 里 preview.redd.it / i.redd.it 的图片。
+        # 注意: ET 解析后引号已反转义成真实 ", 但 URL 内的 & 仍是 &amp;（双重转义）
+        m_img = re.search(r'src="(https://(?:preview|i)\.redd\.it/[^"]+)"', content)
+        thumbnail = m_img.group(1).replace("&amp;", "&") if m_img else None
+        # 正文: content 里 <div class="md">…</div>（纯链接帖没有, 为空）
+        m_md = re.search(r'<div class="md">(.*?)</div>', content, re.S)
+        selftext = ""
+        if m_md:
+            selftext = re.sub(r'<[^>]+>', ' ', m_md.group(1))
+            selftext = html.unescape(selftext).replace("&amp;", "&")
+            selftext = re.sub(r'\s+', ' ', selftext).strip()[:300]
         created = None
         if pub:
             try:
@@ -231,6 +248,8 @@ def _parse_rss(xml_bytes: bytes) -> list[dict]:
             "title": title,
             "url": link,
             "thread_url": thread_url,
+            "thumbnail": thumbnail,
+            "selftext": selftext,
             "score": None,
             "num_comments": None,
             "created_at": created,
@@ -239,38 +258,99 @@ def _parse_rss(xml_bytes: bytes) -> list[dict]:
 
 
 def collect_reddit(cfg: dict) -> list[dict]:
-    """r/<sub>/top/.rss?t=day（RSS 端点, 无需 OAuth）。
+    """多 sub 合并 top/.rss?t=day（RSS 端点, 无需 OAuth, 单次请求）。
 
     本机直连 reddit.com 超时, .json 端点走代理也 403, 但 RSS 走代理可用（已验证）。
-    代理地址在 config.yaml reddit.proxy; 未配置或请求失败时静默降级不阻塞。
+    合并端点 `r/A+B+C/top/.rss` 返回的是**合并池按热度排序的 top N**（已实测）,
+    大 sub 会淹没小 sub → 客户端按 per_sub_limit / min_per_sub 配额截取。
+    代理地址在 config.yaml reddit.proxy（可被环境变量 REDDIT_PROXY 覆盖）;
+    留空则直连（GitHub Actions 场景）; 请求失败时静默降级不阻塞。
     """
     r = cfg["reddit"]
-    proxy = r.get("proxy")
-    if not proxy:
-        print("  ~ reddit: 未配置 reddit.proxy, 跳过", file=sys.stderr)
+    proxy = r.get("proxy") or None
+    subs = r.get("subreddits", [])
+    if not subs:
         return []
+    limit = r.get("limit", 25)
+    per_sub = r.get("per_sub_limit", limit)
+    min_sub = r.get("min_per_sub", 0)
+    # 候选池放大: 保证小 sub 的帖子有机会进池（合并端点按全局热度截断, RSS 上限 100）
+    pool = min(100, max(limit * 3, len(subs) * per_sub * 2))
+
+    def _to_item(e: dict, sub: str) -> dict:
+        return {
+            "source": "reddit",
+            "title": e["title"],
+            "score": e["score"],
+            "num_comments": e["num_comments"],
+            "url": e["url"],
+            "reddit_url": e["thread_url"],
+            "thumbnail": e["thumbnail"],
+            "selftext": e["selftext"],
+            "subreddit": sub,
+            "created_at": e["created_at"],
+        }
+
+    def _quota(entries: list[dict]) -> list[dict]:
+        """按 sub 配额截取: 每 sub 最多 per_sub 条、保底 min_sub 条, 去重后按热度截 limit。"""
+        by_sub: dict[str, list[dict]] = {}
+        seen: set[str] = set()
+        for e in entries:  # entries 已按热度降序
+            m = re.search(r"reddit\.com/r/([^/]+)/comments", e["thread_url"])
+            sub = m.group(1) if m else ""
+            key = e["thread_url"].split("/comments/")[0]
+            if not sub or key in seen:
+                continue
+            seen.add(key)
+            by_sub.setdefault(sub, []).append(e)
+        picked: list[dict] = []
+        cnt: dict[str, int] = {s: 0 for s in subs}
+        # 保底轮: 每个 sub 先拿 min_sub 条（计入 per_sub 配额）
+        for sub in subs:
+            for e in by_sub.get(sub, [])[:min_sub]:
+                if e not in picked:
+                    picked.append(e)
+                    cnt[sub] += 1
+        # 填充轮: 按全局热度顺序补, 受 per_sub 上限约束
+        for e in entries:
+            if len(picked) >= limit:
+                break
+            m = re.search(r"reddit\.com/r/([^/]+)/comments", e["thread_url"])
+            sub = m.group(1) if m else ""
+            if e in picked or not sub:
+                continue
+            if cnt.get(sub, 0) >= per_sub:
+                continue
+            cnt[sub] = cnt.get(sub, 0) + 1
+            picked.append(e)
+        return [_to_item(e, re.search(r"reddit\.com/r/([^/]+)/comments", e["thread_url"]).group(1))
+                for e in picked]
+
+    # 主路径: 合并端点单次请求
+    url = f"https://www.reddit.com/r/{'+'.join(subs)}/top/.rss?t=day&limit={pool}"
+    try:
+        entries = _parse_rss(_http_get(url, proxy))
+        items = _quota(entries)
+        dist = {}
+        for it in items:
+            dist[it["subreddit"]] = dist.get(it["subreddit"], 0) + 1
+        print(f"  合并端点 {len(entries)} 条 → 配额截取 {len(items)} 条 {dist}", file=sys.stderr)
+        return items
+    except Exception as e:  # noqa: BLE001
+        print(f"  ! reddit 合并端点失败, 回退逐 sub 抓取: {e}", file=sys.stderr)
+
+    # 回退路径: 逐 sub 抓（429 风险高, 仅兜底）
     items = []
-    for sub in r.get("subreddits", []):
-        url = f"https://www.reddit.com/r/{sub}/top/.rss?t=day&limit={r.get('limit', 25)}"
+    for sub in subs:
+        url = f"https://www.reddit.com/r/{sub}/top/.rss?t=day&limit={per_sub}"
         try:
-            xml_bytes = _http_get(url, proxy)
-            entries = _parse_rss(xml_bytes)
+            entries = _parse_rss(_http_get(url, proxy))
         except Exception as e:  # noqa: BLE001
             print(f"  ! reddit r/{sub}: {e}", file=sys.stderr)
             continue
-        for e in entries[:r.get("limit", 25)]:
-            items.append({
-                "source": "reddit",
-                "title": e["title"],
-                "score": e["score"],
-                "num_comments": e["num_comments"],
-                "url": e["url"],
-                "reddit_url": e["thread_url"],
-                "subreddit": sub,
-                "created_at": e["created_at"],
-            })
-        time.sleep(1)
-    return items
+        items.extend(_to_item(e, sub) for e in entries[:per_sub])
+        time.sleep(5)
+    return items[:limit]
 
 
 # ───────────────────────── 主流程 ─────────────────────────

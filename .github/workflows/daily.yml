@@ -1,0 +1,65 @@
+# 每天自动采集 LLM 新闻 → 生成日报/周报 + 静态站
+# - 数据 (data/ log/) 回写 main 分支, 归档页持续累积历史
+# - 站点 (site/) 部署到 gh-pages 分支 → GitHub Pages 公开访问
+name: daily
+
+on:
+  schedule:
+    # 每天 UTC 16:00 = 北京时间 00:00（采集"昨天"的完整数据）
+    - cron: "0 16 * * *"
+  workflow_dispatch: {}  # 支持手动触发
+
+permissions:
+  contents: write
+
+jobs:
+  collect-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Collect (GitHub + HN + Reddit)
+        env:
+          # Actions runner 在美国, Reddit 直连, 不走本机代理
+          REDDIT_PROXY: ""
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python pipeline/collect.py
+
+      - name: Digest (daily + weekly markdown)
+        run: |
+          python pipeline/digest.py --mode daily
+          python pipeline/digest.py --mode weekly
+
+      - name: Build static site
+        run: python pipeline/site.py
+
+      - name: Commit data back to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ log/
+          if git diff --cached --quiet; then
+            echo "no data changes"
+          else
+            git commit -m "data: $(date -u +%F) snapshot"
+            git push
+          fi
+
+      - name: Deploy site to gh-pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan gh-pages
+          git rm -rf . >/dev/null 2>&1 || true
+          cp -r site/* .
+          git add -A
+          git commit -m "site: $(date -u +%F)"
+          git push origin gh-pages --force

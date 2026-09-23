@@ -1,5 +1,9 @@
-data/
-log/
+# 数据进仓库（GitHub Actions 每天回写, 归档页才有历史）
+data/*
+!data/raw/
+!data/processed_dates.json
+# 生成物不进仓库（Actions 每次重新生成并部署到 gh-pages）
+site/
 __pycache__/
 *.pyc
 .env

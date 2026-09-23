@@ -31,10 +31,12 @@ reddit:
   # 走 RSS 端点 (top/.rss?t=day), 无需 OAuth; 本机直连被墙, 必须配代理
   # 代理地址 = 本机 HTTP 代理（Clash 等）, 留空则跳过 Reddit 采集
   proxy: "http://127.0.0.1:10809"
-  # PoC 阶段默认只启用 LocalLLaMA; 需要更多子版时取消注释即可
+  # 合并端点 r/A+B+.../top/.rss 单次请求, 返回合并池按热度排序的 top N;
+  # 客户端按 per_sub_limit / min_per_sub 配额截取, 防止大 sub 淹没小 sub
   subreddits:
     - LocalLLaMA
-    # - LLMDevs
+    - LLMDevs
+    - LocalLLM
     # - MachineLearning
     # - artificial
     # - singularity
@@ -45,4 +47,6 @@ reddit:
     # - LlamaIndex
     # - VectorDatabase
     # - GenAI
-  limit: 25
+  limit: 20          # 最终总条数（合并池按热度排序后截取）
+  per_sub_limit: 10  # 每个 sub 最多条数（防大 sub 一家独大）
+  min_per_sub: 2     # 每个 sub 保底条数（候选池里有才给）
