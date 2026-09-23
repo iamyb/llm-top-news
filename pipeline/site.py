@@ -430,7 +430,7 @@ def render_day(date: str, snap: dict, base: str, dates: list[str],
         ensure_ascii=False).replace("</", "<\\/")
     return (PAGE_TMPL
             .replace("__TITLE__", title)
-            .replace("__TAILWIND__", tailwind)
+            .replace("__TAILWIND__", base + tailwind)
             .replace("__BASE__", base)
             .replace("__HOME_ACTIVE__",
                      "bg-slate-200/60 dark:bg-slate-800 font-semibold" if is_index else "")
