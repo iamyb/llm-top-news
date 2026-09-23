@@ -1,0 +1,48 @@
+# llm-top-news 配置
+# 三个数据源全部限定 LLM/AI 相关; 改完直接重跑 collect 即可, 无需重启任何东西
+
+github:
+  # Search API: 近 N 天新建 + 按 star 排序（新晋 star 榜）
+  # 注意: GitHub Search 不允许 qualifier (topic:/in:) 之间用 OR,
+  # 所以只取一个主 topic + 一个主关键词, 两次查询合并去重
+  lookback_days: 7
+  limit: 30
+  primary_topic: llm        # 候选: llm, llm-agents, generative-ai, rag, chatgpt, llm-fine-tuning, vector-database
+  primary_keyword: "LLM"    # 候选: "LLM", "GPT", "RAG", "AI agent", "large language model"
+
+hn:
+  # Algolia search_by_date + 标题短语精确匹配（"keyword"）
+  # 日榜/周榜用不同分数阈值
+  daily_min_points: 30
+  weekly_min_points: 100
+  keywords:
+    - "LLM"
+    - "GPT"
+    - "Claude"
+    - "Gemini"
+    - "Grok"
+    - "AI agent"
+    - "RAG"
+    - "fine-tuning"
+    - "large language model"
+    - "diffusion"
+
+reddit:
+  # 走 RSS 端点 (top/.rss?t=day), 无需 OAuth; 本机直连被墙, 必须配代理
+  # 代理地址 = 本机 HTTP 代理（Clash 等）, 留空则跳过 Reddit 采集
+  proxy: "http://127.0.0.1:10809"
+  # PoC 阶段默认只启用 LocalLLaMA; 需要更多子版时取消注释即可
+  subreddits:
+    - LocalLLaMA
+    # - LLMDevs
+    # - MachineLearning
+    # - artificial
+    # - singularity
+    # - OpenAI
+    # - ClaudeAI
+    # - DeepSeek
+    # - LangChain
+    # - LlamaIndex
+    # - VectorDatabase
+    # - GenAI
+  limit: 25
