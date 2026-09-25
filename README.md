@@ -8,7 +8,7 @@ LLM 生态热榜聚合：GitHub 新晋 star 榜 × HN 高分帖 × Reddit 热帖
 ```
 config.yaml             # 三个数据源的关键词/阈值/子版（核心配置）
 pipeline/
-  collect.py            # 采集: GitHub Search + HN Algolia/MiniLM + Reddit top → data/raw/YYYY-MM-DD.json
+  collect.py            # 采集: GitHub Search + HN Top Stories/MiniLM + Reddit top → data/raw/YYYY-MM-DD.json
   semantic_filter.py    # 本地 MiniLM 语义排序
   digest.py             # 聚合: 跨源去重 + 🔥 标记 + LLM 摘要 → log/daily/ 或 log/weekly/
 data/                   # 原始数据与状态（gitignore）
@@ -33,14 +33,14 @@ python pipeline/digest.py --mode daily  # 生成日报
 python pipeline/digest.py --mode weekly # 生成周报（合并近 7 天）
 ```
 
-HN 会先用关键词从 Algolia 获取候选，再用本地 `all-MiniLM-L6-v2` 按语义相关性排序，默认保留 Top 10。配置位于 `config.yaml` 的 `hn.semantic_filter`；临时关闭可设置 `enabled: false`。GitHub Actions 会缓存 Hugging Face 模型目录，首次运行需要下载模型，后续运行复用缓存。
+HN 从 Firebase Top Stories 取前 100 条，经时间/分数过滤后，先用 `hn.pre_filter_keywords`（139 个 LLM 相关词，小写子串匹配）预过滤，再用本地 `all-MiniLM-L6-v2` 按语义相关性排序，入选需同时满足「通过预过滤 + 分数 ≥ `min_score`」，默认取 Top 10。完整候选（含分数/排名/预过滤标记）另存 `data/raw/YYYY-MM-DD.hn_candidates.json` 供人工审查召回质量。配置位于 `config.yaml` 的 `hn.semantic_filter`；临时关闭可设置 `enabled: false`。GitHub Actions 会缓存 Hugging Face 模型目录，首次运行需要下载模型，后续运行复用缓存。
 
 ## 数据源
 
 | 源 | 取法 | 说明 |
 |---|---|---|
 | GitHub | Search API: 近 7 天新建 + `topic:llm` 或 `"LLM" in:name,description`（两次查询合并）, 按 star 排序 | 新晋 star 榜 |
-| HN | Algolia `search_by_date` 获取候选 + 本地 MiniLM 语义排序 | 候选日榜 ≥30 分，默认取语义 Top 10 |
+| HN | Firebase Top Stories 前 100 → 时间/分数过滤 → 关键词预过滤 → 本地 MiniLM 语义排序 | 候选 ≥30 分，入选需通过预过滤且分数 ≥0.20，默认取 Top 10 |
 | Reddit | `r/<sub>/top.json?t=day`（OAuth, 需 `REDDIT_CLIENT_ID/SECRET`） | 默认仅 LocalLLaMA, 在 config.yaml 里按需加; 未配置凭据则跳过 |
 
 ## 聚合规则

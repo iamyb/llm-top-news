@@ -9,7 +9,8 @@
 
 数据源（全部限定 LLM/AI 相关, 关键词/阈值见 config.yaml）:
     - GitHub Search API   近 7 天新建 + AI topic/关键词, 按 star 排序（新晋 star 榜）
-    - HN Algolia API      search_by_date + 标题短语精确匹配, 分数阈值过滤
+    - HN Firebase API     Top Stories 前 100 → 时间/分数过滤 → 关键词预过滤 → MiniLM 排序取 Top-K
+                          完整候选（含分数/排名/预过滤标记）另存 data/raw/YYYY-MM-DD.hn_candidates.json
     - Reddit top RSS      r/<sub>/top/.rss?t=day, 需代理（config.yaml reddit.proxy）, 未配置则跳过
 """
 
@@ -165,8 +166,27 @@ def collect_github_releases(cfg: dict, source: str) -> list[dict]:
 
 # ───────────────────────── Hacker News ─────────────────────────
 
-def collect_hn(cfg: dict, days: int, min_points: int) -> list[dict]:
-    """从 HN Top Stories 获取候选, 再按配置使用 MiniLM 排序取 Top-K。"""
+def _pre_filter(items: list[dict], keywords: list[str]) -> list[dict]:
+    """关键词预过滤: 小写子串匹配 (标题+正文+URL), 命中任一即通过。
+
+    给每条打 pre_filter_passed 标记, 返回通过过滤的条目列表。
+    """
+    kws = [k.lower() for k in keywords if k]
+    passed = []
+    for item in items:
+        story_text = re.sub(r"<[^>]+>", " ", str(item.get("story_text") or ""))
+        text = f"{item.get('title') or ''} {story_text} {item.get('url') or ''}".lower()
+        item["pre_filter_passed"] = any(k in text for k in kws)
+        if item["pre_filter_passed"]:
+            passed.append(item)
+    return passed
+
+
+def collect_hn(cfg: dict, days: int, min_points: int) -> tuple[list[dict], list[dict]]:
+    """从 HN Top Stories 获取候选, 关键词预过滤 + MiniLM 排序取 Top-K。
+
+    返回 (Top-K 选中条目, 全部候选含 minilm_score/minilm_rank/pre_filter_passed)。
+    """
     h = cfg["hn"]
     ts = int((datetime.now(timezone.utc) - timedelta(days=days)).timestamp())
     candidate_limit = int(h.get("candidate_limit", 100))
@@ -195,18 +215,43 @@ def collect_hn(cfg: dict, days: int, min_points: int) -> list[dict]:
         })
     print(f"  HN Top Stories: {len(items)} 条候选", file=sys.stderr)
 
+    # ① 关键词预过滤 (小写子串匹配, 命中任一即通过)
+    keywords = h.get("pre_filter_keywords") or []
+    if keywords:
+        passed = _pre_filter(items, keywords)
+        print(f"  关键词预过滤: {len(items)} → {len(passed)} 条通过", file=sys.stderr)
+    else:
+        for item in items:
+            item["pre_filter_passed"] = True
+        passed = items
+
     semantic = h.get("semantic_filter", {})
     if not semantic.get("enabled", False) or not items:
-        return items
+        return items, items
+
+    # ② MiniLM 对全部候选打分排序 (候选文件保留完整数据供人工审查)
+    top_k = int(semantic.get("top_k", 10))
+    min_score = float(semantic.get("min_score", 0.0))
     ranked = rank_records(
         items,
-        top_k=int(semantic.get("top_k", 10)),
+        top_k=len(items),
         model_name=semantic.get("model", "sentence-transformers/all-MiniLM-L6-v2"),
         query=semantic.get("query") or DEFAULT_QUERY,
     )
-    selected = [item for item in ranked if item["minilm_relevant"]]
-    print(f"  MiniLM 排序: {len(items)} 条候选 → Top-{len(selected)}", file=sys.stderr)
-    return selected
+
+    # ③ 入选 = 通过关键词 + 分数 >= min_score, 按分数取前 top_k
+    selected = [
+        item for item in ranked
+        if item["pre_filter_passed"] and item["minilm_score"] >= min_score
+    ][:top_k]
+    selected_ids = {id(item) for item in selected}
+    for item in ranked:
+        item["minilm_relevant"] = id(item) in selected_ids
+        item["classification"] = (
+            "llm_related" if item["minilm_relevant"] else "other"
+        )
+    print(f"  MiniLM 排序: {len(passed)} 条通过预过滤 → 入选 {len(selected)} 条", file=sys.stderr)
+    return selected, ranked
 
 
 # ───────────────────────── Reddit ─────────────────────────
@@ -402,8 +447,13 @@ def main() -> None:
     # Harness Release sources are temporarily disabled in config.yaml.
 
     print(f"→ HN 高分帖（回溯 {args.days} 天, ≥{cfg['hn']['daily_min_points']} 分）")
-    hn_items = collect_hn(cfg, days=args.days, min_points=cfg["hn"]["daily_min_points"])
+    hn_items, hn_ranked = collect_hn(cfg, days=args.days, min_points=cfg["hn"]["daily_min_points"])
     print(f"  {len(hn_items)} 条")
+    # 完整候选（含 MiniLM 分数/排名）落盘, 供人工检查召回质量
+    candidates_out = RAW_DIR / f"{today}.hn_candidates.json"
+    candidates_out.write_text(
+        json.dumps(hn_ranked, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"  完整候选 {len(hn_ranked)} 条 → {candidates_out.relative_to(ROOT)}")
 
     print("→ Reddit 热帖")
     reddit_items = collect_reddit(cfg)

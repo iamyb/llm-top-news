@@ -81,6 +81,12 @@ def main() -> None:
         default=10,
         help="按 MiniLM 分数排序后保留前多少条（默认: 10）",
     )
+    parser.add_argument(
+        "--min-score",
+        type=float,
+        default=0.0,
+        help="软阈值: 只有分数 >= 该值的 Top-K 条目才入选（默认: 0.0 不启用）",
+    )
     args = parser.parse_args()
     if args.limit < 1:
         parser.error("--limit must be greater than 0")
@@ -91,7 +97,11 @@ def main() -> None:
         records = json.loads(args.classify_existing.read_text(encoding="utf-8"))
         if not isinstance(records, list) or not all(isinstance(item, dict) for item in records):
             parser.error("--classify-existing must point to a JSON list of objects")
-        records = rank_records(records, min(args.top_k, len(records)))
+        records = rank_records(
+            records,
+            min(args.top_k, len(records)),
+            min_score=args.min_score,
+        )
         args.classify_existing.write_text(
             json.dumps(records, ensure_ascii=False, indent=2), encoding="utf-8"
         )

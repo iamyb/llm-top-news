@@ -16,12 +16,20 @@ def rank_records(
     top_k: int,
     model_name: str = DEFAULT_MODEL,
     query: str = DEFAULT_QUERY,
+    min_score: float = 0.0,
 ) -> list[dict]:
-    """Score all records and return them with rank and Top-K classification."""
+    """Score all records and return them with rank and Top-K classification.
+
+    An item is marked relevant only if it is within the top_k AND its score
+    is at least min_score (soft threshold, so a quiet day yields fewer items
+    rather than padding with irrelevant ones).
+    """
     if not records:
         return []
     if top_k < 1:
         raise ValueError("top_k must be greater than 0")
+    if min_score < 0:
+        raise ValueError("min_score must be >= 0")
 
     import torch
     from transformers import AutoModel, AutoTokenizer
@@ -51,7 +59,10 @@ def rank_records(
 
     ranked_indexes = sorted(range(len(scores)), key=scores.__getitem__, reverse=True)
     ranks = {record_index: rank for rank, record_index in enumerate(ranked_indexes, 1)}
-    selected_indexes = set(ranked_indexes[:min(top_k, len(records))])
+    selected_indexes = set()
+    for record_index in ranked_indexes[:min(top_k, len(records))]:
+        if scores[record_index] >= min_score:
+            selected_indexes.add(record_index)
 
     ranked_records = []
     for record_index, (item, score) in enumerate(zip(records, scores)):
