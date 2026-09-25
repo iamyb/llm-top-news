@@ -1,0 +1,21 @@
+{
+  "date": "2026-09-24",
+  "github": [
+    {
+      "source": "github",
+      "full_name": "example/agent-kit",
+      "description": "An agent toolkit.",
+      "url": "https://example.com/agent-kit",
+      "stars": 42
+    }
+  ],
+  "podcast": [
+    {
+      "source": "podcast",
+      "title": "Knowledge pipelines in production",
+      "description": "A conversation about reliable knowledge pipelines.",
+      "url": "https://example.com/agent-kit",
+      "created_at": "2026-09-24T10:00:00Z"
+    }
+  ]
+}

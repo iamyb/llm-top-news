@@ -1,5 +1,54 @@
 # llm-top-news 配置
-# 三个数据源全部限定 LLM/AI 相关; 改完直接重跑 collect 即可, 无需重启任何东西
+# 采集参数保持在文件顶层; sources/sections 驱动站点板块和展示
+
+sources:
+  github:
+    label: GitHub
+    type: repository
+    collector: github_search
+    section: github
+    color: "#2563eb"
+    order: 1
+  hn:
+    label: Hacker News
+    type: community
+    collector: hn_algolia
+    section: community
+    color: "#d97706"
+    order: 2
+  reddit:
+    label: Reddit
+    type: community
+    collector: reddit_rss
+    section: community
+    color: "#ea580c"
+    order: 3
+
+sections:
+  github:
+    label: GitHub
+    order: 1
+    sources:
+      - github
+  harness:
+    label: Harness
+    order: 2
+    sources: []
+  models:
+    label: Models
+    order: 3
+    sources: []
+  applications:
+    label: LLM Applications
+    order: 4
+    sources: []
+  community:
+    label: Community Pulse
+    order: 5
+    sources:
+      - hn
+      - reddit
+
 
 github:
   # Search API: 近 N 天新建 + 按 star 排序（新晋 star 榜）
