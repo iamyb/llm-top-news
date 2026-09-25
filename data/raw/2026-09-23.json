@@ -5,7 +5,7 @@
       "source": "github",
       "full_name": "jev-chat/jev-chat-jarvis",
       "description": "装在手机上的对话副驾：在微信 / QQ / X / 飞书里读懂对方、给出候选回复、一键填入输入框，发不发由你。非侵入，只读屏幕，不 hook 不改包。",
-      "stars": 5030,
+      "stars": 5189,
       "created_at": "2026-09-21T11:12:53Z",
       "url": "https://github.com/jev-chat/jev-chat-jarvis",
       "language": "Kotlin",
@@ -22,7 +22,7 @@
       "source": "github",
       "full_name": "yibie/awesome-jev",
       "description": "A curated list of public projects, integrations, and discussions built on Jev — TypeSafe AI's System One model for typed decisions.",
-      "stars": 1416,
+      "stars": 1463,
       "created_at": "2026-09-17T14:23:21Z",
       "url": "https://github.com/yibie/awesome-jev",
       "language": "Python",
@@ -37,7 +37,7 @@
       "source": "github",
       "full_name": "v-modal/awesome-jev-tools",
       "description": "A curated list of tools  built for Jev — TypeSafe AI's System One model for typed decisions.",
-      "stars": 677,
+      "stars": 691,
       "created_at": "2026-09-19T16:48:59Z",
       "url": "https://github.com/v-modal/awesome-jev-tools",
       "language": null,
@@ -57,7 +57,7 @@
       "source": "github",
       "full_name": "Continuum-AI-Corp/OrcaBonsai-27B-Uncensored",
       "description": "Runtime behavioral ablation for compressed LLMs. First target: Ternary Bonsai 2 27B — no weight modification or re-quantization. by OrcaRouter team",
-      "stars": 526,
+      "stars": 531,
       "created_at": "2026-09-18T06:45:54Z",
       "url": "https://github.com/Continuum-AI-Corp/OrcaBonsai-27B-Uncensored",
       "language": "Python",
@@ -67,7 +67,7 @@
       "source": "github",
       "full_name": "AbdelStark/awesome-typesafe-jev",
       "description": "Awesome Jev: a source-backed field guide to TypeSafe's System One model, with SDKs, live demos, agent tools, and independent evaluations.",
-      "stars": 490,
+      "stars": 496,
       "created_at": "2026-09-17T06:56:37Z",
       "url": "https://github.com/AbdelStark/awesome-typesafe-jev",
       "language": "HTML",
@@ -88,7 +88,7 @@
       "source": "github",
       "full_name": "jev-chat/jev-chat-windows",
       "description": "微信（Windows 4.x）旁挂的回复辅助：窗口截图 + 本地离线 OCR 读对方消息 → Jev 判断意图 → 3 条候选一键填入，发送永远手动",
-      "stars": 406,
+      "stars": 433,
       "created_at": "2026-09-21T14:37:14Z",
       "url": "https://github.com/jev-chat/jev-chat-windows",
       "language": "Python",
@@ -109,7 +109,7 @@
       "source": "github",
       "full_name": "Rizzo-AI-Academy/rizzo-flow",
       "description": "The open, local take on Jev: typed decisions from an LLM, without generating a single token",
-      "stars": 376,
+      "stars": 384,
       "created_at": "2026-09-21T00:00:02Z",
       "url": "https://github.com/Rizzo-AI-Academy/rizzo-flow",
       "language": "Python",
@@ -119,7 +119,7 @@
       "source": "github",
       "full_name": "nokia-applied-research/AnyJev",
       "description": "Turn any LLM into a Jev-style decision model: typed decisions, real probabilities, no training. (continue updating)",
-      "stars": 295,
+      "stars": 353,
       "created_at": "2026-09-21T05:55:40Z",
       "url": "https://github.com/nokia-applied-research/AnyJev",
       "language": "Python",
@@ -138,7 +138,7 @@
       "source": "github",
       "full_name": "jev-chat/jev-chat-jarvis-mac",
       "description": "微信消息意图识别悬浮窗（macOS）：看屏 + 本地小模型判断意图和风险，再按话术生成回复候选。纯只读、不注入微信。",
-      "stars": 293,
+      "stars": 304,
       "created_at": "2026-09-21T11:39:32Z",
       "url": "https://github.com/jev-chat/jev-chat-jarvis-mac",
       "language": "Python",
@@ -157,7 +157,7 @@
       "source": "github",
       "full_name": "ekzhang/openjev-sglang",
       "description": "Jev-compatible API endpoint based on open models (prefill-only)",
-      "stars": 289,
+      "stars": 298,
       "created_at": "2026-09-17T18:11:49Z",
       "url": "https://github.com/ekzhang/openjev-sglang",
       "language": "Python",
@@ -170,9 +170,19 @@
     },
     {
       "source": "github",
+      "full_name": "Yinsongxu/LLM2Jev",
+      "description": "Turn local language models into Jev-style structured decision models. Get results from text and images with prefill alone—no token-by-token decoding required.",
+      "stars": 252,
+      "created_at": "2026-09-19T10:59:33Z",
+      "url": "https://github.com/Yinsongxu/LLM2Jev",
+      "language": "Python",
+      "topics": []
+    },
+    {
+      "source": "github",
       "full_name": "0xNatoshi/jev-codex-router",
       "description": "Per-turn model & reasoning routing for Codex, driven by Jev (TypeSafe System One): picks the model, thinking depth and speed mode for every turn.",
-      "stars": 244,
+      "stars": 249,
       "created_at": "2026-09-17T04:14:19Z",
       "url": "https://github.com/0xNatoshi/jev-codex-router",
       "language": "JavaScript",
@@ -190,7 +200,7 @@
       "source": "github",
       "full_name": "OmniJev/awesome-jev-gallery",
       "description": "🔥🔥 Papers, open reproductions and independent evaluations behind System One models and Jev.",
-      "stars": 227,
+      "stars": 240,
       "created_at": "2026-09-17T20:16:57Z",
       "url": "https://github.com/OmniJev/awesome-jev-gallery",
       "language": "JavaScript",
@@ -209,19 +219,23 @@
     },
     {
       "source": "github",
-      "full_name": "Yinsongxu/LLM2Jev",
-      "description": "Adapt local language models into Jev-compatible structured decision engines with Choice, Score, and Noul outputs   powered by prefill-only binary inference.",
-      "stars": 221,
-      "created_at": "2026-09-19T10:59:33Z",
-      "url": "https://github.com/Yinsongxu/LLM2Jev",
-      "language": "Python",
-      "topics": []
+      "full_name": "Alex314618-create/JevRev",
+      "description": "An LLM + Jev workflow. Boost your vertebrate brain with a spine inside. ",
+      "stars": 184,
+      "created_at": "2026-09-21T01:53:13Z",
+      "url": "https://github.com/Alex314618-create/JevRev",
+      "language": "TypeScript",
+      "topics": [
+        "jev",
+        "llm",
+        "workflow"
+      ]
     },
     {
       "source": "github",
       "full_name": "liyupi/ai-model-world",
       "description": "AI 大模型世界，把 556 个大模型拟人化成像素小人的可视化站点。进来就能看到此刻谁最聪明、谁最会写代码、谁最便宜、谁刚发布，往下是国内与国外分区的厂商广场、完整的发布时间线和多维排行榜。搜索认模型名、厂商和能力，输入「多模态」会直接列出全部多模态模型。数据取自 Epoch AI、models.dev、LiveBench 与 Hugging Face，每小时自动同步，所有文案由真实数据生成，不调用任何 LLM。Next.js 静态导出，零后端。",
-      "stars": 174,
+      "stars": 176,
       "created_at": "2026-09-17T03:12:17Z",
       "url": "https://github.com/liyupi/ai-model-world",
       "language": "TypeScript",
@@ -237,6 +251,16 @@
         "llm",
         "llm-benchmarks"
       ]
+    },
+    {
+      "source": "github",
+      "full_name": "TianyuCodings/JevHarness",
+      "description": "LLM-authored task-specific Jev harnesses with optional full-trajectory reward reflection and GEPA evolution.",
+      "stars": 170,
+      "created_at": "2026-09-21T08:59:46Z",
+      "url": "https://github.com/TianyuCodings/JevHarness",
+      "language": "Python",
+      "topics": []
     },
     {
       "source": "github",
@@ -261,19 +285,9 @@
     },
     {
       "source": "github",
-      "full_name": "TianyuCodings/JevHarness",
-      "description": "LLM-authored task-specific Jev harnesses with optional full-trajectory reward reflection and GEPA evolution.",
-      "stars": 158,
-      "created_at": "2026-09-21T08:59:46Z",
-      "url": "https://github.com/TianyuCodings/JevHarness",
-      "language": "Python",
-      "topics": []
-    },
-    {
-      "source": "github",
       "full_name": "dimentary/llm-robotics-playground",
       "description": "A library of experiments using frontier LLMs/VLMs for robotics tasks, currently focusing on GPT-6 Astra.",
-      "stars": 152,
+      "stars": 153,
       "created_at": "2026-09-17T17:44:32Z",
       "url": "https://github.com/dimentary/llm-robotics-playground",
       "language": "Python",
@@ -281,28 +295,9 @@
     },
     {
       "source": "github",
-      "full_name": "lordx64/phantom-kv",
-      "description": "Refusal removal as a loadable KV-cache graft — zero weight modification, no refusal-direction projection, fully reversible.",
-      "stars": 134,
-      "created_at": "2026-09-17T19:43:33Z",
-      "url": "https://github.com/lordx64/phantom-kv",
-      "language": "Python",
-      "topics": [
-        "abliteration",
-        "kv-cache",
-        "llm",
-        "mechanistic-interpretability",
-        "model-steering",
-        "pytorch",
-        "qwen",
-        "refusal-removal"
-      ]
-    },
-    {
-      "source": "github",
       "full_name": "Michael-Jiahao-Zhang/game-the-llm-reviewer",
       "description": "Defend sound research against LLM reviewer bias through meaning-preserving rewrites.",
-      "stars": 134,
+      "stars": 147,
       "created_at": "2026-09-21T23:11:47Z",
       "url": "https://github.com/Michael-Jiahao-Zhang/game-the-llm-reviewer",
       "language": null,
@@ -320,9 +315,28 @@
     },
     {
       "source": "github",
+      "full_name": "lordx64/phantom-kv",
+      "description": "Refusal removal as a loadable KV-cache graft — zero weight modification, no refusal-direction projection, fully reversible.",
+      "stars": 138,
+      "created_at": "2026-09-17T19:43:33Z",
+      "url": "https://github.com/lordx64/phantom-kv",
+      "language": "Python",
+      "topics": [
+        "abliteration",
+        "kv-cache",
+        "llm",
+        "mechanistic-interpretability",
+        "model-steering",
+        "pytorch",
+        "qwen",
+        "refusal-removal"
+      ]
+    },
+    {
+      "source": "github",
       "full_name": "APUS-AI-Lab/fast-browser-use",
       "description": "A fast browser-use skill powered by local LLMs via single-token reflexes. Fast, local-first, zero hallucinations.",
-      "stars": 129,
+      "stars": 131,
       "created_at": "2026-09-19T10:17:17Z",
       "url": "https://github.com/APUS-AI-Lab/fast-browser-use",
       "language": "Python",
@@ -332,7 +346,7 @@
       "source": "github",
       "full_name": "walidboulanouar/awesome-jev-use-cases",
       "description": "Awesome list of TypeSafe AI Jev use cases: 74 demos ranked by likes, 150+ GitHub repos, limits, cost and API examples. CC0, sponsored by AY Automate.",
-      "stars": 123,
+      "stars": 130,
       "created_at": "2026-09-19T18:01:10Z",
       "url": "https://github.com/walidboulanouar/awesome-jev-use-cases",
       "language": null,
@@ -353,7 +367,7 @@
       "source": "github",
       "full_name": "kraayenjon/awesome-jev",
       "description": "A curated list of Jev use cases, projects, SDKs, and resources. Jev is TypeSafe AI's System One model for fast, typed decisions in software — Choice, Score, and Noul with calibrated probabilities.",
-      "stars": 117,
+      "stars": 125,
       "created_at": "2026-09-18T15:43:06Z",
       "url": "https://github.com/kraayenjon/awesome-jev",
       "language": null,
@@ -368,20 +382,6 @@
         "awesome-list",
         "classification",
         "curated-list"
-      ]
-    },
-    {
-      "source": "github",
-      "full_name": "Alex314618-create/JevRev",
-      "description": "An LLM + Jev workflow. Boost your vertebrate brain with a spine inside. ",
-      "stars": 114,
-      "created_at": "2026-09-21T01:53:13Z",
-      "url": "https://github.com/Alex314618-create/JevRev",
-      "language": "TypeScript",
-      "topics": [
-        "jev",
-        "llm",
-        "workflow"
       ]
     },
     {
@@ -425,7 +425,7 @@
       "source": "github",
       "full_name": "w3cj/jev-chat",
       "description": "A tool calling chat bot built with Jev and no LLM.",
-      "stars": 91,
+      "stars": 93,
       "created_at": "2026-09-18T21:09:21Z",
       "url": "https://github.com/w3cj/jev-chat",
       "language": "TypeScript",
@@ -435,7 +435,7 @@
       "source": "github",
       "full_name": "Worldbuilder013/HEXIS",
       "description": "HEXIS. Compile SKILL.md into state machines: deterministic execution order via transition guards, LLM reasoning scoped inside states.",
-      "stars": 91,
+      "stars": 93,
       "created_at": "2026-09-17T06:23:51Z",
       "url": "https://github.com/Worldbuilder013/HEXIS",
       "language": "Python",
@@ -466,7 +466,7 @@
       "source": "github",
       "full_name": "ghuntley/preflight",
       "description": "A local proxy that scans LLM requests and attachments for secrets before they reach the model.",
-      "stars": 73,
+      "stars": 74,
       "created_at": "2026-09-20T14:11:20Z",
       "url": "https://github.com/ghuntley/preflight",
       "language": "Rust",
@@ -476,7 +476,7 @@
       "source": "github",
       "full_name": "hyperspaceai/jevcache",
       "description": "A decision cache for TypeSafe Jev-class models — memoize decisions so repeats are free, deterministic, and shareable. One 2 MB binary.",
-      "stars": 71,
+      "stars": 72,
       "created_at": "2026-09-18T11:22:25Z",
       "url": "https://github.com/hyperspaceai/jevcache",
       "language": null,
@@ -494,7 +494,7 @@
     {
       "source": "hn",
       "title": "LLM Ass Bench",
-      "points": 157,
+      "points": 161,
       "num_comments": 45,
       "url": "https://www.assbench.com/",
       "hn_url": "https://news.ycombinator.com/item?id=49807688",
@@ -505,47 +505,33 @@
     },
     {
       "source": "hn",
-      "title": "Show HN: AI·rete·RAG – a Rete rule engine decides, RAG explains why",
-      "points": 37,
-      "num_comments": 3,
-      "url": "https://ai-rete-rag.com/",
-      "hn_url": "https://news.ycombinator.com/item?id=49803683",
-      "created_at": "2026-09-22T16:15:06Z",
-      "matched_keywords": [
-        "LLM",
-        "Claude",
-        "RAG"
-      ]
-    },
-    {
-      "source": "hn",
-      "title": "GPT-6 Sol and Luna",
-      "points": 1616,
-      "num_comments": 778,
-      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
-      "hn_url": "https://news.ycombinator.com/item?id=49805509",
-      "created_at": "2026-09-22T18:00:34Z",
+      "title": "GPT-6 Astra has gained the ability to drive a car",
+      "points": 217,
+      "num_comments": 187,
+      "url": "https://drivingbench.com/",
+      "hn_url": "https://news.ycombinator.com/item?id=49817404",
+      "created_at": "2026-09-23T15:14:22Z",
       "matched_keywords": [
         "GPT"
       ]
     },
     {
       "source": "hn",
-      "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
-      "points": 687,
-      "num_comments": 406,
-      "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
-      "hn_url": "https://news.ycombinator.com/item?id=49801324",
-      "created_at": "2026-09-22T13:52:15Z",
+      "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
+      "points": 87,
+      "num_comments": 52,
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+      "hn_url": "https://news.ycombinator.com/item?id=49820134",
+      "created_at": "2026-09-23T18:06:47Z",
       "matched_keywords": [
-        "GPT"
+        "Claude"
       ]
     },
     {
       "source": "hn",
-      "title": "Claude Code reads AGENTS.md only when telemetry is on",
-      "points": 93,
-      "num_comments": 29,
+      "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
+      "points": 399,
+      "num_comments": 226,
       "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
       "hn_url": "https://news.ycombinator.com/item?id=49814947",
       "created_at": "2026-09-23T12:15:33Z",
@@ -555,45 +541,21 @@
     },
     {
       "source": "hn",
-      "title": "Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max)",
-      "points": 309,
-      "num_comments": 98,
-      "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
-      "hn_url": "https://news.ycombinator.com/item?id=49804316",
-      "created_at": "2026-09-22T16:51:31Z",
+      "title": "Gemini 3.8 text-to-speech",
+      "points": 159,
+      "num_comments": 87,
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
+      "hn_url": "https://news.ycombinator.com/item?id=49817615",
+      "created_at": "2026-09-23T15:29:23Z",
       "matched_keywords": [
-        "Claude"
-      ]
-    },
-    {
-      "source": "hn",
-      "title": "Claude Opus 5.5",
-      "points": 1627,
-      "num_comments": 996,
-      "url": "https://www.anthropic.com/claude-opus-5-5",
-      "hn_url": "https://news.ycombinator.com/item?id=49803892",
-      "created_at": "2026-09-22T16:29:05Z",
-      "matched_keywords": [
-        "Claude"
-      ]
-    },
-    {
-      "source": "hn",
-      "title": "Claude Opus 5.5",
-      "points": 273,
-      "num_comments": 2,
-      "url": "https://www.anthropic.com/claude-opus-5-5",
-      "hn_url": "https://news.ycombinator.com/item?id=49803863",
-      "created_at": "2026-09-22T16:27:30Z",
-      "matched_keywords": [
-        "Claude"
+        "Gemini"
       ]
     },
     {
       "source": "hn",
       "title": "The new CC, an AI agent built for families",
       "points": 50,
-      "num_comments": 61,
+      "num_comments": 63,
       "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/cc-expanding-to-groups/",
       "hn_url": "https://news.ycombinator.com/item?id=49809806",
       "created_at": "2026-09-22T23:46:07Z",
@@ -617,15 +579,15 @@
     },
     {
       "source": "reddit",
-      "title": "JEV is making me realize just how bad LLMs are at citations",
+      "title": "Same agent task, two users: one gives every detail up front, one only answers when asked. Success went down from 100% to 60%",
       "score": null,
       "num_comments": null,
-      "url": "https://www.reddit.com/r/LLMDevs/comments/1wnb977/jev_is_making_me_realize_just_how_bad_llms_are_at/",
-      "reddit_url": "https://www.reddit.com/r/LLMDevs/comments/1wnb977/jev_is_making_me_realize_just_how_bad_llms_are_at/",
+      "url": "https://www.reddit.com/r/LLMDevs/comments/1wo5bly/same_agent_task_two_users_one_gives_every_detail/",
+      "reddit_url": "https://www.reddit.com/r/LLMDevs/comments/1wo5bly/same_agent_task_two_users_one_gives_every_detail/",
       "thumbnail": null,
-      "selftext": "I've ran few tests on web search retrieval and used JEV as a judge for checking whether the source cited actually supports the claims and gives a strength score. Typically they cite around 8 sources per task. I havent had a test run that JEV thought all 8 were correct. With just plain search and no ",
+      "selftext": "Most agent evals hand the model a perfect prompt. We decided it's not realistic enough, so we built a simulated user in our eval harness that knows the requirements but only answers when asked. On 5 measured tasks from here : 5/5 succeeded with the full prompt 3/5 with the simulated user, +44% cost ",
       "subreddit": "LLMDevs",
-      "created_at": "2026-09-22T14:36:35+00:00"
+      "created_at": "2026-09-23T12:59:48+00:00"
     },
     {
       "source": "reddit",
@@ -641,27 +603,15 @@
     },
     {
       "source": "reddit",
-      "title": "New 6B image model coming, AntLing just open sourced the Ming-Image-0.1-Design family",
+      "title": "Mods: can we do something about half the forum getting filled with these advertising posts for Jev?",
       "score": null,
       "num_comments": null,
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wnipcz/new_6b_image_model_coming_antling_just_open/",
-      "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wnipcz/new_6b_image_model_coming_antling_just_open/",
-      "thumbnail": "https://preview.redd.it/ajz0oym6e4rh1.jpeg?width=640&crop=smart&auto=webp&s=f7383eae5ada1167675cfb95042e475d5c2d6273",
-      "selftext": "• Ming-Image-0.1-Design, 6B • Ming-Image-0.1-Design-Layer, 6B • Two open-source Agent Skills: the Ling UI Design Skill and the Image-to-Editable-PPT Skill Ming-Image-0.1-Design ranks #1 among open-weight models on Artificial Analysis’s UI/UX Design leaderboard. https://huggingface.co/inclusionAI/Min",
-      "subreddit": "LocalLLaMA",
-      "created_at": "2026-09-22T19:06:22+00:00"
-    },
-    {
-      "source": "reddit",
-      "title": "DeepSeek and Moonshot AI face Beijing's probe over potential data leaks to Anthropic",
-      "score": null,
-      "num_comments": null,
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wnv85k/deepseek_and_moonshot_ai_face_beijings_probe_over/",
-      "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wnv85k/deepseek_and_moonshot_ai_face_beijings_probe_over/",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wo6o0f/mods_can_we_do_something_about_half_the_forum/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wo6o0f/mods_can_we_do_something_about_half_the_forum/",
       "thumbnail": null,
-      "selftext": "The rumor about Kimi execs getting arrested finally has some legs. I believe the reality is more like under investigation for potential arrests or fine.",
+      "selftext": "Jev is a paid product that dumped a lot of venture capitol money into shill their product here and in other subreddits. Obvious shill posts are obvious.",
       "subreddit": "LocalLLaMA",
-      "created_at": "2026-09-23T03:49:48+00:00"
+      "created_at": "2026-09-23T13:54:12+00:00"
     },
     {
       "source": "reddit",
@@ -677,15 +627,27 @@
     },
     {
       "source": "reddit",
-      "title": "Qwen image 2.1 (Fast FP8) generates premium quality images",
+      "title": "Cost of intelligence is dropping fast",
       "score": null,
       "num_comments": null,
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wnhq8d/qwen_image_21_fast_fp8_generates_premium_quality/",
-      "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wnhq8d/qwen_image_21_fast_fp8_generates_premium_quality/",
-      "thumbnail": "https://preview.redd.it/q7cz652k74rh1.png?width=140&height=78&auto=webp&s=73eab57976a87208b7f705680191286012603453",
-      "selftext": "Don't know how they did it, but for under 10GB model, the results are astonishing. I am running it on Unsloth Studio. They just released the update, so if you are not seeing the option, I recommend updating your Unsloth Studio. Cheers!",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wo1bct/cost_of_intelligence_is_dropping_fast/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wo1bct/cost_of_intelligence_is_dropping_fast/",
+      "thumbnail": "https://preview.redd.it/43n0bhiap8rh1.png?width=140&height=140&crop=1:1,smart&auto=webp&s=2be1b32611e59f9bce9835fe212912620ddd9849",
+      "selftext": "https://preview.redd.it/43n0bhiap8rh1.png?width=960&format=png&auto=webp&s=776785f6eb39e3eba519b85f8be8eb7453318a4f 50% per quarter is amazing. 4× faster than DNA sequencing, 6× faster than compute, 18× faster than lithium batteries, and (up to 1973) 54× faster than electricity. https://x.com/EpochA",
       "subreddit": "LocalLLaMA",
-      "created_at": "2026-09-22T18:31:36+00:00"
+      "created_at": "2026-09-23T09:38:19+00:00"
+    },
+    {
+      "source": "reddit",
+      "title": "DeepSeek and Moonshot AI face Beijing's probe over potential data leaks to Anthropic",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wnv85k/deepseek_and_moonshot_ai_face_beijings_probe_over/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wnv85k/deepseek_and_moonshot_ai_face_beijings_probe_over/",
+      "thumbnail": null,
+      "selftext": "The rumor about Kimi execs getting arrested finally has some legs. I believe the reality is more like under investigation for potential arrests or fine.",
+      "subreddit": "LocalLLaMA",
+      "created_at": "2026-09-23T03:49:48+00:00"
     },
     {
       "source": "reddit",
@@ -701,27 +663,27 @@
     },
     {
       "source": "reddit",
-      "title": "Laya model playing Flappy Bird on a CPU using OpenVINO INT8 inference",
+      "title": "Jev in 25 lines of Python",
       "score": null,
       "num_comments": null,
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wnf4q2/laya_model_playing_flappy_bird_on_a_cpu_using/",
-      "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wnf4q2/laya_model_playing_flappy_bird_on_a_cpu_using/",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wo07r8/jev_in_25_lines_of_python/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wo07r8/jev_in_25_lines_of_python/",
       "thumbnail": null,
-      "selftext": "A 421M-parameter model just played Flappy Bird on my desktop CPU (OpenVINO int8) Running on my Intel Core i7 12th gen CPU Converted laya system one model to OpenVINO and quantized to int8",
+      "selftext": "",
       "subreddit": "LocalLLaMA",
-      "created_at": "2026-09-22T16:59:39+00:00"
+      "created_at": "2026-09-23T08:31:25+00:00"
     },
     {
       "source": "reddit",
-      "title": "Qwen3.8 27B running locally bought A4 paper from Amazon autonomously",
+      "title": "MiMo-V3 is getting a new architecture. The core of it, HySparse2, is out today.",
       "score": null,
       "num_comments": null,
-      "url": "https://www.reddit.com/r/LocalLLM/comments/1wngqha/qwen38_27b_running_locally_bought_a4_paper_from/",
-      "reddit_url": "https://www.reddit.com/r/LocalLLM/comments/1wngqha/qwen38_27b_running_locally_bought_a4_paper_from/",
-      "thumbnail": null,
-      "selftext": "I ran out of A4 paper, so I gave a locally running Qwen3.8 27B one simple task: Find cheap A4 paper with a good discount on Amazon and buy it. Try to handle everything yourself. It completed the entire task in one run . Setup: Qwen3.8 27B — fully local TensorSharp — local LLM inference engine + agen",
-      "subreddit": "LocalLLM",
-      "created_at": "2026-09-22T17:55:48+00:00"
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wo7mr6/mimov3_is_getting_a_new_architecture_the_core_of/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wo7mr6/mimov3_is_getting_a_new_architecture_the_core_of/",
+      "thumbnail": "https://preview.redd.it/qfo9y90z5arh1.png?width=640&crop=smart&auto=webp&s=064bfe9b15ec8940c17d15e7164e5cdd123b1304",
+      "selftext": "https://arxiv.org/pdf/2609.26368",
+      "subreddit": "LocalLLaMA",
+      "created_at": "2026-09-23T14:31:12+00:00"
     },
     {
       "source": "reddit",
@@ -737,51 +699,39 @@
     },
     {
       "source": "reddit",
-      "title": "Now Opus 5.5 is 58 on Artificial Analysis , how long do you have wait until an open model hits 58?",
+      "title": "Floor-Rig 9000! More machines joined the almighty throng",
       "score": null,
       "num_comments": null,
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wnhlbl/now_opus_55_is_58_on_artificial_analysis_how_long/",
-      "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wnhlbl/now_opus_55_is_58_on_artificial_analysis_how_long/",
-      "thumbnail": null,
-      "selftext": "It is 12 points higher than the best open model mimo 2.6 pro and a big jump from fable 5.1. Crazy, glm 5.5 and qwen 4 will be on par with gpt 6 sol or better since it has a score of 48 If it took 2 months for the best open model to go from 44 to 46, then at this rate, in 6 months , they will reach 5",
-      "subreddit": "LocalLLaMA",
-      "created_at": "2026-09-22T18:26:34+00:00"
-    },
-    {
-      "source": "reddit",
-      "title": "Jev in 25 lines of Python",
-      "score": null,
-      "num_comments": null,
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wo07r8/jev_in_25_lines_of_python/",
-      "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wo07r8/jev_in_25_lines_of_python/",
-      "thumbnail": null,
-      "selftext": "",
-      "subreddit": "LocalLLaMA",
-      "created_at": "2026-09-23T08:31:25+00:00"
-    },
-    {
-      "source": "reddit",
-      "title": "Am I going insane for thinking that these are all Bot comments?",
-      "score": null,
-      "num_comments": null,
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wnf162/am_i_going_insane_for_thinking_that_these_are_all/",
-      "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wnf162/am_i_going_insane_for_thinking_that_these_are_all/",
-      "thumbnail": "https://preview.redd.it/20st4vivq3rh1.png?width=140&height=99&auto=webp&s=d42fa27f0d27f01446084454196f6932d892dfaa",
-      "selftext": "I know that there are some bots active on this sub but wow these comments really look AI generated. Is it just me or are those really bot comments? https://preview.redd.it/20st4vivq3rh1.png?width=955&format=png&auto=webp&s=16a7f98e2c4709445c6b5dbafb99517689b2cad9 source: https://www.reddit.com/r/Loc",
-      "subreddit": "LocalLLaMA",
-      "created_at": "2026-09-22T16:56:04+00:00"
-    },
-    {
-      "source": "reddit",
-      "title": "Qwen 3.8 27B on dual RTX 5060 Ti - 130 tok/s - full 256k context",
-      "score": null,
-      "num_comments": null,
-      "url": "https://www.reddit.com/r/LocalLLM/comments/1wnapgs/qwen_38_27b_on_dual_rtx_5060_ti_130_toks_full/",
-      "reddit_url": "https://www.reddit.com/r/LocalLLM/comments/1wnapgs/qwen_38_27b_on_dual_rtx_5060_ti_130_toks_full/",
-      "thumbnail": null,
-      "selftext": "I have been experimenting with Qwen 3.8 27B NVFP4 on my dual RTX 5060 Ti 16GB rig, for a total of 32GB VRAM. I'm running stock vLLM 0.30.0 with no patches, on headless Ubuntu, so no desktop is using any VRAM. This shows that it's possible to run Qwen 3.8 27B without an RTX 5090. My GPUs are power li",
+      "url": "https://www.reddit.com/r/LocalLLM/comments/1wo77e7/floorrig_9000_more_machines_joined_the_almighty/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLM/comments/1wo77e7/floorrig_9000_more_machines_joined_the_almighty/",
+      "thumbnail": "https://preview.redd.it/oaftbqr33arh1.jpeg?width=640&crop=smart&auto=webp&s=d14b8f015720c05fd810bc26664e1b48b2ab0a38",
+      "selftext": "A lot of people weren't sure whether to be impressed or horrified by my floor rig for testing all sorts. It's finally about to get a proper new home, with better cooling, proper wiring and something resembling sensible cable management. So, before I dismantle it, here's the full system monstrosity i",
       "subreddit": "LocalLLM",
-      "created_at": "2026-09-22T14:15:49+00:00"
+      "created_at": "2026-09-23T14:14:51+00:00"
+    },
+    {
+      "source": "reddit",
+      "title": "Apple just ran a 1T parameter model on four Mac Studios from one wall outlet",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LocalLLM/comments/1wnwdww/apple_just_ran_a_1t_parameter_model_on_four_mac/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLM/comments/1wnwdww/apple_just_ran_a_1t_parameter_model_on_four_mac/",
+      "thumbnail": null,
+      "selftext": "Apple's new Mac Studio ships in late October with up to 512GB of unified memory, and Reuters says Apple demoed Kimi K2.6, a 1T parameter open-weight model, across four of them plugged into a single wall outlet. Thunderbolt 5 + RDMA lets the machines run as a cluster, and Apple says four Mac Studios ",
+      "subreddit": "LocalLLM",
+      "created_at": "2026-09-23T04:50:41+00:00"
+    },
+    {
+      "source": "reddit",
+      "title": "Engram gone wild! 2b model update...",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wnzu2f/engram_gone_wild_2b_model_update/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wnzu2f/engram_gone_wild_2b_model_update/",
+      "thumbnail": null,
+      "selftext": "Update from : https://old.reddit.com/r/LocalLLaMA/comments/1wis23s/update_small_model_engram/ It's been about a week so I'm back. People were asking me about the model. People wanted code, or models, etc. Most of that is useless to you right now because you're not going to use an under trained model",
+      "subreddit": "LocalLLaMA",
+      "created_at": "2026-09-23T08:08:35+00:00"
     },
     {
       "source": "reddit",
@@ -797,27 +747,15 @@
     },
     {
       "source": "reddit",
-      "title": "Apple just ran a 1T parameter model on four Mac Studios from one wall outlet",
+      "title": "Jev isn't new tech. Its marketing targets people who think AI started with LLMs.",
       "score": null,
       "num_comments": null,
-      "url": "https://www.reddit.com/r/LocalLLM/comments/1wnwdww/apple_just_ran_a_1t_parameter_model_on_four_mac/",
-      "reddit_url": "https://www.reddit.com/r/LocalLLM/comments/1wnwdww/apple_just_ran_a_1t_parameter_model_on_four_mac/",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1woe70t/jev_isnt_new_tech_its_marketing_targets_people/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1woe70t/jev_isnt_new_tech_its_marketing_targets_people/",
       "thumbnail": null,
-      "selftext": "Apple's new Mac Studio ships today with up to 512GB of unified memory, and Reuters says Apple demoed Kimi K2.6, a 1T parameter open-weight model, across four of them plugged into a single wall outlet. Thunderbolt 5 + RDMA lets the machines run as a cluster, and Apple says four Mac Studios can delive",
-      "subreddit": "LocalLLM",
-      "created_at": "2026-09-23T04:50:41+00:00"
-    },
-    {
-      "source": "reddit",
-      "title": "RX 9070 16GB (AMD) for local LLM + agentic coding — a full success story, for anyone tired of RTX-only threads",
-      "score": null,
-      "num_comments": null,
-      "url": "https://www.reddit.com/r/LocalLLM/comments/1wnmep7/rx_9070_16gb_amd_for_local_llm_agentic_coding_a/",
-      "reddit_url": "https://www.reddit.com/r/LocalLLM/comments/1wnmep7/rx_9070_16gb_amd_for_local_llm_agentic_coding_a/",
-      "thumbnail": "https://preview.redd.it/sgdr51xi15rh1.png?width=640&crop=smart&auto=webp&s=1cd810c4085b5dfc7d1f7523cfbaacb0f2705157",
-      "selftext": "Most local LLM writeups assume Nvidia. I went in with an AMD card (XFX RX 9070, 16GB) knowing basically nothing about local LLMs, and wanted to document what actually worked, since I couldn't find much AMD-specific guidance when I started. **Short version: it works well.** Well enough that this same",
-      "subreddit": "LocalLLM",
-      "created_at": "2026-09-22T21:20:29+00:00"
+      "selftext": "I keep seeing Jev presented as some new class of decision model, but most of what’s being advertised is just normal classifier behavior with modern zero-shot capabilities. It outputs probabilities over constrained choices, doesn’t generate autoregressively, can’t output an invalid class, and can use",
+      "subreddit": "LocalLLaMA",
+      "created_at": "2026-09-23T18:33:21+00:00"
     },
     {
       "source": "reddit",
@@ -833,15 +771,39 @@
     },
     {
       "source": "reddit",
-      "title": "Laya came first… so why is everyone still only talking about Jev?",
+      "title": "RX 9070 16GB (AMD) for local LLM + agentic coding — a full success story, for anyone tired of RTX-only threads",
       "score": null,
       "num_comments": null,
-      "url": "https://www.reddit.com/r/LocalLLM/comments/1wnyf0o/laya_came_first_so_why_is_everyone_still_only/",
-      "reddit_url": "https://www.reddit.com/r/LocalLLM/comments/1wnyf0o/laya_came_first_so_why_is_everyone_still_only/",
-      "thumbnail": null,
-      "selftext": "genuine question. Indian guy drops the openweight version of this whole “System One decision model” thing (Laya). The research trail goes back to 2025. Then the closed, well-funded American version drops and suddenly that’s the only name people know. I’m not saying one is better. I’m just noticing t",
+      "url": "https://www.reddit.com/r/LocalLLM/comments/1wnmep7/rx_9070_16gb_amd_for_local_llm_agentic_coding_a/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLM/comments/1wnmep7/rx_9070_16gb_amd_for_local_llm_agentic_coding_a/",
+      "thumbnail": "https://preview.redd.it/sgdr51xi15rh1.png?width=640&crop=smart&auto=webp&s=1cd810c4085b5dfc7d1f7523cfbaacb0f2705157",
+      "selftext": "Most local LLM writeups assume Nvidia. I went in with an AMD card (XFX RX 9070, 16GB) knowing basically nothing about local LLMs, and wanted to document what actually worked, since I couldn't find much AMD-specific guidance when I started. **Short version: it works well.** Well enough that this same",
       "subreddit": "LocalLLM",
-      "created_at": "2026-09-23T06:43:55+00:00"
+      "created_at": "2026-09-22T21:20:29+00:00"
+    },
+    {
+      "source": "reddit",
+      "title": "Qwen 3.8 27B FP8 on one RTX PRO 6000: 2B tokens of shared coding-agent traffic",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LocalLLM/comments/1wo5552/qwen_38_27b_fp8_on_one_rtx_pro_6000_2b_tokens_of/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLM/comments/1wo5552/qwen_38_27b_fp8_on_one_rtx_pro_6000_2b_tokens_of/",
+      "thumbnail": "https://preview.redd.it/mkwtrxw7o9rh1.jpeg?width=640&crop=smart&auto=webp&s=3bbdb8b34d4308a065ba901a6d4ff80a55bddd0a",
+      "selftext": "I've been running Qwen 3.8 27B FP8 on vLLM (prefix caching + speculative decoding) on a single RTX PRO 6000 Blackwell 96GB, shared by a small group of developers who mostly use it for coding agents. In its first week it processed 2B tokens. Two users alone went through ~950M and ~900M. What the work",
+      "subreddit": "LocalLLM",
+      "created_at": "2026-09-23T12:51:50+00:00"
+    },
+    {
+      "source": "reddit",
+      "title": "What kind of rig do I need to train this kind of model? Just for research ofc, not as a chaperone for next Christmas..",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LocalLLM/comments/1wnsj1r/what_kind_of_rig_do_i_need_to_train_this_kind_of/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLM/comments/1wnsj1r/what_kind_of_rig_do_i_need_to_train_this_kind_of/",
+      "thumbnail": null,
+      "selftext": "",
+      "subreddit": "LocalLLM",
+      "created_at": "2026-09-23T01:42:19+00:00"
     }
   ]
 }
