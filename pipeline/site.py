@@ -42,12 +42,13 @@ TAILWIND_URL = "https://cdn.tailwindcss.com"
 
 DEFAULT_SOURCE_CONFIG = {
   "github": {"label": "GitHub", "color": "#2563eb", "order": 1},
-  "hn": {"label": "Hacker News", "color": "#d97706", "order": 2},
-  "reddit": {"label": "Reddit", "color": "#ea580c", "order": 3},
+  "hf_papers": {"label": "HF Papers", "color": "#8b5cf6", "order": 2},
+  "hn": {"label": "Hacker News", "color": "#d97706", "order": 3},
+  "reddit": {"label": "Reddit", "color": "#ea580c", "order": 4},
 }
 DEFAULT_SECTION_CONFIG = {
   "harness": {"label": "Harness & Agent Tooling", "order": 1},
-  "models": {"label": "Models & Model Platforms", "order": 2},
+  "papers": {"label": "Papers", "order": 2},
   "applications": {"label": "LLM Applications & Infrastructure", "order": 3},
   "community": {"label": "Community Pulse", "order": 4},
 }
@@ -225,7 +226,7 @@ STYLE_CSS = """
   --line: #2b3440;
   --accent: #75a7ff;
 }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scrollbar-gutter: stable; }
 body { background: var(--page); color: var(--ink); }
 ::-webkit-scrollbar { width: 10px; height: 8px; }
 ::-webkit-scrollbar-thumb { background: rgba(120,130,150,.35); border-radius: 6px; }
@@ -252,6 +253,7 @@ body { background: var(--page); color: var(--ink); }
 .news-summary { color: var(--muted); font-size: .875rem; line-height: 1.6; }
 .news-meta { color: var(--muted); font-size: .75rem; line-height: 1.5; }
 .source-github { --source-color: #2563eb; }
+.source-hf_papers { --source-color: #8b5cf6; }
 .source-hn { --source-color: #d97706; }
 .source-reddit { --source-color: #ea580c; }
 .source-label { color: var(--source-color, var(--accent)); font-size: .7rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
@@ -264,10 +266,9 @@ body { background: var(--page); color: var(--ink); }
 .source-heading h3 { margin: 0; color: var(--muted); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; }
 .source-heading span { color: var(--muted); font-size: .72rem; }
 .filter-btn.active { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent); color: var(--accent); font-weight: 700; }
+.filter-bar { position: sticky; top: 0; z-index: 50; background: var(--page); width: 100vw; margin-left: calc(50% - 50vw); padding: 10px max(16px, calc(50vw - 560px)) 12px; border-bottom: 1px solid var(--line); }
 .archive-row { transition: background .15s ease, border-color .15s ease; }
 .archive-row:hover { border-color: var(--accent); }
-.archive-row .row-arrow { transition: transform .15s ease, color .15s ease; }
-.archive-row:hover .row-arrow { transform: translateX(4px); color: #3b82f6; }
 @media (max-width: 640px) {
   .header-status { margin-top: 12px; text-align: left; width: 100%; }
   .top-nav a + a { margin-left: 16px; }
@@ -284,15 +285,8 @@ APP_JS = r"""
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g,
     (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
-  // ── 主题按钮（所有页面都有）──
-  const themeBtn = $("#theme-btn");
-  if (themeBtn) themeBtn.onclick = () => {
-    const dark = document.documentElement.classList.toggle("dark");
-    localStorage.setItem("theme", dark ? "dark" : "light");
-  };
-
   const dataEl = document.getElementById("data");
-  if (!dataEl) return;  // 归档页无数据, 只挂主题按钮
+  if (!dataEl) return;  // 归档页无数据
 
   const payload = JSON.parse(dataEl.textContent).snapshot;
   const SNAP = payload.sources || {};
@@ -380,7 +374,24 @@ APP_JS = r"""
     </article>`;
   }
 
-  const CARDS = { github: githubCard, hn: hnCard, reddit: redditCard };
+  function hfPapersCard(it) {
+    const authors = (it.authors || []).slice(0, 3).join(", ");
+    const more = (it.authors || []).length > 3 ? " et al." : "";
+    return `<article class="news-item source-hf_papers">
+      <div class="news-rail"></div><div class="news-body">
+        <div class="flex items-start gap-3">
+          <div class="min-w-0 flex-1">
+            <div class="source-label mb-1">HF Papers</div>
+            <a href="${esc(it.url)}" target="_blank" rel="noopener" class="news-title line-clamp-2">${esc(it.title)}</a>
+            ${it.summary ? `<p class="news-summary mt-1.5 line-clamp-2">${esc(it.summary)}</p>` : ""}
+            <div class="news-meta mt-2">👍 ${it.upvotes ?? 0} · 💬 ${it.num_comments ?? 0}${authors ? ` · ${esc(authors)}${more}` : ""}</div>
+          </div>
+        </div>
+      </div>
+    </article>`;
+  }
+
+  const CARDS = { github: githubCard, hn: hnCard, reddit: redditCard, hf_papers: hfPapersCard };
 
   // ── 渲染 ──
   function render() {
@@ -500,13 +511,8 @@ if(t==="dark")document.documentElement.classList.add("dark");})();
       <div class="brand-subtitle">Daily intelligence for the LLM ecosystem</div>
     </div>
     <div class="header-status">
-      <strong>__DATE__</strong><br>
-      Updated __GENERATED__<br>
-      __TOTAL__ items · __SOURCES__ sources
+      <strong>__DATE__</strong> · __TOTAL__ items · __SOURCES__ sources
     </div>
-    <button id="theme-btn" class="w-9 h-9 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center" title="Toggle theme" aria-label="Toggle theme">
-      <svg class="w-4.5 h-4.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    </button>
   </header>
 
   <nav class="top-nav" aria-label="Primary navigation">
@@ -515,7 +521,7 @@ if(t==="dark")document.documentElement.classList.add("dark");})();
     <span class="float-right mt-1">__DAY_NAV__</span>
   </nav>
 
-  <div class="mb-6">
+  <div class="filter-bar">
     <div class="flex gap-2.5 flex-wrap items-center">
         <input id="search" type="search" placeholder="Search titles, descriptions, or keywords…"
           class="flex-1 min-w-[220px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-2.5 text-sm outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-950">
@@ -524,8 +530,8 @@ if(t==="dark")document.documentElement.classList.add("dark");})();
     </div>
     </div>
     <div id="source-filters" class="flex gap-2.5 flex-wrap items-center mt-3"></div>
+    <div id="sub-filters" class="flex gap-2 flex-wrap items-center mt-3"></div>
   </div>
-  <div id="sub-filters" class="flex gap-2 flex-wrap items-center mb-6"></div>
 
   <div id="sections"></div>
 
@@ -553,40 +559,27 @@ if(t==="dark")document.documentElement.classList.add("dark");})();
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased min-h-screen">
-<div class="max-w-3xl mx-auto px-4 py-6">
-  <header class="flex items-center gap-3 mb-8">
-    <a href="index.html" class="text-xl font-extrabold tracking-tight">LLM Top News<span class="text-blue-500">.</span></a>
-    <nav class="flex gap-1 text-sm">
-      <a href="index.html" class="px-3 py-1.5 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800">Today</a>
-      <span class="px-3 py-1.5 rounded-lg bg-slate-200/60 dark:bg-slate-800 font-semibold">Archive</span>
-    </nav>
-    <div class="flex-1"></div>
-    <button id="theme-btn" class="w-9 h-9 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center" title="Toggle theme">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    </button>
+<div class="max-w-6xl mx-auto px-4 py-6">
+  <header class="masthead flex items-start gap-4 flex-wrap">
+    <div class="flex-1 min-w-[220px]">
+      <a href="index.html" class="brand-title">LLM Top News<span class="text-blue-500">.</span></a>
+      <div class="brand-subtitle">Daily intelligence for the LLM ecosystem</div>
+    </div>
+    <div class="header-status">
+      <strong>__NDAYS__ days</strong> · __NITEMS__ items · __NCROSS__ cross-source hits
+    </div>
   </header>
 
-  <div class="mb-8">
-    <h1 class="text-3xl font-extrabold tracking-tight">News Archive<span class="text-blue-500">.</span></h1>
-    <p class="text-sm text-slate-500 dark:text-slate-400 mt-1.5">Browse daily snapshots, newest first.</p>
-  </div>
-  <div class="grid grid-cols-3 gap-3 mb-8">
-    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl px-4 py-3">
-      <div class="text-2xl font-extrabold">__NDAYS__</div>
-      <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Days tracked</div>
-    </div>
-    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl px-4 py-3">
-      <div class="text-2xl font-extrabold">__NITEMS__</div>
-      <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Items collected</div>
-    </div>
-    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl px-4 py-3">
-      <div class="text-2xl font-extrabold text-rose-500">__NCROSS__</div>
-      <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Cross-source hits</div>
-    </div>
-  </div>
-  <div class="space-y-3">
+  <nav class="top-nav" aria-label="Primary navigation">
+    <a href="index.html">Today</a>
+    <a href="archive.html" class="active">Archive</a>
+  </nav>
+
+  <div class="news-list">
 __ROWS__
   </div>
+
+  <footer class="text-center text-xs text-slate-400 mt-10">llm-top-news auto-generated</footer>
 </div>
 <script src="app.js"></script>
 </body>
@@ -595,14 +588,14 @@ __ROWS__
 
 
 def _day_nav(base: str, prev: str | None, next_: str | None) -> str:
-    btn = ("px-3 py-1.5 rounded-lg text-sm border border-slate-200 dark:border-slate-700 "
-           "bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800")
+    btn = ("text-xs text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:hover:text-slate-100 "
+           "transition-colors duration-150")
     parts = []
     if prev:
-        parts.append(f'<a href="{base}daily/{prev}.html" class="{btn}">← Prev</a>')
+        parts.append(f'<a href="{base}daily/{prev}.html" class="{btn}">← {prev[5:]}</a>')
     if next_:
-        parts.append(f'<a href="{base}daily/{next_}.html" class="{btn}">Next →</a>')
-    return " ".join(parts)
+        parts.append(f'<a href="{base}daily/{next_}.html" class="{btn}">{next_[5:]} →</a>')
+    return "  ".join(parts)
 
 
 def render_day(date: str, snap: dict, base: str, dates: list[str],
@@ -644,10 +637,11 @@ def render_archive(dates: list[str], snaps: dict[str, dict], tailwind: str) -> s
 
     pill = {
         "github": ("bg-blue-50 text-blue-600 dark:bg-blue-950 dark:text-blue-300", "bg-blue-500"),
+        "hf_papers": ("bg-violet-50 text-violet-600 dark:bg-violet-950 dark:text-violet-300", "bg-violet-500"),
         "hn": ("bg-amber-50 text-amber-700 dark:bg-amber-950 dark:text-amber-300", "bg-amber-500"),
         "reddit": ("bg-orange-50 text-orange-600 dark:bg-orange-950 dark:text-orange-300", "bg-orange-500"),
     }
-    label = {"github": "GitHub", "hn": "HN", "reddit": "Reddit"}
+    label = {"github": "GitHub", "hf_papers": "HF Papers", "hn": "HN", "reddit": "Reddit"}
 
     rows = []
     for d in reversed(dates):
@@ -665,23 +659,15 @@ def render_archive(dates: list[str], snaps: dict[str, dict], tailwind: str) -> s
         cross = (f'<span class="px-2 py-0.5 rounded-full font-semibold '
                  f'bg-rose-50 text-rose-600 dark:bg-rose-950 dark:text-rose-300">'
                  f'{len(s["cross"])} cross-source</span>') if s["cross"] else ""
-        rows.append(f"""    <a href="daily/{d}.html"
-       class="archive-row card-hover flex items-center gap-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl px-5 py-4">
-      <div class="w-14 shrink-0 text-center rounded-xl bg-gradient-to-b from-blue-500 to-indigo-600 text-white py-2 shadow-sm">
-        <div class="text-xl font-extrabold leading-none">{dt.day:02d}</div>
-        <div class="text-[10px] uppercase tracking-widest mt-1 opacity-90">{dt.strftime('%b')}</div>
-      </div>
-      <div class="min-w-0 flex-1">
-        <div class="flex items-baseline gap-2">
-          <span class="font-mono font-bold">{d}</span>
-          <span class="text-xs text-slate-400 dark:text-slate-500">{dt.strftime('%A')}</span>
+        rows.append(f"""    <a href="daily/{d}.html" class="news-item archive-row" style="--source-color: #3b82f6">
+      <div class="news-rail"></div><div class="news-body">
+        <div class="source-label mb-1">{dt.strftime('%A')} · {dt.strftime('%b')} {dt.day:02d}</div>
+        <div class="flex items-baseline gap-2 flex-wrap">
+          <span class="news-title">{d}</span>
+          <span class="text-xs text-slate-400 dark:text-slate-500">{total} items</span>
         </div>
-        <div class="flex gap-1.5 mt-2 text-xs flex-wrap">{pills}{cross}</div>
-        <div class="h-1.5 rounded-full overflow-hidden flex bg-slate-100 dark:bg-slate-800 mt-2.5">
-          {bar}
-        </div>
+        <div class="news-meta mt-2 flex gap-1.5 flex-wrap items-center">{pills}{cross}</div>
       </div>
-      <span class="row-arrow text-slate-300 dark:text-slate-600 text-lg font-bold">→</span>
     </a>""")
     return (ARCHIVE_TMPL
             .replace("__TAILWIND__", tailwind)

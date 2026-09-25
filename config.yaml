@@ -37,20 +37,27 @@ sources:
   #   section: harness
   #   color: "#2563eb"
   #   order: 5
+  hf_papers:
+    label: HF Papers
+    type: paper
+    collector: hf_daily_papers
+    section: papers
+    color: "#8b5cf6"
+    order: 2
   hn:
     label: Hacker News
     type: community
     collector: hn_algolia
     section: community
     color: "#d97706"
-    order: 2
+    order: 3
   reddit:
     label: Reddit
     type: community
     collector: reddit_rss
     section: community
     color: "#ea580c"
-    order: 3
+    order: 4
 
 sections:
   github:
@@ -66,17 +73,18 @@ sections:
   #     - deepseek_harness
   #     - opencode
   #     - vscode
-  models:
-    label: Models
+  papers:
+    label: Papers
     order: 3
-    sources: []
+    sources:
+      - hf_papers
   applications:
     label: LLM Applications
     order: 4
     sources: []
   community:
     label: Community Pulse
-    order: 5
+    order: 4
     sources:
       - hn
       - reddit

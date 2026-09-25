@@ -122,7 +122,8 @@ def load_raw(mode: str) -> tuple[dict, str]:
 
 
 def _heat(item: dict) -> int:
-    return item.get("stars") or item.get("points") or item.get("score") or 0
+    return (item.get("stars") or item.get("points") or item.get("score")
+            or item.get("upvotes") or 0)
 
 
 # ───────────────────────── 跨源聚合 ─────────────────────────
@@ -256,6 +257,29 @@ def render_hn(stories: list[dict], top_n: int = 15) -> list[str]:
     return lines
 
 
+def render_hf_papers(stories: list[dict], top_n: int = 15) -> list[str]:
+    lines = ["## 📄 HF Daily Papers", ""]
+    shown = 0
+    for s in stories:
+        if shown >= top_n:
+            break
+        item = next((i for i in s["items"] if i["source"] == "hf_papers"), None)
+        if not item:
+            continue
+        shown += 1
+        authors = ", ".join(item["authors"][:3]) if item.get("authors") else ""
+        more = f" 等" if item.get("authors") and len(item["authors"]) > 3 else ""
+        lines.append(f"{shown}. [{item['title']}]({item['url']}) — 👍 {item['upvotes']}")
+        if authors:
+            lines.append(f"   {authors}{more}")
+        if item.get("summary"):
+            lines.append(f"> {llm_summarize(item['summary'], 'HF 论文摘要')}")
+    if not shown:
+        lines.append("（无数据）")
+    lines.append("")
+    return lines
+
+
 def render_reddit(stories: list[dict], top_n: int = 15) -> list[str]:
     lines = ["## 📕 Reddit 热帖", ""]
     shown = 0
@@ -290,6 +314,8 @@ def render_cross_source(stories: list[dict], mode: str = "daily") -> list[str]:
         for item in s["items"]:
             if item["source"] == "github":
                 lines.append(f"  - GitHub: [{item['full_name']}]({item['url']}) ⭐{item['stars']}")
+            elif item["source"] == "hf_papers":
+                lines.append(f"  - HF Papers: [{item['title']}]({item['url']}) 👍{item['upvotes']}")
             elif item["source"] == "hn":
                 lines.append(f"  - HN: [{item['title']}]({item['hn_url']}) ▲{item['points']}")
             elif item["source"] == "reddit":
@@ -318,6 +344,7 @@ def render(mode: str, raw: dict, stories: list[dict]) -> str:
             lines.append("")
     lines += render_cross_source(stories, mode)
     lines += render_github(stories)
+    lines += render_hf_papers(stories)
     lines += render_hn(stories)
     lines += render_reddit(stories)
     lines.append("---")
@@ -351,7 +378,8 @@ def main() -> None:
         if before != len(raw["hn"]):
             print(f"  ~ HN 周报阈值 ≥{min_pts} 分: {before} → {len(raw['hn'])} 条")
 
-    all_items = raw["github"] + raw["hn"] + raw["reddit"]
+    all_items = (raw.get("github", []) + raw.get("hf_papers", [])
+                 + raw.get("hn", []) + raw.get("reddit", []))
     stories = aggregate(all_items)
     md = render(args.mode, raw, stories)
 

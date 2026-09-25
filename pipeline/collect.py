@@ -425,6 +425,36 @@ def collect_reddit(cfg: dict) -> list[dict]:
     return items[:limit]
 
 
+# ───────────────────────── HF Daily Papers ─────────────────────────
+
+def collect_hf_papers(cfg: dict) -> list[dict]:
+    """Hugging Face Daily Papers: 当日精选 AI 论文, 按 upvote 排序取前 N。"""
+    hf = cfg.get("hf_papers", {})
+    limit = hf.get("limit", 15)
+    data = http_json("https://huggingface.co/api/daily_papers?limit=100")
+    if not isinstance(data, list):
+        return []
+    items = []
+    for entry in data:
+        paper = entry.get("paper") or {}
+        paper_id = paper.get("id") or ""
+        if not paper_id:
+            continue
+        items.append({
+            "source": "hf_papers",
+            "title": paper.get("title") or "(untitled)",
+            "summary": (paper.get("summary") or "")[:500],
+            "upvotes": paper.get("upvotes") or 0,
+            "num_comments": entry.get("numComments") or 0,
+            "url": f"https://huggingface.co/papers/{paper_id}",
+            "arxiv_id": paper_id,
+            "published_at": paper.get("publishedAt"),
+            "authors": [a.get("name") for a in (paper.get("authors") or []) if a.get("name")][:8],
+        })
+    items.sort(key=lambda x: x["upvotes"], reverse=True)
+    return items[:limit]
+
+
 # ───────────────────────── 主流程 ─────────────────────────
 
 def main() -> None:
@@ -455,15 +485,19 @@ def main() -> None:
         json.dumps(hn_ranked, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"  完整候选 {len(hn_ranked)} 条 → {candidates_out.relative_to(ROOT)}")
 
+    print("→ HF Daily Papers")
+    hf_items = collect_hf_papers(cfg)
+    print(f"  {len(hf_items)} 条")
+
     print("→ Reddit 热帖")
     reddit_items = collect_reddit(cfg)
     print(f"  {len(reddit_items)} 条")
 
     raw = {"date": today, "github": github_items,
-           "hn": hn_items, "reddit": reddit_items}
+           "hf_papers": hf_items, "hn": hn_items, "reddit": reddit_items}
     out = RAW_DIR / f"{today}.json"
     out.write_text(json.dumps(raw, ensure_ascii=False, indent=2), encoding="utf-8")
-    total = len(github_items) + len(hn_items) + len(reddit_items)
+    total = len(github_items) + len(hf_items) + len(hn_items) + len(reddit_items)
     print(f"\n✓ {total} 条快照 → {out.relative_to(ROOT)}")
 
 
