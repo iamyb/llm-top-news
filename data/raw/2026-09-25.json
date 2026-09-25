@@ -1,0 +1,838 @@
+{
+  "date": "2026-09-25",
+  "github": [
+    {
+      "source": "github",
+      "full_name": "jev-chat/jev-chat-jarvis",
+      "description": "装在手机上的对话副驾：在 QQ / X / 飞书里读懂对方、给出候选回复、一键填入输入框，发不发由你。非侵入，只读屏幕，不 hook 不改包。",
+      "stars": 6473,
+      "created_at": "2026-09-21T11:12:53Z",
+      "url": "https://github.com/jev-chat/jev-chat-jarvis",
+      "language": "Kotlin",
+      "topics": [
+        "accessibility-service",
+        "android",
+        "chat-assistant",
+        "llm",
+        "qq"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "mikehasa/golive-skill",
+      "description": "Take your agent-built product live: hosting, database, domain, email, payments — on your own accounts. Open-source Agent Skill + zero-dependency Node CLI: detect → plan → approve → apply → verify. No GoLive account, backend or telemetry.",
+      "stars": 932,
+      "created_at": "2026-09-23T13:37:26Z",
+      "url": "https://github.com/mikehasa/golive-skill",
+      "language": "TypeScript",
+      "topics": [
+        "agent-skill",
+        "agent-skills",
+        "ai-agents",
+        "claude-code",
+        "cloudflare",
+        "codex",
+        "database",
+        "deployment",
+        "developer-tools",
+        "devops"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "pallavi-shekhar/ai-engineering-interview-questions-company-wise",
+      "description": "Your Cheat Sheet For AI Engineering Interviews at Top AI Companies - Questions and Answers.",
+      "stars": 925,
+      "created_at": "2026-09-19T04:14:43Z",
+      "url": "https://github.com/pallavi-shekhar/ai-engineering-interview-questions-company-wise",
+      "language": "Markdown",
+      "topics": [
+        "ai",
+        "ai-engineering",
+        "ai-engineering-interview",
+        "ai-interview",
+        "ai-interview-questions",
+        "company-wise-prep",
+        "company-wise-questions",
+        "interview-questions",
+        "llm-inference",
+        "questions-and-answers"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "yetone/magpie",
+      "description": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
+      "stars": 764,
+      "created_at": "2026-09-23T16:22:35Z",
+      "url": "https://github.com/yetone/magpie",
+      "language": "Go",
+      "topics": [
+        "claude-code",
+        "codex",
+        "deepseek",
+        "gemini-cli",
+        "llm",
+        "macos"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "v-modal/awesome-jev-tools",
+      "description": "A curated list of tools  built for Jev — TypeSafe AI's System One model for typed decisions.",
+      "stars": 716,
+      "created_at": "2026-09-19T16:48:59Z",
+      "url": "https://github.com/v-modal/awesome-jev-tools",
+      "language": null,
+      "topics": [
+        "awesome",
+        "awesome-list",
+        "awesome-lists",
+        "jev",
+        "llm",
+        "robotics",
+        "robotics-algorithms",
+        "robotics-control",
+        "robotics-simulation"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "nokia-applied-research/AnyJev",
+      "description": "Turn any LLM into a Jev-style decision model: typed decisions, real probabilities, no training. (continue updating)",
+      "stars": 618,
+      "created_at": "2026-09-21T05:55:40Z",
+      "url": "https://github.com/nokia-applied-research/AnyJev",
+      "language": "Python",
+      "topics": [
+        "calibration",
+        "decision-model",
+        "jev",
+        "jev-model",
+        "llm",
+        "system-one",
+        "transformers",
+        "vllm"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "jev-chat/jev-chat-windows",
+      "description": "JevChat-Windows：聊天窗口旁挂的回复辅助。窗口截图 + 本地离线 OCR 读对方消息 → Jev 判断意图 → 3 条候选一键填入，发送永远手动",
+      "stars": 553,
+      "created_at": "2026-09-21T14:37:14Z",
+      "url": "https://github.com/jev-chat/jev-chat-windows",
+      "language": "Python",
+      "topics": [
+        "chat-assistant",
+        "jev",
+        "llm",
+        "local-first",
+        "ocr",
+        "privacy",
+        "pyqt",
+        "python",
+        "wechat",
+        "windows"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "yukitorido/short-video-generator-AI",
+      "description": "AI video processing pipeline for generating vertical shorts using LLMs, Whisper transcription, highlight detection and automated editing",
+      "stars": 430,
+      "created_at": "2026-09-23T18:11:57Z",
+      "url": "https://github.com/yukitorido/short-video-generator-AI",
+      "language": "Python",
+      "topics": [
+        "ai",
+        "llm",
+        "llm-tools",
+        "opus-clip",
+        "opus-clip-alternative",
+        "short-video",
+        "short-video-automation",
+        "short-video-generator",
+        "short-video-maker"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "jev-chat/jev-chat-jarvis-mac",
+      "description": "聊天悬浮窗助手（macOS）：屏幕感知 + 本地小模型判断意图与风险，按话术生成回复候选。纯只读。",
+      "stars": 396,
+      "created_at": "2026-09-21T11:39:32Z",
+      "url": "https://github.com/jev-chat/jev-chat-jarvis-mac",
+      "language": "Python",
+      "topics": [
+        "llm",
+        "local-first",
+        "macos",
+        "ocr",
+        "privacy",
+        "pyobjc",
+        "python"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "kydlikebtc/awesome-jev",
+      "description": "1207 public resources for Jev, TypeSafe AI's System One decision model, indexed by decision pattern. Source citations, dated link checks and scheduled call-site text checks; runtime and performance are not independently tested here. EN/中文, JSON schema and platform compatibility.",
+      "stars": 351,
+      "created_at": "2026-09-22T02:22:54Z",
+      "url": "https://github.com/kydlikebtc/awesome-jev",
+      "language": "Python",
+      "topics": [
+        "agent-tools",
+        "ai-agents",
+        "awesome",
+        "awesome-list",
+        "calibration",
+        "catalog",
+        "classification",
+        "context-compaction",
+        "decision-model",
+        "intent-routing"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "Yinsongxu/LLM2Jev",
+      "description": "Turn local language models into Jev-style structured decision models. Get results from text and images with prefill alone—no token-by-token decoding required.",
+      "stars": 328,
+      "created_at": "2026-09-19T10:59:33Z",
+      "url": "https://github.com/Yinsongxu/LLM2Jev",
+      "language": "Python",
+      "topics": [
+        "jev",
+        "llm",
+        "mllm"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "Alex314618-create/JevRev",
+      "description": "An LLM + Jev workflow that changes EVERYTHING. Boost your vertebrate brain with a spine inside. ",
+      "stars": 304,
+      "created_at": "2026-09-21T01:53:13Z",
+      "url": "https://github.com/Alex314618-create/JevRev",
+      "language": "TypeScript",
+      "topics": [
+        "jev",
+        "llm",
+        "workflow"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "Inkloom-art/inkloom",
+      "description": "Specialised AI models for logo design — a brand-analysis model turns a business into constraints, typography and symbol models construct the mark, and a composition engine produces real lockups and clear-space rules. Early access open.",
+      "stars": 264,
+      "created_at": "2026-09-20T07:54:30Z",
+      "url": "https://github.com/Inkloom-art/inkloom",
+      "language": "TypeScript",
+      "topics": [
+        "brand-identity",
+        "cloudflare-workers",
+        "design-systems",
+        "generative-ai",
+        "logo-design",
+        "typography"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "penso/herdr-gpui",
+      "description": "Native macOS client for Herdr, built with Rust and GPUI. View terminal sessions, workspaces, Git worktrees, and agent activity through your local Herdr daemon.",
+      "stars": 207,
+      "created_at": "2026-09-20T05:22:39Z",
+      "url": "https://github.com/penso/herdr-gpui",
+      "language": "Rust",
+      "topics": [
+        "ai-agents",
+        "desktop-app",
+        "developer-tools",
+        "git-worktrees",
+        "gpui",
+        "herdr",
+        "macos",
+        "rust",
+        "terminal"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "walidboulanouar/awesome-jev-use-cases",
+      "description": "Awesome list of TypeSafe AI Jev use cases: 74 demos ranked by likes, 150+ GitHub repos, limits, cost and API examples. CC0",
+      "stars": 204,
+      "created_at": "2026-09-19T18:01:10Z",
+      "url": "https://github.com/walidboulanouar/awesome-jev-use-cases",
+      "language": null,
+      "topics": [
+        "ai-guardrails",
+        "ai-router",
+        "awesome",
+        "awesome-list",
+        "classification",
+        "claude-code",
+        "decision-model",
+        "examples",
+        "jev",
+        "jev-model"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "sno-ai/sno-station",
+      "description": "Sno Station — your Claude Code and Codex working as one squad on your own machine. Shared encrypted memory, agent-to-agent messaging (Reach), squad skills for handoff and cross-vendor review, and a nightly loop that rewrites the agents' own skills with your approval. Open source, no daemon, no cloud",
+      "stars": 199,
+      "created_at": "2026-09-19T06:55:24Z",
+      "url": "https://github.com/sno-ai/sno-station",
+      "language": "TypeScript",
+      "topics": [
+        "agent-communication",
+        "agent-memory",
+        "agentic-ai",
+        "ai-agents",
+        "claude-code",
+        "codex",
+        "coding-agents",
+        "developer-tools",
+        "local-first",
+        "long-term-memory"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "Michael-Jiahao-Zhang/game-the-llm-reviewer",
+      "description": "Defend sound research against LLM reviewer bias through meaning-preserving rewrites.",
+      "stars": 176,
+      "created_at": "2026-09-21T23:11:47Z",
+      "url": "https://github.com/Michael-Jiahao-Zhang/game-the-llm-reviewer",
+      "language": null,
+      "topics": [
+        "academic-writing",
+        "agent-skills",
+        "ai-research",
+        "llm",
+        "llm-reviewer",
+        "paper-writing",
+        "peer-review",
+        "prompt-engineering",
+        "scientific-writing"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "hirotomasato/yowes",
+      "description": "Generate realistic teacher documents (ID cards, licenses, letters) for 13 countries via MCP.",
+      "stars": 175,
+      "created_at": "2026-09-19T05:33:10Z",
+      "url": "https://github.com/hirotomasato/yowes",
+      "language": "Python",
+      "topics": [
+        "agent",
+        "document-generator",
+        "mcp",
+        "model-context-protocol",
+        "pillow",
+        "python"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "Devin-AXIS/jev-dsh-decision",
+      "description": "Jev DSH 决策引擎｜面向 Agent Harness 的结构化决策插件。原生支持 DeepSeek Harness，通过 iPolloWork 支持 OpenCode、Codex Harness。",
+      "stars": 172,
+      "created_at": "2026-09-20T04:39:05Z",
+      "url": "https://github.com/Devin-AXIS/jev-dsh-decision",
+      "language": "JavaScript",
+      "topics": [
+        "agent-harness",
+        "ai-agents",
+        "apollo-plugin",
+        "codex",
+        "codex-harness-plugin",
+        "codex-plugin",
+        "decision-engine",
+        "deepseek-harness",
+        "deepseek-harness-plugin",
+        "deepseek-plugin"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "mitkox/esf",
+      "description": "Self-hosted engineering software factory: Temporal, CubeSandbox agents, deterministic verification and durable evidence. MIT-licensed Machinist fork.",
+      "stars": 145,
+      "created_at": "2026-09-19T16:07:54Z",
+      "url": "https://github.com/mitkox/esf",
+      "language": "Go",
+      "topics": [
+        "ai-agents",
+        "golang",
+        "self-hosted",
+        "software-factory",
+        "temporal"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "HeyPuter/builder",
+      "description": "📦✨ AI Builder For Creating Sites and Apps! An open-source alternative to Lovable, Replit, v0, and similar platforms.",
+      "stars": 119,
+      "created_at": "2026-09-21T03:45:45Z",
+      "url": "https://github.com/HeyPuter/builder",
+      "language": "JavaScript",
+      "topics": [
+        "ai-agents",
+        "ai-builder",
+        "app-builder",
+        "base44",
+        "bolt",
+        "claude-code",
+        "codex",
+        "lovable",
+        "opencode",
+        "replit"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "georgeding/Relate",
+      "description": "记得她说过的每一句话，也记得你答应过的每一件事。A self-hosted AI chief of staff for your chats — remembers what they said and what you promised.",
+      "stars": 104,
+      "created_at": "2026-09-23T16:20:10Z",
+      "url": "https://github.com/georgeding/Relate",
+      "language": "JavaScript",
+      "topics": [
+        "ai-assistant",
+        "llm",
+        "mcp",
+        "memory",
+        "ollama",
+        "openai-compatible",
+        "personal-knowledge",
+        "privacy",
+        "self-hosted",
+        "telegram"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "michaelswissa/jevry",
+      "description": "Your browser. Ready to act. An MIT-licensed desktop browser agent for website tasks, cited research, and supported games.",
+      "stars": 102,
+      "created_at": "2026-09-24T10:44:35Z",
+      "url": "https://github.com/michaelswissa/jevry",
+      "language": "TypeScript",
+      "topics": [
+        "ai-agents",
+        "browser-automation",
+        "desktop-app",
+        "electron",
+        "research",
+        "typescript"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "savka777/jev-use",
+      "description": "Say it, and your Mac does it. A computer-use harness on Jev that reads the screen through Accessibility. Fast, no vision model",
+      "stars": 97,
+      "created_at": "2026-09-19T14:05:35Z",
+      "url": "https://github.com/savka777/jev-use",
+      "language": "Swift",
+      "topics": [
+        "accessibility",
+        "ai",
+        "ai-agents",
+        "browser-use",
+        "computer-use",
+        "harness",
+        "jev",
+        "macos",
+        "swift",
+        "typesafe-ai"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "Rylaispirit/cinematic-video-prompt-skill",
+      "description": "AI video prompt cheat sheet & Claude Skill: cinematic camera angles, camera movement, lighting, composition, color grading for Veo 3, Kling, Sora, Runway, Midjourney. 700+ terms with Vietnamese explanations.",
+      "stars": 93,
+      "created_at": "2026-09-20T16:44:06Z",
+      "url": "https://github.com/Rylaispirit/cinematic-video-prompt-skill",
+      "language": null,
+      "topics": [
+        "ai-video",
+        "camera-movement",
+        "cinematography",
+        "claude-skill",
+        "generative-ai",
+        "kling",
+        "lighting",
+        "midjourney",
+        "prompt-engineering",
+        "prompts"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "libingzheren/Jev-Mem",
+      "description": "Jev-Mem: System-One Controlled Agentic Memory",
+      "stars": 90,
+      "created_at": "2026-09-20T05:27:53Z",
+      "url": "https://github.com/libingzheren/Jev-Mem",
+      "language": "Python",
+      "topics": [
+        "agent",
+        "agent-memory",
+        "agentic-ai",
+        "agentic-memory",
+        "agents",
+        "jev",
+        "jev-ai",
+        "llm"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "openlayer-ai/jevals",
+      "description": "Agent evals and guardrails as Jev decisions: one request per trace, a fraction of a cent, fast enough for the agent loop. Runs locally with Kev or Laya.",
+      "stars": 85,
+      "created_at": "2026-09-20T19:56:13Z",
+      "url": "https://github.com/openlayer-ai/jevals",
+      "language": "Python",
+      "topics": [
+        "agents",
+        "evals",
+        "guardrails",
+        "jev",
+        "llm",
+        "llm-evaluation",
+        "ragas",
+        "typesafe"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "angel291592/Intent-Router",
+      "description": "Intent compiler for AI agents — converges vague requests into typed IntentSpec contracts (probe, ask, or halt before routing), the input layer for routers and typed-decision models like Jev & Laya",
+      "stars": 84,
+      "created_at": "2026-09-22T06:00:27Z",
+      "url": "https://github.com/angel291592/Intent-Router",
+      "language": "Python",
+      "topics": [
+        "agent-skills",
+        "agentic",
+        "ai-agents",
+        "clarification",
+        "claude-code",
+        "codex",
+        "context-engineering",
+        "decision-model",
+        "intent",
+        "llm-routing"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "amitshekhariitbhu/ai-system-design",
+      "description": "AI System Design - Learn how to design AI systems built on LLMs, RAG, and AI Agents step by step.",
+      "stars": 81,
+      "created_at": "2026-09-25T04:50:06Z",
+      "url": "https://github.com/amitshekhariitbhu/ai-system-design",
+      "language": "Markdown",
+      "topics": [
+        "ai",
+        "ai-agents",
+        "ai-engineering",
+        "ai-system",
+        "ai-system-design",
+        "ai-systems",
+        "ai-systems-design",
+        "llm",
+        "system-design",
+        "system-design-interview"
+      ]
+    },
+    {
+      "source": "github",
+      "full_name": "ZCodium-project/ZCodium",
+      "description": "ZCodium，Independent audit fork of ZCode (ZCode → ZCodium). All monitoring and telemetry removed; upstream commits reviewed one by one. ZCode 的独立审计分支（ZCode → ZCodium）：已移除监控与遥测，上游改动逐提交审阅。",
+      "stars": 72,
+      "created_at": "2026-09-23T21:53:06Z",
+      "url": "https://github.com/ZCodium-project/ZCodium",
+      "language": "TypeScript",
+      "topics": [
+        "ai-agents",
+        "vibe-coding",
+        "zcod",
+        "zcode",
+        "zcode-desktop",
+        "zcodium"
+      ]
+    }
+  ],
+  "hn": [
+    {
+      "source": "hn",
+      "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design",
+      "points": 347,
+      "num_comments": 125,
+      "url": "https://github.com/devdotfast/whiteboard",
+      "hn_url": "https://news.ycombinator.com/item?id=49833867",
+      "created_at": "2026-09-24T17:21:36Z",
+      "matched_keywords": [
+        "Claude",
+        "AI agents",
+        "coding agent",
+        "Claude Code",
+        "Codex"
+      ]
+    }
+  ],
+  "reddit": [
+    {
+      "source": "reddit",
+      "title": "Qwen 3.8 27b be like...",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wpdho8/qwen_38_27b_be_like/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wpdho8/qwen_38_27b_be_like/",
+      "thumbnail": null,
+      "selftext": "The user is frustrated — I rambled too much and didn't act. Let's just run the test suite and move on. No more forensics. One command, execute, then report. (Original memo is a casual internal monologue in English. Translating faithfully while preserving the informal, stream-of-consciousness registe",
+      "subreddit": "LocalLLaMA",
+      "created_at": "2026-09-24T21:00:38+00:00"
+    },
+    {
+      "source": "reddit",
+      "title": "Jive - Rethinking the Agentic Loop with System One Models",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LLMDevs/comments/1wp8ugp/jive_rethinking_the_agentic_loop_with_system_one/",
+      "reddit_url": "https://www.reddit.com/r/LLMDevs/comments/1wp8ugp/jive_rethinking_the_agentic_loop_with_system_one/",
+      "thumbnail": null,
+      "selftext": "I have been thinking that the current Agentic Loop design of LLM Call -> Tool Call -> ... has been outdated. The arrival of Jev and other System One models provided us a primitive we desperately needed. We need an agent that can natively think fast and slow . Not have workflows or multi-agent archit",
+      "subreddit": "LLMDevs",
+      "created_at": "2026-09-24T18:02:00+00:00"
+    },
+    {
+      "source": "reddit",
+      "title": "loaded 1b local ai for driving assistant integrated with ADAs.",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LocalLLM/comments/1wp3vnh/loaded_1b_local_ai_for_driving_assistant/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLM/comments/1wp3vnh/loaded_1b_local_ai_for_driving_assistant/",
+      "thumbnail": null,
+      "selftext": "",
+      "subreddit": "LocalLLM",
+      "created_at": "2026-09-24T14:56:14+00:00"
+    },
+    {
+      "source": "reddit",
+      "title": "It's here: Blackwell Pro 5k 48GB",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LocalLLM/comments/1wpfxje/its_here_blackwell_pro_5k_48gb/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLM/comments/1wpfxje/its_here_blackwell_pro_5k_48gb/",
+      "thumbnail": "https://preview.redd.it/g2ee1qxjqjrh1.jpg?width=140&height=140&crop=1:1,smart&auto=webp&s=fcdb540f92661a2509f79adf3f76f354695fa821",
+      "selftext": "I didn't think I'd actually get it. Ordered from Dell, 5 week lead time. $5300. Ordered on 9.10.2026. After two weeks the listing was removed - all discrete GPUs were removed from the Dell web storefront. So I opened a story ticket, it was here the next day. I was looking at various other options th",
+      "subreddit": "LocalLLM",
+      "created_at": "2026-09-24T22:42:19+00:00"
+    },
+    {
+      "source": "reddit",
+      "title": "UkisAI Swift Series / 27B, Flash Next and Bonsai 2 + GSQ-RCO / -63.4% thinking, x1.95 speed with xhigh accuracy",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wp6gal/ukisai_swift_series_27b_flash_next_and_bonsai_2/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wp6gal/ukisai_swift_series_27b_flash_next_and_bonsai_2/",
+      "thumbnail": null,
+      "selftext": "Hey everyone, Jovan from UkisAI here! Today, we are introducing Swift, a family of efficient reasoning LLMs based on Qwen, trained by penalizing tokens related to pathological overthinking patterns and restoring accuracy via RL (GSPO) and OPD . After amazing feedback and 350k+ downloads in 13 days o",
+      "subreddit": "LocalLLaMA",
+      "created_at": "2026-09-24T16:32:57+00:00"
+    },
+    {
+      "source": "reddit",
+      "title": "Upgraded my Setup",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LocalLLM/comments/1wpawqj/upgraded_my_setup/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLM/comments/1wpawqj/upgraded_my_setup/",
+      "thumbnail": "https://preview.redd.it/u7hq5nheqirh1.jpeg?width=640&crop=smart&auto=webp&s=3d2f664f83c1ee4033cc3f80cafe41ecb5e1bf30",
+      "selftext": "Just upgraded my 2x RTX 6000 to 4 😀👍 Anyone here with the same Setup? 😀",
+      "subreddit": "LocalLLM",
+      "created_at": "2026-09-24T19:19:41+00:00"
+    },
+    {
+      "source": "reddit",
+      "title": "Meta Muse appears to be excited to give away its system data",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wpbeb7/meta_muse_appears_to_be_excited_to_give_away_its/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wpbeb7/meta_muse_appears_to_be_excited_to_give_away_its/",
+      "thumbnail": null,
+      "selftext": "",
+      "subreddit": "LocalLLaMA",
+      "created_at": "2026-09-24T19:38:33+00:00"
+    },
+    {
+      "source": "reddit",
+      "title": "Qwen3.8-Flash-Next on 12GB VRAM - 65 tokens per second",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wp7zyb/qwen38flashnext_on_12gb_vram_65_tokens_per_second/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wp7zyb/qwen38flashnext_on_12gb_vram_65_tokens_per_second/",
+      "thumbnail": null,
+      "selftext": "A while ago I posted 15 tok/s output and 100-120 tok/s prompt processing with the IQ3_XXS quant on a 12GB RTX 5070 using llama.cpp. Since then I built my own inference engine for this one model and this kind of PC. The same IQ3_XXS now runs at ~65 tok/s output and ~430 tok/s prompt processing , and ",
+      "subreddit": "LocalLLaMA",
+      "created_at": "2026-09-24T17:30:44+00:00"
+    },
+    {
+      "source": "reddit",
+      "title": "5090 Astral @ Best Buy $4200!",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LocalLLM/comments/1wph36i/5090_astral_best_buy_4200/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLM/comments/1wph36i/5090_astral_best_buy_4200/",
+      "thumbnail": "https://preview.redd.it/wcja0wr00krh1.jpeg?width=640&crop=smart&auto=webp&s=766e4c153682085bba3ea69d79705fe33ec8e21b",
+      "selftext": "Yooooooo Just scored a 5090 astral for 4200! Kind of insane. I was just browsing and saw it in a cage. It’s opened box in excellent condition. Will keep ya posted I wonder if this will be better for llms compared to 5090 founders edition.",
+      "subreddit": "LocalLLM",
+      "created_at": "2026-09-24T23:35:23+00:00"
+    },
+    {
+      "source": "reddit",
+      "title": "Insert Token: A visualization into the inner workings of LLMs",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LocalLLM/comments/1wp6tbl/insert_token_a_visualization_into_the_inner/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLM/comments/1wp6tbl/insert_token_a_visualization_into_the_inner/",
+      "thumbnail": "https://preview.redd.it/nejrb4ciyhrh1.gif?width=640&crop=smart&s=c07f1f45c2fe78f33b7ec0528b3ed39b5a4ec09c",
+      "selftext": "I wanted to expand my understanding of how LLMs work so I created an interactive animation that visualizes how tokens flow through an LLM during inference. Check it out, I think it came out great: https://sambatista.com/blog/insert-token-how-an-ai-model-writes-a-sentence There is an FAQ section at t",
+      "subreddit": "LocalLLM",
+      "created_at": "2026-09-24T16:46:30+00:00"
+    },
+    {
+      "source": "reddit",
+      "title": "Open AI in the wild",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wp5yp6/open_ai_in_the_wild/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wp5yp6/open_ai_in_the_wild/",
+      "thumbnail": null,
+      "selftext": "You degenerates are famous. I was at a conference with one of the authors, and they asked me: \"Did we do a good job representing the community?\" https://dl.acm.org/doi/abs/10.1145/3805689.3812421",
+      "subreddit": "LocalLLaMA",
+      "created_at": "2026-09-24T16:14:26+00:00"
+    },
+    {
+      "source": "reddit",
+      "title": "M5 Ultra 80Core GLM-5.3-Flash on DwarfStar Speeds",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wpkz0o/m5_ultra_80core_glm53flash_on_dwarfstar_speeds/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wpkz0o/m5_ultra_80core_glm53flash_on_dwarfstar_speeds/",
+      "thumbnail": "https://preview.redd.it/bcrjsh1hxkrh1.png?width=140&height=132&auto=webp&s=dc9aa87f47653d6cb5ec0e87beff09c15c758ec9",
+      "selftext": "I've been playing around with various models on the M5 Ultra 256GB 80-core Mac Studio. These are the results over many rounds of agentic inferencing. I'm happy with the performance. Glad to have the large amount of RAM. But it does feel like the GPU is underpowered for this amount of RAM. I'm wonder",
+      "subreddit": "LocalLLaMA",
+      "created_at": "2026-09-25T02:45:45+00:00"
+    },
+    {
+      "source": "reddit",
+      "title": "No Low Ballers lol",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LocalLLM/comments/1wpg8f1/no_low_ballers_lol/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLM/comments/1wpg8f1/no_low_ballers_lol/",
+      "thumbnail": "https://preview.redd.it/qvvr0lqzsjrh1.jpeg?width=640&crop=smart&auto=webp&s=3958bc3f30290ad5fe61617ecd9435d66d28381d",
+      "selftext": "😂",
+      "subreddit": "LocalLLM",
+      "created_at": "2026-09-24T22:55:59+00:00"
+    },
+    {
+      "source": "reddit",
+      "title": "ThinkingCap 3.8-27B vs. Swift 3.8-27B vs. Qwen 3.8-27B Benchmarks",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wp5vqr/thinkingcap_3827b_vs_swift_3827b_vs_qwen_3827b/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wp5vqr/thinkingcap_3827b_vs_swift_3827b_vs_qwen_3827b/",
+      "thumbnail": null,
+      "selftext": "With the release of ThinkingCap-Qwen3.8-27B , I thought it would be worthwhile to do a comparison between the original Qwen3.8-27B, the new ThinkingCap, and Swift-Qwen3.8-27B . Both Swift which I already reviewed , and ThinkingCap do exactly the same thing: they reduce the excessive reasoning loops ",
+      "subreddit": "LocalLLaMA",
+      "created_at": "2026-09-24T16:11:15+00:00"
+    },
+    {
+      "source": "reddit",
+      "title": "Former Intel CEO: \"HBM is lousy\". High Bandwidth Flash Is Coming",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wpprlr/former_intel_ceo_hbm_is_lousy_high_bandwidth/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wpprlr/former_intel_ceo_hbm_is_lousy_high_bandwidth/",
+      "thumbnail": null,
+      "selftext": "Irrational Analysis:\"HBM is a mistake\" Former Intel CEO: \"HBM is lousy\" SK Hynix VP:\"HBM is not the final answer to the memory wall problem\" \"If the stacks get high enough...each core die operates slower than plain old commodity memory\" Hot chips 2026 Q&A, Irrational Analysis asks: \"You talk about g",
+      "subreddit": "LocalLLaMA",
+      "created_at": "2026-09-25T07:15:37+00:00"
+    },
+    {
+      "source": "reddit",
+      "title": "Qwengram-0.8B: I transferred Qwen3.8 Flash-Next’s n-gram memory into Qwen3.5-0.8B — 5.05% lower validation perplexity",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wpvep4/qwengram08b_i_transferred_qwen38_flashnexts_ngram/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wpvep4/qwengram08b_i_transferred_qwen38_flashnexts_ngram/",
+      "thumbnail": null,
+      "selftext": "I’ve been experimenting with whether Qwen3.8-Flash-Next’s pretrained PLE n-gram memory can improve a much smaller Qwen3.5-0.8B model. I trained the 0.8B setup with limited resources, mostly using free Kaggle notebook GPUs. The setup keeps both the Qwen3.5-0.8B backbone and the roughly 51B-parameter ",
+      "subreddit": "LocalLLaMA",
+      "created_at": "2026-09-25T12:46:00+00:00"
+    },
+    {
+      "source": "reddit",
+      "title": "Benchmarking DeepSeek V4 Flash on 4× CMP 170HX 64GB: 256GB HBM, PP4, 262K context, up to ~95 tok/s",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LocalLLM/comments/1wpa0to/benchmarking_deepseek_v4_flash_on_4_cmp_170hx/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLM/comments/1wpa0to/benchmarking_deepseek_v4_flash_on_4_cmp_170hx/",
+      "thumbnail": "https://preview.redd.it/grzz4m2ckirh1.jpg?width=140&height=105&auto=webp&s=f170f15a0152b43cbc95919f411b9e1347646721",
+      "selftext": "I’ve been building a local AI server around four unlocked CMP 170HX 64GB cards and finally have DeepSeek V4 Flash Vision stable across all four GPUs. Hardware 4× NVIDIA CMP 170HX 64GB 256GB aggregate HBM2e Runtime Ubuntu 24.04 vLLM Pipeline parallel = 4 max_model_len = 262144 FP8 KV cache DSpark spe",
+      "subreddit": "LocalLLM",
+      "created_at": "2026-09-24T18:45:40+00:00"
+    },
+    {
+      "source": "reddit",
+      "title": "Is Qwen Flash Next at like Q2 better than 27B at Q4?",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wpgyfh/is_qwen_flash_next_at_like_q2_better_than_27b_at/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wpgyfh/is_qwen_flash_next_at_like_q2_better_than_27b_at/",
+      "thumbnail": null,
+      "selftext": "I know questions like this are asked often but I didn’t see this specific one",
+      "subreddit": "LocalLLaMA",
+      "created_at": "2026-09-24T23:28:53+00:00"
+    },
+    {
+      "source": "reddit",
+      "title": "P100 gang",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LocalLLM/comments/1wplw7v/p100_gang/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLM/comments/1wplw7v/p100_gang/",
+      "thumbnail": "https://preview.redd.it/5plmzns3ykrh1.jpeg?width=640&crop=smart&auto=webp&s=6e450833967e1e3d83d3f9ded830bef85135e754",
+      "selftext": "Z440 tower with 128GB DDR4 at 2133MHz (salvaged from e-waste bin at work 5 years ago), and I just upgraded the CPU to E5-2683 v4 (16c/32t). Started with two P100s, using an adapter with the lower case fan at full blast to cool them. Worked OK, but I need to use lower quants to get decent context siz",
+      "subreddit": "LocalLLM",
+      "created_at": "2026-09-25T03:32:34+00:00"
+    },
+    {
+      "source": "reddit",
+      "title": "Swift-1.5 Qwen3.8-27B on a single RTX 5090: all-NVFP4 + DFlash2, full 262k context, ~160 tok/s decode",
+      "score": null,
+      "num_comments": null,
+      "url": "https://www.reddit.com/r/LocalLLM/comments/1wplkrm/swift15_qwen3827b_on_a_single_rtx_5090_allnvfp4/",
+      "reddit_url": "https://www.reddit.com/r/LocalLLM/comments/1wplkrm/swift15_qwen3827b_on_a_single_rtx_5090_allnvfp4/",
+      "thumbnail": null,
+      "selftext": "We're serving a single-GPU LLM box (RTX 5090 32 GB) and built this artifact: ukisai's Swift-1.5 Qwen3.8-27B (RL+OPD post-training, agentic/coding focus) converted to all-NVFP4 (W4A4 gs16) + z-lab DFlash2 drafter, for the NInfer engine (v3). Artifact (public, SHA-pinned): Qwen3.8-27B-swift15-nvfp4ful",
+      "subreddit": "LocalLLM",
+      "created_at": "2026-09-25T03:16:48+00:00"
+    }
+  ]
+}

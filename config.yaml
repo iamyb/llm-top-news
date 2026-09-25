@@ -9,6 +9,34 @@ sources:
     section: github
     color: "#2563eb"
     order: 1
+  # pi:
+  #   label: pi.dev
+  #   type: release
+  #   collector: github_releases
+  #   section: harness
+  #   color: "#0f766e"
+  #   order: 2
+  # deepseek_harness:
+  #   label: DeepSeek Harness
+  #   type: release
+  #   collector: github_releases
+  #   section: harness
+  #   color: "#0891b2"
+  #   order: 3
+  # opencode:
+  #   label: OpenCode
+  #   type: release
+  #   collector: github_releases
+  #   section: harness
+  #   color: "#7c3aed"
+  #   order: 4
+  # vscode:
+  #   label: Visual Studio Code
+  #   type: release
+  #   collector: github_releases
+  #   section: harness
+  #   color: "#2563eb"
+  #   order: 5
   hn:
     label: Hacker News
     type: community
@@ -30,10 +58,14 @@ sections:
     order: 1
     sources:
       - github
-  harness:
-    label: Harness
-    order: 2
-    sources: []
+  # harness:
+  #   label: Harness
+  #   order: 2
+  #   sources:
+  #     - pi
+  #     - deepseek_harness
+  #     - opencode
+  #     - vscode
   models:
     label: Models
     order: 3
@@ -52,18 +84,42 @@ sections:
 
 github:
   # Search API: 近 N 天新建 + 按 star 排序（新晋 star 榜）
-  # 注意: GitHub Search 不允许 qualifier (topic:/in:) 之间用 OR,
-  # 所以只取一个主 topic + 一个主关键词, 两次查询合并去重
   lookback_days: 7
   limit: 30
-  primary_topic: llm        # 候选: llm, llm-agents, generative-ai, rag, chatgpt, llm-fine-tuning, vector-database
-  primary_keyword: "LLM"    # 候选: "LLM", "GPT", "RAG", "AI agent", "large language model"
+  topics:
+    - llm
+    - llm-agents
+    - ai-agents
+    - generative-ai
+    - rag
+    - embeddings
+    - llm-inference
+    - mcp
+    - coding-agent
+    - fine-tuning
+
+# pi:
+#   repo: earendil-works/pi
+
+# deepseek_harness:
+#   repo: deepseek-ai/deepseek-harness
+#   include_prereleases: true
+
+# opencode:
+#   repo: anomalyco/opencode
+
+# vscode:
+#   repo: microsoft/vscode
 
 hn:
-  # Algolia search_by_date + 标题短语精确匹配（"keyword"）
-  # 日榜/周榜用不同分数阈值
+  # Algolia 先按关键词抓候选, 再由本地 MiniLM 排序取 Top-K
   daily_min_points: 30
   weekly_min_points: 100
+  semantic_filter:
+    enabled: true
+    model: sentence-transformers/all-MiniLM-L6-v2
+    top_k: 10
+    query: "News about large language models, generative AI, AI agents, RAG, MCP, embeddings, model training, inference, coding assistants, and AI developer tools."
   keywords:
     - "LLM"
     - "GPT"
@@ -75,6 +131,20 @@ hn:
     - "fine-tuning"
     - "large language model"
     - "diffusion"
+    - "AI agents"
+    - "agentic AI"
+    - "coding agent"
+    - "MCP"
+    - "model context protocol"
+    - "LLM inference"
+    - "vLLM"
+    - "Ollama"
+    - "llama.cpp"
+    - "embeddings"
+    - "vector database"
+    - "Claude Code"
+    - "Codex"
+    - "open source model"
 
 reddit:
   # 走 RSS 端点 (top/.rss?t=day), 无需 OAuth; 本机直连被墙, 必须配代理

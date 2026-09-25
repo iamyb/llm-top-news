@@ -95,21 +95,25 @@ def load_raw(mode: str) -> tuple[dict, str]:
         return raw, f"daily:{date}"
 
     # weekly
-    merged: dict = {"date": now.strftime("%Y-%m-%d"), "github": [], "hn": [], "reddit": []}
+    merged: dict = {"date": now.strftime("%Y-%m-%d")}
     seen: dict[str, dict] = {}
+    sources: set[str] = set()
     for i in range(7):
         d = (now - timedelta(days=i)).strftime("%Y-%m-%d")
         f = RAW_DIR / f"{d}.json"
         if not f.exists():
             continue
         day = json.loads(f.read_text(encoding="utf-8"))
-        for src in ("github", "hn", "reddit"):
+        day_sources = [key for key, value in day.items()
+                       if key != "date" and isinstance(value, list)]
+        sources.update(day_sources)
+        for src in day_sources:
             for item in day.get(src, []):
                 key = f"{src}|{item.get('url') or item.get('title')}"
                 old = seen.get(key)
                 if old is None or _heat(item) > _heat(old):
                     seen[key] = item
-    for src in ("github", "hn", "reddit"):
+    for src in sorted(sources):
         merged[src] = sorted(
             (it for k, it in seen.items() if k.startswith(src + "|")),
             key=_heat, reverse=True)

@@ -31,6 +31,8 @@ from urllib.request import HTTPSHandler, ProxyHandler, Request, build_opener, ur
 
 import yaml
 
+from semantic_filter import DEFAULT_QUERY, rank_records
+
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 RAW_DIR = DATA_DIR / "raw"
@@ -109,14 +111,10 @@ def collect_github(cfg: dict) -> list[dict]:
     cutoff = (datetime.now(timezone.utc) - timedelta(days=g.get("lookback_days", 7))).strftime("%Y-%m-%d")
     limit = g.get("limit", 30)
 
-    # 查询 1: 单 topic（抓规范打标的 repo）
-    topic = g.get("primary_topic", "llm")
-    q1 = f"created:>{cutoff} topic:{topic}"
-    # 查询 2: 单关键词 in:name,description（抓描述里提到 LLM 的）
-    keyword = g.get("primary_keyword", "LLM")
-    q2 = f'created:>{cutoff} "{keyword}" in:name,description'
-
-    raw_items = _github_search(q1, limit) + _github_search(q2, limit)
+    raw_items = []
+    for topic in g.get("topics", ["llm"]):
+        query = f"created:>{cutoff} topic:{topic}"
+        raw_items.extend(_github_search(query, limit))
 
     # 按 full_name 去重, 保留 star 最高的
     seen: dict[str, dict] = {}
@@ -140,10 +138,35 @@ def collect_github(cfg: dict) -> list[dict]:
     return items
 
 
+def collect_github_releases(cfg: dict, source: str) -> list[dict]:
+    """采集指定仓库最新的一条 GitHub Release。"""
+    repo = cfg[source]["repo"]
+    data = http_json(f"https://api.github.com/repos/{repo}/releases?per_page=100")
+    if not isinstance(data, list):
+        return []
+
+    items = []
+    include_prereleases = cfg[source].get("include_prereleases", False)
+    for release in data:
+        if release.get("draft") or (release.get("prerelease") and not include_prereleases):
+            continue
+        published_at = release.get("published_at") or ""
+        tag = release.get("tag_name") or ""
+        items.append({
+            "source": source,
+            "title": release.get("name") or tag,
+            "summary": (release.get("body") or "")[:1000],
+            "tag_name": tag,
+            "url": release.get("html_url"),
+            "published_at": published_at,
+        })
+    return sorted(items, key=lambda item: item["published_at"], reverse=True)[:1]
+
+
 # ───────────────────────── Hacker News ─────────────────────────
 
 def collect_hn(cfg: dict, days: int, min_points: int) -> list[dict]:
-    """对每个关键词做标题短语精确匹配, 单次运行内按 objectID 去重。"""
+    """获取 HN 候选并按配置使用 MiniLM 排序后取 Top-K。"""
     h = cfg["hn"]
     ts = int((datetime.now(timezone.utc) - timedelta(days=days)).timestamp())
     seen: dict[str, dict] = {}
@@ -173,13 +196,26 @@ def collect_hn(cfg: dict, days: int, min_points: int) -> list[dict]:
                     "url": hit.get("url") or f"https://news.ycombinator.com/item?id={oid}",
                     "hn_url": f"https://news.ycombinator.com/item?id={oid}",
                     "created_at": hit.get("created_at"),
+                    "story_text": hit.get("story_text") or "",
                     "matched_keywords": [],
                 }
                 seen[oid] = item
             if kw not in item["matched_keywords"]:
                 item["matched_keywords"].append(kw)
         time.sleep(0.3)
-    return list(seen.values())
+    items = list(seen.values())
+    semantic = h.get("semantic_filter", {})
+    if not semantic.get("enabled", False) or not items:
+        return items
+    ranked = rank_records(
+        items,
+        top_k=int(semantic.get("top_k", 10)),
+        model_name=semantic.get("model", "sentence-transformers/all-MiniLM-L6-v2"),
+        query=semantic.get("query") or DEFAULT_QUERY,
+    )
+    selected = [item for item in ranked if item["minilm_relevant"]]
+    print(f"  MiniLM 排序: {len(items)} 条候选 → Top-{len(selected)}", file=sys.stderr)
+    return selected
 
 
 # ───────────────────────── Reddit ─────────────────────────
@@ -372,6 +408,8 @@ def main() -> None:
     github_items = collect_github(cfg)
     print(f"  {len(github_items)} 条")
 
+    # Harness Release sources are temporarily disabled in config.yaml.
+
     print(f"→ HN 高分帖（回溯 {args.days} 天, ≥{cfg['hn']['daily_min_points']} 分）")
     hn_items = collect_hn(cfg, days=args.days, min_points=cfg["hn"]["daily_min_points"])
     print(f"  {len(hn_items)} 条")
@@ -380,7 +418,8 @@ def main() -> None:
     reddit_items = collect_reddit(cfg)
     print(f"  {len(reddit_items)} 条")
 
-    raw = {"date": today, "github": github_items, "hn": hn_items, "reddit": reddit_items}
+    raw = {"date": today, "github": github_items,
+           "hn": hn_items, "reddit": reddit_items}
     out = RAW_DIR / f"{today}.json"
     out.write_text(json.dumps(raw, ensure_ascii=False, indent=2), encoding="utf-8")
     total = len(github_items) + len(hn_items) + len(reddit_items)

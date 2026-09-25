@@ -1,2 +1,4 @@
 pyyaml>=6.0
 certifi>=2024.2.2
+torch>=2.2
+transformers>=4.40

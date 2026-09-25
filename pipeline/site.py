@@ -405,11 +405,11 @@ APP_JS = r"""
         const items = sectionItems.filter((it) => it.source === source);
         const meta = SOURCE_BY_KEY[source] || { key: source, label: source, color: "#64748b" };
         const card = CARDS[source] || ((item) => genericCard(item, meta));
-        const heading = groupKeys.length > 1 ? `<div class="source-heading"><h3>${esc(meta.label)}</h3><span>${items.length} items</span></div>` : "";
+        const heading = groupKeys.length > 1 ? `<div class="source-heading"><h3>${esc(meta.label)} (${items.length})</h3></div>` : "";
         return `<div class="source-group">${heading}<div class="news-list">${items.map(card).join("")}</div></div>`;
       }).join("");
       html += `<section>
-        <div class="section-heading"><h2>${esc(sectionMeta.label)}</h2><span>${sectionItems.length} items</span></div>
+        <div class="section-heading"><h2>${esc(sectionMeta.label)} (${sectionItems.length})</h2></div>
         ${groups}
       </section>`;
     }
@@ -431,8 +431,11 @@ APP_JS = r"""
   }
   const sectionFilterWrap = $("#section-filters");
   if (sectionFilterWrap) {
-    sectionFilterWrap.innerHTML += SECTION_META.map((meta) =>
-      `<button class="section-filter-btn filter-btn px-4 py-2 rounded-full text-sm border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900" data-section="${esc(meta.key)}">${esc(meta.label)}</button>`).join("");
+    const totalItems = Object.values(SECTIONS).reduce((total, items) => total + items.length, 0);
+    const allButton = sectionFilterWrap.querySelector('[data-section="all"]');
+    if (allButton) allButton.textContent = `All sections (${totalItems})`;
+    sectionFilterWrap.innerHTML += SECTION_META.filter((meta) => (SECTIONS[meta.key] || []).length > 0).map((meta) =>
+      `<button class="section-filter-btn filter-btn px-4 py-2 rounded-full text-sm border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900" data-section="${esc(meta.key)}">${esc(meta.label)} (${(SECTIONS[meta.key] || []).length})</button>`).join("");
   }
   renderSourceFilters();
   const search = $("#search");
