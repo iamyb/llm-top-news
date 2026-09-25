@@ -166,44 +166,35 @@ def collect_github_releases(cfg: dict, source: str) -> list[dict]:
 # ───────────────────────── Hacker News ─────────────────────────
 
 def collect_hn(cfg: dict, days: int, min_points: int) -> list[dict]:
-    """获取 HN 候选并按配置使用 MiniLM 排序后取 Top-K。"""
+    """从 HN Top Stories 获取候选, 再按配置使用 MiniLM 排序取 Top-K。"""
     h = cfg["hn"]
     ts = int((datetime.now(timezone.utc) - timedelta(days=days)).timestamp())
-    seen: dict[str, dict] = {}
-    for kw in h.get("keywords", []):
-        query = urlencode({
-            "query": f'"{kw}"',
-            "tags": "story",
-            "numericFilters": f"created_at_i>{ts},points>{min_points}",
-            "hitsPerPage": 20,
-        })
-        try:
-            data = http_json(f"https://hn.algolia.com/api/v1/search_by_date?{query}")
-        except Exception as e:  # noqa: BLE001
-            print(f"  ! hn keyword {kw!r}: {e}", file=sys.stderr)
+    candidate_limit = int(h.get("candidate_limit", 100))
+    story_ids = http_json("https://hacker-news.firebaseio.com/v0/topstories.json")
+    if not isinstance(story_ids, list):
+        raise RuntimeError("HN topstories API returned an unexpected response")
+
+    items = []
+    for story_id in story_ids[:candidate_limit]:
+        item = http_json(f"https://hacker-news.firebaseio.com/v0/item/{story_id}.json")
+        if not isinstance(item, dict) or item.get("type") != "story":
             continue
-        for hit in data.get("hits", []):
-            oid = hit.get("objectID")
-            if not oid:
-                continue
-            item = seen.get(oid)
-            if item is None:
-                item = {
-                    "source": "hn",
-                    "title": hit.get("title"),
-                    "points": hit.get("points"),
-                    "num_comments": hit.get("num_comments"),
-                    "url": hit.get("url") or f"https://news.ycombinator.com/item?id={oid}",
-                    "hn_url": f"https://news.ycombinator.com/item?id={oid}",
-                    "created_at": hit.get("created_at"),
-                    "story_text": hit.get("story_text") or "",
-                    "matched_keywords": [],
-                }
-                seen[oid] = item
-            if kw not in item["matched_keywords"]:
-                item["matched_keywords"].append(kw)
-        time.sleep(0.3)
-    items = list(seen.values())
+        created_timestamp = int(item.get("time") or 0)
+        if created_timestamp <= ts or int(item.get("score") or 0) <= min_points:
+            continue
+        items.append({
+            "source": "hn",
+            "title": item.get("title") or "(untitled)",
+            "points": item.get("score", 0),
+            "num_comments": item.get("descendants", 0),
+            "url": item.get("url") or f"https://news.ycombinator.com/item?id={story_id}",
+            "hn_url": f"https://news.ycombinator.com/item?id={story_id}",
+            "created_at": datetime.fromtimestamp(created_timestamp, timezone.utc).isoformat(),
+            "story_text": item.get("text") or "",
+            "matched_keywords": [],
+        })
+    print(f"  HN Top Stories: {len(items)} 条候选", file=sys.stderr)
+
     semantic = h.get("semantic_filter", {})
     if not semantic.get("enabled", False) or not items:
         return items

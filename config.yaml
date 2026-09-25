@@ -115,6 +115,7 @@ hn:
   # Algolia 先按关键词抓候选, 再由本地 MiniLM 排序取 Top-K
   daily_min_points: 30
   weekly_min_points: 100
+  candidate_limit: 100
   semantic_filter:
     enabled: true
     model: sentence-transformers/all-MiniLM-L6-v2
