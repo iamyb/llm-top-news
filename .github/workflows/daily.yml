@@ -8,8 +8,10 @@ on:
     branches:
       - main
   schedule:
-    # 每天 UTC 16:00 = 北京时间 00:00（采集"昨天"的完整数据）
-    - cron: "0 16 * * *"
+    # 每 8 小时一次: UTC 0/8/16 = 北京时间 08:00/16:00/00:00
+    # 当日快照重跑覆盖（无 seen 状态）, 历史只保留当日最后一次版本;
+    # 日报由当日首次运行生成（processed_dates 去重）, 一日一份不变
+    - cron: "0 */8 * * *"
   workflow_dispatch: {}  # 支持手动触发
 
 permissions:
