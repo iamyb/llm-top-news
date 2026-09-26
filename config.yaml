@@ -287,9 +287,10 @@ reddit:
     - LocalLLaMA
     - LLMDevs
     - LocalLLM
+    - Singularity
+    - StableDiffusion
     # - MachineLearning
     # - artificial
-    # - singularity
     # - OpenAI
     # - ClaudeAI
     # - DeepSeek
@@ -298,5 +299,5 @@ reddit:
     # - VectorDatabase
     # - GenAI
   limit: 20          # 最终总条数（合并池按热度排序后截取）
-  per_sub_limit: 10  # 每个 sub 最多条数（防大 sub 一家独大）
+  per_sub_limit: 5   # 每个 sub 最多条数（防大 sub 一家独家）
   min_per_sub: 2     # 每个 sub 保底条数（候选池里有才给）
