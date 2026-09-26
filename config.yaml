@@ -133,6 +133,9 @@ github:
 # vscode:
 #   repo: microsoft/vscode
 
+hf_papers:
+  limit: 15         # 按 upvote 取前 N
+
 hn:
   # Firebase Top Stories 前 100 → 时间/分数过滤 → 关键词预过滤 → MiniLM 排序取 Top-K
   daily_min_points: 30
