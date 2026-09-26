@@ -2,8 +2,6 @@
 
 Trending news aggregator for the LLM ecosystem: GitHub rising-star repos × high-scoring HN posts × Reddit hot posts, deduplicated across sources and ranked by heat.
 
-Complements [llm-watch](../llm-watch): llm-watch tracks per-product deltas (releases × community reaction); this tool takes heat-based snapshots (what's hot in LLM land *today*).
-
 ## Layout
 
 ```
