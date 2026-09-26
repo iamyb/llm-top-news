@@ -560,8 +560,8 @@ if(t==="dark")document.documentElement.classList.add("dark");})();
 </script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%233b82f6'/%3E%3Ctext x='50' y='72' font-size='64' font-family='Arial,sans-serif' font-weight='bold' fill='white' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KX6L0E2R04"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-KX6L0E2R04');</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NZEJ3PCX54"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NZEJ3PCX54');</script>
 <script src="__TAILWIND__"></script>
 <script>tailwind.config={darkMode:"class"}</script>
 <link rel="stylesheet" href="style.css">
