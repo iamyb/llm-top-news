@@ -316,7 +316,7 @@ APP_JS = r"""
         <div class="flex items-start gap-3">
           ${avatar ? `<img src="${esc(avatar)}" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 shrink-0" onerror="this.remove()">` : ""}
           <div class="min-w-0 flex-1">
-            <div class="source-label mb-1">GitHub</div>
+            <div class="source-label mb-1">GitHub · ${it.github_kind === "active" ? "Active" : "New"}</div>
             <a href="${esc(it.url)}" target="_blank" rel="noopener" class="news-title line-clamp-2">${esc(it.full_name)}</a>
             ${it.description ? `<p class="news-summary mt-1.5 line-clamp-2">${esc(it.description)}</p>` : ""}
             <div class="news-meta mt-2">★ ${it.stars ?? 0}${lang}${topics ? ` · ${topics}` : ""}</div>
@@ -391,7 +391,7 @@ APP_JS = r"""
     </article>`;
   }
 
-  const CARDS = { github: githubCard, hn: hnCard, reddit: redditCard, hf_papers: hfPapersCard };
+  const CARDS = { github_new: githubCard, github_active: githubCard, hn: hnCard, reddit: redditCard, hf_papers: hfPapersCard };
 
   // ── 渲染 ──
   function render() {

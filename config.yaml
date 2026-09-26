@@ -2,13 +2,20 @@
 # 采集参数保持在文件顶层; sources/sections 驱动站点板块和展示
 
 sources:
-  github:
-    label: GitHub
+  github_new:
+    label: GitHub New
     type: repository
     collector: github_search
     section: github
     color: "#2563eb"
     order: 1
+  github_active:
+    label: GitHub Active
+    type: repository
+    collector: github_search
+    section: github
+    color: "#0f766e"
+    order: 2
   # pi:
   #   label: pi.dev
   #   type: release
@@ -43,28 +50,29 @@ sources:
     collector: hf_daily_papers
     section: papers
     color: "#8b5cf6"
-    order: 2
+    order: 3
   hn:
     label: Hacker News
     type: community
     collector: hn_algolia
     section: community
     color: "#d97706"
-    order: 3
+    order: 6
   reddit:
     label: Reddit
     type: community
     collector: reddit_rss
     section: community
     color: "#ea580c"
-    order: 4
+    order: 5
 
 sections:
   github:
     label: GitHub
     order: 1
     sources:
-      - github
+      - github_new
+      - github_active
   # harness:
   #   label: Harness
   #   order: 2
@@ -86,14 +94,20 @@ sections:
     label: Community Pulse
     order: 4
     sources:
-      - hn
       - reddit
+      - hn
 
 
 github:
   # Search API: 近 N 天新建 + 按 star 排序（新晋 star 榜）
   lookback_days: 7
+  # 存量项目: 最近有 push 且已有一定 star 的活跃项目
+  active_lookback_days: 14
+  active_min_stars: 100
+  active_limit: 15
   limit: 30
+  # 连续 GitHub Search 请求之间的等待秒数; 设为 0 可关闭
+  request_delay_seconds: 6
   topics:
     - llm
     - llm-agents

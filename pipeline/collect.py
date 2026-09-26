@@ -102,41 +102,55 @@ def _github_search(q: str, per_page: int) -> list[dict]:
     return data.get("items", [])
 
 
-def collect_github(cfg: dict) -> list[dict]:
-    """近 N 天新建 + AI 相关, 按 star 排序的新晋 star 榜。
+def collect_github(cfg: dict) -> tuple[list[dict], list[dict]]:
+    """分别采集新建项目榜和近期活跃存量项目榜。
 
     GitHub Search 限制: qualifier (topic:/in:) 之间不能用 OR,
     所以拆成两次查询（单 topic + 单关键词）再合并去重。
     """
     g = cfg["github"]
     cutoff = (datetime.now(timezone.utc) - timedelta(days=g.get("lookback_days", 7))).strftime("%Y-%m-%d")
+    active_cutoff = (datetime.now(timezone.utc) - timedelta(days=g.get("active_lookback_days", 14))).strftime("%Y-%m-%d")
+    active_min_stars = int(g.get("active_min_stars", 100))
+    active_limit = int(g.get("active_limit", 15))
     limit = g.get("limit", 30)
+    request_delay = max(0.0, float(g.get("request_delay_seconds", 1.0)))
+    search_count = 0
 
-    raw_items = []
-    for topic in g.get("topics", ["llm"]):
-        query = f"created:>{cutoff} topic:{topic}"
-        raw_items.extend(_github_search(query, limit))
+    def collect_pool(query_prefix: str, per_page: int, kind: str) -> list[dict]:
+        nonlocal search_count
+        raw_items = []
+        for topic in g.get("topics", ["llm"]):
+            if search_count:
+                time.sleep(request_delay)
+            raw_items.extend(_github_search(f"{query_prefix} topic:{topic}", per_page))
+            search_count += 1
 
-    # 按 full_name 去重, 保留 star 最高的
-    seen: dict[str, dict] = {}
-    for r in raw_items:
-        fn = r.get("full_name", "")
-        if fn not in seen or (r.get("stargazers_count") or 0) > (seen[fn].get("stargazers_count") or 0):
-            seen[fn] = r
+        seen: dict[str, dict] = {}
+        for item in raw_items:
+            full_name = item.get("full_name", "")
+            if full_name not in seen or (item.get("stargazers_count") or 0) > (seen[full_name].get("stargazers_count") or 0):
+                seen[full_name] = item
 
-    items = []
-    for r in sorted(seen.values(), key=lambda x: x.get("stargazers_count") or 0, reverse=True)[:limit]:
-        items.append({
-            "source": "github",
-            "full_name": r.get("full_name"),
-            "description": (r.get("description") or "")[:300],
-            "stars": r.get("stargazers_count"),
-            "created_at": r.get("created_at"),
-            "url": r.get("html_url"),
-            "language": r.get("language"),
-            "topics": (r.get("topics") or [])[:10],
-        })
-    return items
+        return [{
+            "source": f"github_{kind}",
+            "full_name": item.get("full_name"),
+            "description": (item.get("description") or "")[:300],
+            "stars": item.get("stargazers_count"),
+            "created_at": item.get("created_at"),
+            "pushed_at": item.get("pushed_at"),
+            "url": item.get("html_url"),
+            "language": item.get("language"),
+            "topics": (item.get("topics") or [])[:10],
+            "github_kind": kind,
+        } for item in sorted(seen.values(), key=lambda value: value.get("stargazers_count") or 0, reverse=True)[:per_page]]
+
+    new_items = collect_pool(f"created:>{cutoff}", limit, "new")
+    new_names = {item["full_name"] for item in new_items}
+    active_items = [item for item in collect_pool(
+        f"pushed:>{active_cutoff} stars:>={active_min_stars}", active_limit, "active")
+        if item["full_name"] not in new_names]
+    return new_items, active_items
 
 
 def collect_github_releases(cfg: dict, source: str) -> list[dict]:
@@ -470,9 +484,9 @@ def main() -> None:
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     RAW_DIR.mkdir(parents=True, exist_ok=True)
 
-    print("→ GitHub 新晋 star 榜")
-    github_items = collect_github(cfg)
-    print(f"  {len(github_items)} 条")
+    print("→ GitHub 新建项目榜 + 存量活跃榜")
+    github_new, github_active = collect_github(cfg)
+    print(f"  新建 {len(github_new)} 条, 存量活跃 {len(github_active)} 条")
 
     # Harness Release sources are temporarily disabled in config.yaml.
 
@@ -493,11 +507,11 @@ def main() -> None:
     reddit_items = collect_reddit(cfg)
     print(f"  {len(reddit_items)} 条")
 
-    raw = {"date": today, "github": github_items,
+    raw = {"date": today, "github_new": github_new, "github_active": github_active,
            "hf_papers": hf_items, "hn": hn_items, "reddit": reddit_items}
     out = RAW_DIR / f"{today}.json"
     out.write_text(json.dumps(raw, ensure_ascii=False, indent=2), encoding="utf-8")
-    total = len(github_items) + len(hf_items) + len(hn_items) + len(reddit_items)
+    total = len(github_new) + len(github_active) + len(hf_items) + len(hn_items) + len(reddit_items)
     print(f"\n✓ {total} 条快照 → {out.relative_to(ROOT)}")
 
 

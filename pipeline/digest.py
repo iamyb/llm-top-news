@@ -215,13 +215,13 @@ def llm_summarize(text: str, label: str) -> str:
 
 # ───────────────────────── 渲染 ─────────────────────────
 
-def render_github(stories: list[dict], top_n: int = 15) -> list[str]:
-    lines = ["## 🚀 GitHub 新晋 star 榜", ""]
+def render_github(stories: list[dict], source: str, heading: str, top_n: int = 15) -> list[str]:
+    lines = [f"## 🚀 {heading}", ""]
     shown = 0
     for s in stories:
         if shown >= top_n:
             break
-        item = next((i for i in s["items"] if i["source"] == "github"), None)
+        item = next((i for i in s["items"] if i["source"] == source), None)
         if not item:
             continue
         shown += 1
@@ -343,10 +343,11 @@ def render(mode: str, raw: dict, stories: list[dict]) -> str:
             lines.append(f"**本周 star 王**: [{item['full_name']}]({item['url']}) ⭐ {item['stars']}")
             lines.append("")
     lines += render_cross_source(stories, mode)
-    lines += render_github(stories)
+    lines += render_github(stories, "github_new", "GitHub 新建项目榜")
+    lines += render_github(stories, "github_active", "GitHub 存量活跃榜")
     lines += render_hf_papers(stories)
-    lines += render_hn(stories)
     lines += render_reddit(stories)
+    lines += render_hn(stories)
     lines.append("---")
     lines.append("*llm-top-news 自动生成, 人工终审后发布。*")
     return "\n".join(lines) + "\n"
@@ -378,7 +379,8 @@ def main() -> None:
         if before != len(raw["hn"]):
             print(f"  ~ HN 周报阈值 ≥{min_pts} 分: {before} → {len(raw['hn'])} 条")
 
-    all_items = (raw.get("github", []) + raw.get("hf_papers", [])
+    all_items = (raw.get("github_new", []) + raw.get("github_active", [])
+                 + raw.get("github", []) + raw.get("hf_papers", [])
                  + raw.get("hn", []) + raw.get("reddit", []))
     stories = aggregate(all_items)
     md = render(args.mode, raw, stories)

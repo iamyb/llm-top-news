@@ -24,7 +24,7 @@ conda activate llm-watch        # 与 llm-watch 共用环境（Python 3.12, 仅 
 pip install -r requirements.txt
 
 # 可选: 环境变量写入项目根 .env（已 gitignore, 脚本自动加载）
-# GITHUB_TOKEN=xxx      # 可选, 无 token 也能跑（每次仅 2 个 Search 查询）
+# GITHUB_TOKEN=xxx      # 推荐, 提高 GitHub Search API 配额
 # REDDIT_CLIENT_ID/SECRET  # 可选, Reddit 源需要（公开端点被 403, 走 OAuth）
 # LLM_API_BASE/KEY/MODEL  # 可选, OpenAI 兼容端点; 不配则摘要退化为截断
 
@@ -39,7 +39,7 @@ HN 从 Firebase Top Stories 取前 100 条，经时间/分数过滤后，先用 
 
 | 源 | 取法 | 说明 |
 |---|---|---|
-| GitHub | Search API: 近 7 天新建 + `topic:llm` 或 `"LLM" in:name,description`（两次查询合并）, 按 star 排序 | 新晋 star 榜 |
+| GitHub | Search API: 10 个 topic 分别查询新建项目和活跃存量项目（共约 20 次请求）, 按 star 排序 | 新建榜与存量活跃榜分开展示 |
 | HN | Firebase Top Stories 前 100 → 时间/分数过滤 → 关键词预过滤 → 本地 MiniLM 语义排序 | 候选 ≥30 分，入选需通过预过滤且分数 ≥0.20，默认取 Top 10 |
 | Reddit | `r/<sub>/top.json?t=day`（OAuth, 需 `REDDIT_CLIENT_ID/SECRET`） | 默认仅 LocalLLaMA, 在 config.yaml 里按需加; 未配置凭据则跳过 |
 
