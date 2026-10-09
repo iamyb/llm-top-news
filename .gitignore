@@ -2,7 +2,7 @@
 data/*
 !data/raw/
 !data/processed_dates.json
-# 生成物不进仓库（Actions 每次重新生成并部署到 gh-pages）
+# 生成物不进仓库（Actions 每次重新生成并部署到 GitHub Pages）
 site/
 __pycache__/
 *.pyc
