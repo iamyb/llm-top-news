@@ -26,6 +26,7 @@ import sys
 import time
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
+from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import HTTPSHandler, ProxyHandler, Request, build_opener, urlopen
@@ -145,8 +146,106 @@ def collect_github(cfg: dict) -> list[dict]:
     return collect_pool(f"created:>{cutoff}", limit, "new")
 
 
+class _GithubTrendingParser(HTMLParser):
+    """Parse repository rows from GitHub's daily Trending HTML page."""
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.items: list[dict] = []
+        self._article: dict | None = None
+        self._article_depth = 0
+        self._capture: str | None = None
+        self._capture_depth = 0
+        self._text: list[str] = []
+
+    @staticmethod
+    def _has_class(attrs: dict[str, str | None], class_name: str) -> bool:
+        return class_name in (attrs.get("class") or "").split()
+
+    def handle_starttag(self, tag: str, attrs_list: list[tuple[str, str | None]]) -> None:
+        attrs = dict(attrs_list)
+        if tag == "article" and self._has_class(attrs, "Box-row") and self._article is None:
+            self._article = {"full_name": "", "description": "", "language": "", "text": ""}
+            self._article_depth = 1
+            return
+        if self._article is None:
+            return
+        self._article_depth += 1
+        if tag == "h2":
+            self._capture = "repo_heading"
+            self._capture_depth = self._article_depth
+            self._text = []
+        elif tag == "p" and "col-9" in (attrs.get("class") or "").split():
+            self._capture = "description"
+            self._capture_depth = self._article_depth
+            self._text = []
+        elif tag == "span" and attrs.get("itemprop") == "programmingLanguage":
+            self._capture = "language"
+            self._capture_depth = self._article_depth
+            self._text = []
+        elif tag == "a" and "/stargazers" in (attrs.get("href") or ""):
+            self._capture = "total_stars"
+            self._capture_depth = self._article_depth
+            self._text = []
+        elif tag == "a" and self._capture == "repo_heading":
+            href = attrs.get("href") or ""
+            if href.count("/") == 2:
+                self._article["full_name"] = href.strip("/")
+        elif self._capture is None:
+            href = attrs.get("href") or ""
+            if self._article.get("full_name") == "" and self._article_depth >= 2 and href.count("/") == 2:
+                self._article["full_name"] = href.strip("/")
+
+    def handle_endtag(self, tag: str) -> None:
+        if self._article is None:
+            return
+        if self._capture and self._article_depth == self._capture_depth:
+            self._article[self._capture] = " ".join(self._text).strip()
+            self._capture = None
+            self._text = []
+        if tag == "article" and self._article_depth == 1:
+            if self._article.get("full_name"):
+                self.items.append(self._article)
+            self._article = None
+            self._article_depth = 0
+            self._capture = None
+            self._text = []
+            return
+        self._article_depth = max(0, self._article_depth - 1)
+
+    def handle_data(self, data: str) -> None:
+        if self._article is None:
+            return
+        if self._capture:
+            self._text.append(data)
+        else:
+            self._article["text"] += f" {data}"
+
+
+def _parse_github_trending(page: str) -> list[dict]:
+    parser = _GithubTrendingParser()
+    parser.feed(page)
+    parser.close()
+    items = []
+    for row in parser.items:
+        stars_today_match = re.search(r"([\d,]+)\s+stars\s+today", row["text"], re.I)
+        total_stars_match = re.search(r"([\d,]+)\s*$", row.get("total_stars", ""))
+        items.append({
+            "source": "github_trending",
+            "full_name": row["full_name"],
+            "description": row["description"][:300],
+            "stars": int(total_stars_match.group(1).replace(",", "")) if total_stars_match else 0,
+            "stars_today": int(stars_today_match.group(1).replace(",", "")) if stars_today_match else 0,
+            "url": f"https://github.com/{row['full_name']}",
+            "language": row["language"],
+            "topics": [],
+            "github_kind": "trending",
+        })
+    return sorted(items, key=lambda item: item["stars_today"], reverse=True)
+
+
 def collect_github_trending(cfg: dict) -> list[dict]:
-    """抓取 GitHub Trending (daily) HTML 页面, 按 <article> 块解析。
+    """抓取 GitHub Trending (daily) HTML 页面, 用 HTMLParser 解析 repository rows。
 
     github.com 无官方 Trending API, 只能抓 HTML; 直连被墙, 需代理
     （config.yaml github.proxy, 可被 GITHUB_PROXY 覆盖, 留空则直连）。
@@ -161,32 +260,7 @@ def collect_github_trending(cfg: dict) -> list[dict]:
     except Exception as e:  # noqa: BLE001
         print(f"  ! github trending 抓取失败: {e}", file=sys.stderr)
         return []
-    items = []
-    for block in re.findall(r'<article class="Box-row">(.*?)</article>', page, re.S):
-        m = re.search(r'<h2[^>]*>.*?href="/([^/"]+/[^/"]+)"', block, re.S)
-        if not m:
-            continue
-        full_name = m.group(1)
-        dm = re.search(r'<p class="col-9[^"]*">\s*(.*?)\s*</p>', block, re.S)
-        desc = re.sub(r'<[^>]+>', '', dm.group(1)).strip() if dm else ""
-        lm = re.search(r'itemprop="programmingLanguage">([^<]+)</span>', block)
-        lang = lm.group(1) if lm else ""
-        sm = re.search(r'([\d,]+)\s+stars\s+today', block)
-        stars_today = int(sm.group(1).replace(",", "")) if sm else 0
-        tm = re.search(r'href="/[^"]+/stargazers[^"]*"[^>]*>\s*<svg[^>]*>.*?</svg>\s*([\d,]+)', block, re.S)
-        total_stars = int(tm.group(1).replace(",", "")) if tm else 0
-        items.append({
-            "source": "github_trending",
-            "full_name": full_name,
-            "description": html.unescape(desc)[:300],
-            "stars": total_stars,
-            "stars_today": stars_today,
-            "url": f"https://github.com/{full_name}",
-            "language": lang,
-            "topics": [],
-            "github_kind": "trending",
-        })
-    items.sort(key=lambda x: x["stars_today"], reverse=True)
+    items = _parse_github_trending(page)
     print(f"  GitHub Trending: {len(items)} 条 → 取前 {min(limit, len(items))}", file=sys.stderr)
     return items[:limit]
 
@@ -456,6 +530,44 @@ def collect_hf_papers(cfg: dict) -> list[dict]:
     return items[:limit]
 
 
+def collection_quality_warnings(cfg: dict, raw: dict) -> list[str]:
+    """Return non-blocking warnings for missing, malformed, or oversized feeds."""
+    limits = {
+        "github_new": int(cfg.get("github", {}).get("limit", 30)),
+        "github_trending": int(cfg.get("github", {}).get("trending_limit", 15)),
+        "hf_papers": int(cfg.get("hf_papers", {}).get("limit", 15)),
+        "hn": int(cfg.get("hn", {}).get("limit", 20)),
+        "reddit": int(cfg.get("reddit", {}).get("limit", 20)),
+    }
+    warnings = []
+    for source, limit in limits.items():
+        items = raw.get(source)
+        if not isinstance(items, list):
+            warnings.append(f"{source}: result is not a list")
+            continue
+        if not items:
+            warnings.append(f"{source}: no items collected")
+        if len(items) > limit:
+            warnings.append(f"{source}: {len(items)} items exceeds configured limit {limit}")
+        seen = set()
+        for item in items:
+            if not isinstance(item, dict):
+                warnings.append(f"{source}: non-object item")
+                continue
+            identity = item.get("url") or item.get("full_name") or item.get("title")
+            if identity and identity in seen:
+                warnings.append(f"{source}: duplicate item {identity}")
+                break
+            if identity:
+                seen.add(identity)
+    trending = raw.get("github_trending", [])
+    if isinstance(trending, list):
+        stars_today = [item.get("stars_today", 0) for item in trending if isinstance(item, dict)]
+        if stars_today != sorted(stars_today, reverse=True):
+            warnings.append("github_trending: items are not sorted by stars_today")
+    return warnings
+
+
 # ───────────────────────── 主流程 ─────────────────────────
 
 def main() -> None:
@@ -499,6 +611,8 @@ def main() -> None:
 
     raw = {"date": today, "github_new": github_new, "github_trending": github_trending,
            "hf_papers": hf_items, "hn": hn_items, "reddit": reddit_items}
+    for warning in collection_quality_warnings(cfg, raw):
+        print(f"  ! 质量检查: {warning}", file=sys.stderr)
     out = RAW_DIR / f"{today}.json"
     out.write_text(json.dumps(raw, ensure_ascii=False, indent=2), encoding="utf-8")
     total = len(github_new) + len(github_trending) + len(hf_items) + len(hn_items) + len(reddit_items)
