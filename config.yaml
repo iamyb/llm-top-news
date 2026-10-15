@@ -2,19 +2,19 @@
 # 采集参数保持在文件顶层; sources/sections 驱动站点板块和展示
 
 sources:
+  github_trending:
+    label: GitHub Trending
+    type: repository
+    collector: github_trending
+    section: github
+    color: "#0f766e"
+    order: 1
   github_new:
     label: GitHub New
     type: repository
     collector: github_search
     section: github
     color: "#2563eb"
-    order: 1
-  github_active:
-    label: GitHub Active
-    type: repository
-    collector: github_search
-    section: github
-    color: "#0f766e"
     order: 2
   # pi:
   #   label: pi.dev
@@ -44,12 +44,12 @@ sources:
   #   section: harness
   #   color: "#2563eb"
   #   order: 5
-  hf_papers:
-    label: HF Papers
-    type: paper
-    collector: hf_daily_papers
-    section: papers
-    color: "#8b5cf6"
+  reddit:
+    label: Reddit
+    type: community
+    collector: reddit_rss
+    section: community
+    color: "#ea580c"
     order: 3
   hn:
     label: Hacker News
@@ -57,13 +57,13 @@ sources:
     collector: hn_algolia
     section: community
     color: "#d97706"
-    order: 6
-  reddit:
-    label: Reddit
-    type: community
-    collector: reddit_rss
-    section: community
-    color: "#ea580c"
+    order: 4
+  hf_papers:
+    label: HF Papers
+    type: paper
+    collector: hf_daily_papers
+    section: papers
+    color: "#8b5cf6"
     order: 5
 
 sections:
@@ -71,8 +71,8 @@ sections:
     label: GitHub
     order: 1
     sources:
+      - github_trending
       - github_new
-      - github_active
   # harness:
   #   label: Harness
   #   order: 2
@@ -81,6 +81,12 @@ sections:
   #     - deepseek_harness
   #     - opencode
   #     - vscode
+  community:
+    label: Community Pulse
+    order: 2
+    sources:
+      - reddit
+      - hn
   papers:
     label: Papers
     order: 3
@@ -90,24 +96,18 @@ sections:
     label: LLM Applications
     order: 4
     sources: []
-  community:
-    label: Community Pulse
-    order: 4
-    sources:
-      - reddit
-      - hn
 
 
 github:
   # Search API: 近 N 天新建 + 按 star 排序（新晋 star 榜）
   lookback_days: 7
-  # 存量项目: 最近有 push 且已有一定 star 的活跃项目
-  active_lookback_days: 14
-  active_min_stars: 100
-  active_limit: 15
   limit: 30
   # 连续 GitHub Search 请求之间的等待秒数; 设为 0 可关闭
   request_delay_seconds: 6
+  # Trending: 抓 github.com/trending?since=daily HTML 页（无官方 API）。
+  # github.com 直连被墙, 需代理（可被环境变量 GITHUB_PROXY 覆盖, 留空则直连）
+  proxy: "http://127.0.0.1:10809"
+  trending_limit: 15
   topics:
     - llm
     - llm-agents
@@ -137,163 +137,8 @@ hf_papers:
   limit: 15         # 按 upvote 取前 N
 
 hn:
-  # Firebase Top Stories 前 100 → 时间/分数过滤 → 关键词预过滤 → MiniLM 排序取 Top-K
-  daily_min_points: 30
-  weekly_min_points: 100
-  candidate_limit: 100
-  semantic_filter:
-    enabled: true
-    model: sentence-transformers/all-MiniLM-L6-v2
-    top_k: 10
-    # 软阈值: 只有分数 >= min_score 的 Top-K 条目才入选, 宁缺毋滥
-    min_score: 0.20
-    query: "News about large language models, generative AI, AI agents, RAG, MCP, embeddings, model training, inference, coding assistants, and AI developer tools."
-  # 关键词预过滤: 小写子串匹配 (标题+正文+URL), 命中任一即通过, 再进 MiniLM 排序
-  pre_filter_keywords:
-    # 模型名
-    - "llm"
-    - "gpt"
-    - "chatgpt"
-    - "claude"
-    - "opus"
-    - "codex"
-    - "gemini"
-    - "grok"
-    - "llama"
-    - "mistral"
-    - "mixtral"
-    - "qwen"
-    - "deepseek"
-    - "kimi"
-    - "glm"
-    - "ernie"
-    - "yi "
-    - "phi-3"
-    - "gemma"
-    - "falcon"
-    - "command-r"
-    - "copilot"
-    - "cursor"
-    - "windsurf"
-    - "perplexity"
-    - "midjourney"
-    - "stable diffusion"
-    - "sora"
-    - "veo"
-    - "imagen"
-    - "dalle"
-    - "whisper"
-    # 公司/组织
-    - "openai"
-    - "anthropic"
-    - "deepmind"
-    - "meta ai"
-    - "xai"
-    - "mistral ai"
-    - "cohere"
-    - "hugging face"
-    - "huggingface"
-    - "stability ai"
-    - "runway"
-    - "elevenlabs"
-    - "scale ai"
-    - "nvidia"
-    - "ai21"
-    - "inflection"
-    - "character.ai"
-    - "suno"
-    - "black forest labs"
-    # 技术术语
-    - "large language model"
-    - "language model"
-    - "transformer"
-    - "generative ai"
-    - "genai"
-    - "gen ai"
-    - "machine learning"
-    - "deep learning"
-    - "neural network"
-    - "neural net"
-    - "artificial intelligence"
-    - " ai "
-    - "ai model"
-    - "ai agent"
-    - "agentic"
-    - "agent"
-    - "rag"
-    - "retrieval-augmented"
-    - "mcp"
-    - "model context protocol"
-    - "prompt"
-    - "prompting"
-    - "inference"
-    - "fine-tun"
-    - "finetun"
-    - "pretrain"
-    - "pre-train"
-    - "rlhf"
-    - "reinforcement learning"
-    - "embedding"
-    - "token"
-    - "tokenizer"
-    - "context window"
-    - "quantiz"
-    - "lora"
-    - "peft"
-    - "distill"
-    - "benchmark"
-    - "mmlu"
-    - "sota"
-    - "hallucinat"
-    - "jailbreak"
-    - "alignment"
-    - "multimodal"
-    - "vision-language"
-    - "diffusion"
-    - "text-to-image"
-    - "text-to-video"
-    - "text-to-speech"
-    - "speech-to-text"
-    - "function calling"
-    - "tool use"
-    - "reasoning"
-    # 框架/工具/硬件
-    - "pytorch"
-    - "tensorflow"
-    - "jax"
-    - "langchain"
-    - "llamaindex"
-    - "vllm"
-    - "ollama"
-    - "lm studio"
-    - "comfyui"
-    - "diffusers"
-    - "transformers"
-    - "cuda"
-    - "tpu"
-    - "h100"
-    - "a100"
-    - "b200"
-    - "gb200"
-    - "gpu cluster"
-    - "inference engine"
-    - "model serving"
-    - "open weights"
-    - "open-source model"
-    - "open source model"
-    - "weights"
-    - "agi"
-    - "model context protocol"
-    - "LLM inference"
-    - "vLLM"
-    - "Ollama"
-    - "llama.cpp"
-    - "embeddings"
-    - "vector database"
-    - "Claude Code"
-    - "Codex"
-    - "open source model"
-
+  # Firebase Top Stories 按排名取前 N 条, 不做关键词/语义过滤
+  limit: 20
 reddit:
   # 走 RSS 端点 (top/.rss?t=day), 无需 OAuth; 本机直连被墙, 必须配代理
   # 代理地址 = 本机 HTTP 代理（Clash 等）, 留空则跳过 Reddit 采集

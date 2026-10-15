@@ -33,14 +33,14 @@ python pipeline/digest.py --mode weekly # generate weekly digest (merges the las
 python pipeline/site.py                 # rebuild the static site
 ```
 
-HN pulls the first 100 Top Stories, filters by time/score, then runs a `hn.pre_filter_keywords` pre-filter (130+ LLM-related keywords, lowercase substring match) followed by a local `all-MiniLM-L6-v2` semantic ranking. An item is selected only if it passes the pre-filter **and** scores ≥ `min_score`; the top 10 are kept by default. The full candidate list (with scores/ranks/pre-filter flags) is saved to `data/raw/YYYY-MM-DD.hn_candidates.json` for manual recall review. Config lives under `hn.semantic_filter` in `config.yaml`; set `enabled: false` to disable. GitHub Actions caches the Hugging Face model directory, so only the first run downloads the model.
+HN pulls Top Stories by rank and keeps the top `hn.limit` (20 by default) — no keyword pre-filter or semantic ranking. A time filter (lookback days) avoids stale posts when merging weekly. The candidate list is saved to `data/raw/YYYY-MM-DD.hn_candidates.json`.
 
 ## Data sources
 
 | Source | Method | Notes |
 |---|---|---|
 | GitHub | Search API: 10 topics, querying newly created and recently active repos separately (~20 requests), sorted by stars | "New" and "active" boards are shown separately |
-| HN | Firebase Top Stories top 100 → time/score filter → keyword pre-filter → local MiniLM semantic ranking | candidates ≥30 points; selection requires passing the pre-filter and ≥0.20 semantic score; top 10 by default |
+| HN | Firebase Top Stories by rank | top 20 by default (`hn.limit`); no keyword/semantic filtering |
 | Reddit | `r/<sub>/top/.rss?t=day` via proxy, no OAuth needed | 5 subreddits by default (LocalLLaMA, LLMDevs, LocalLLM, Singularity, StableDiffusion); edit the list in `config.yaml`; a proxy is required where reddit.com is blocked |
 | HF Papers | `huggingface.co/api/daily_papers`, sorted by upvotes | daily AI paper picks, top 15 by default (`hf_papers.limit`) |
 

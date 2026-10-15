@@ -9,8 +9,8 @@
 
 数据源（全部限定 LLM/AI 相关, 关键词/阈值见 config.yaml）:
     - GitHub Search API   近 7 天新建 + AI topic/关键词, 按 star 排序（新晋 star 榜）
-    - HN Firebase API     Top Stories 前 100 → 时间/分数过滤 → 关键词预过滤 → MiniLM 排序取 Top-K
-                          完整候选（含分数/排名/预过滤标记）另存 data/raw/YYYY-MM-DD.hn_candidates.json
+    - HN Firebase API     Top Stories 按排名取前 N（默认 20, 不做关键词/语义过滤）
+                          另存 data/raw/YYYY-MM-DD.hn_candidates.json
     - Reddit top RSS      r/<sub>/top/.rss?t=day, 需代理（config.yaml reddit.proxy）, 未配置则跳过
 """
 
@@ -31,8 +31,6 @@ from urllib.parse import urlencode
 from urllib.request import HTTPSHandler, ProxyHandler, Request, build_opener, urlopen
 
 import yaml
-
-from semantic_filter import DEFAULT_QUERY, rank_records
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
@@ -89,6 +87,8 @@ def load_config() -> dict:
     # GitHub Actions 上设 REDDIT_PROXY="" 强制直连（runner 在美国, 无需代理）
     if "REDDIT_PROXY" in os.environ and isinstance(cfg.get("reddit"), dict):
         cfg["reddit"]["proxy"] = os.environ["REDDIT_PROXY"]
+    if "GITHUB_PROXY" in os.environ and isinstance(cfg.get("github"), dict):
+        cfg["github"]["proxy"] = os.environ["GITHUB_PROXY"]
     return cfg
 
 
@@ -102,17 +102,14 @@ def _github_search(q: str, per_page: int) -> list[dict]:
     return data.get("items", [])
 
 
-def collect_github(cfg: dict) -> tuple[list[dict], list[dict]]:
-    """分别采集新建项目榜和近期活跃存量项目榜。
+def collect_github(cfg: dict) -> list[dict]:
+    """采集新建项目榜（近 N 天新建 + AI topic, 按 star 排序）。
 
     GitHub Search 限制: qualifier (topic:/in:) 之间不能用 OR,
-    所以拆成两次查询（单 topic + 单关键词）再合并去重。
+    所以拆成多次查询（单 topic）再合并去重。
     """
     g = cfg["github"]
     cutoff = (datetime.now(timezone.utc) - timedelta(days=g.get("lookback_days", 7))).strftime("%Y-%m-%d")
-    active_cutoff = (datetime.now(timezone.utc) - timedelta(days=g.get("active_lookback_days", 14))).strftime("%Y-%m-%d")
-    active_min_stars = int(g.get("active_min_stars", 100))
-    active_limit = int(g.get("active_limit", 15))
     limit = g.get("limit", 30)
     request_delay = max(0.0, float(g.get("request_delay_seconds", 1.0)))
     search_count = 0
@@ -145,12 +142,53 @@ def collect_github(cfg: dict) -> tuple[list[dict], list[dict]]:
             "github_kind": kind,
         } for item in sorted(seen.values(), key=lambda value: value.get("stargazers_count") or 0, reverse=True)[:per_page]]
 
-    new_items = collect_pool(f"created:>{cutoff}", limit, "new")
-    new_names = {item["full_name"] for item in new_items}
-    active_items = [item for item in collect_pool(
-        f"pushed:>{active_cutoff} stars:>={active_min_stars}", active_limit, "active")
-        if item["full_name"] not in new_names]
-    return new_items, active_items
+    return collect_pool(f"created:>{cutoff}", limit, "new")
+
+
+def collect_github_trending(cfg: dict) -> list[dict]:
+    """抓取 GitHub Trending (daily) HTML 页面, 按 <article> 块解析。
+
+    github.com 无官方 Trending API, 只能抓 HTML; 直连被墙, 需代理
+    （config.yaml github.proxy, 可被 GITHUB_PROXY 覆盖, 留空则直连）。
+    失败时静默降级返回空列表, 不阻塞其他源。
+    """
+    g = cfg["github"]
+    proxy = g.get("proxy") or None
+    limit = int(g.get("trending_limit", 15))
+    url = "https://github.com/trending?since=daily"
+    try:
+        page = _http_get(url, proxy).decode("utf-8", errors="replace")
+    except Exception as e:  # noqa: BLE001
+        print(f"  ! github trending 抓取失败: {e}", file=sys.stderr)
+        return []
+    items = []
+    for block in re.findall(r'<article class="Box-row">(.*?)</article>', page, re.S):
+        m = re.search(r'<h2[^>]*>.*?href="/([^/"]+/[^/"]+)"', block, re.S)
+        if not m:
+            continue
+        full_name = m.group(1)
+        dm = re.search(r'<p class="col-9[^"]*">\s*(.*?)\s*</p>', block, re.S)
+        desc = re.sub(r'<[^>]+>', '', dm.group(1)).strip() if dm else ""
+        lm = re.search(r'itemprop="programmingLanguage">([^<]+)</span>', block)
+        lang = lm.group(1) if lm else ""
+        sm = re.search(r'([\d,]+)\s+stars\s+today', block)
+        stars_today = int(sm.group(1).replace(",", "")) if sm else 0
+        tm = re.search(r'href="/[^"]+/stargazers[^"]*"[^>]*>\s*<svg[^>]*>.*?</svg>\s*([\d,]+)', block, re.S)
+        total_stars = int(tm.group(1).replace(",", "")) if tm else 0
+        items.append({
+            "source": "github_trending",
+            "full_name": full_name,
+            "description": html.unescape(desc)[:300],
+            "stars": total_stars,
+            "stars_today": stars_today,
+            "url": f"https://github.com/{full_name}",
+            "language": lang,
+            "topics": [],
+            "github_kind": "trending",
+        })
+    items.sort(key=lambda x: x["stars_today"], reverse=True)
+    print(f"  GitHub Trending: {len(items)} 条 → 取前 {min(limit, len(items))}", file=sys.stderr)
+    return items[:limit]
 
 
 def collect_github_releases(cfg: dict, source: str) -> list[dict]:
@@ -180,41 +218,27 @@ def collect_github_releases(cfg: dict, source: str) -> list[dict]:
 
 # ───────────────────────── Hacker News ─────────────────────────
 
-def _pre_filter(items: list[dict], keywords: list[str]) -> list[dict]:
-    """关键词预过滤: 小写子串匹配 (标题+正文+URL), 命中任一即通过。
+def collect_hn(cfg: dict, days: int, limit: int) -> tuple[list[dict], list[dict]]:
+    """从 HN Top Stories 按排名取前 N 条（不做关键词/语义过滤）。
 
-    给每条打 pre_filter_passed 标记, 返回通过过滤的条目列表。
-    """
-    kws = [k.lower() for k in keywords if k]
-    passed = []
-    for item in items:
-        story_text = re.sub(r"<[^>]+>", " ", str(item.get("story_text") or ""))
-        text = f"{item.get('title') or ''} {story_text} {item.get('url') or ''}".lower()
-        item["pre_filter_passed"] = any(k in text for k in kws)
-        if item["pre_filter_passed"]:
-            passed.append(item)
-    return passed
-
-
-def collect_hn(cfg: dict, days: int, min_points: int) -> tuple[list[dict], list[dict]]:
-    """从 HN Top Stories 获取候选, 关键词预过滤 + MiniLM 排序取 Top-K。
-
-    返回 (Top-K 选中条目, 全部候选含 minilm_score/minilm_rank/pre_filter_passed)。
+    仅保留时间过滤（回溯 days 天, 周报合并 7 天时避免重复旧帖）。
+    返回 (入选条目, 全部候选)。
     """
     h = cfg["hn"]
     ts = int((datetime.now(timezone.utc) - timedelta(days=days)).timestamp())
-    candidate_limit = int(h.get("candidate_limit", 100))
     story_ids = http_json("https://hacker-news.firebaseio.com/v0/topstories.json")
     if not isinstance(story_ids, list):
         raise RuntimeError("HN topstories API returned an unexpected response")
 
     items = []
-    for story_id in story_ids[:candidate_limit]:
+    for story_id in story_ids:
+        if len(items) >= limit:
+            break
         item = http_json(f"https://hacker-news.firebaseio.com/v0/item/{story_id}.json")
         if not isinstance(item, dict) or item.get("type") != "story":
             continue
         created_timestamp = int(item.get("time") or 0)
-        if created_timestamp <= ts or int(item.get("score") or 0) <= min_points:
+        if created_timestamp <= ts:
             continue
         items.append({
             "source": "hn",
@@ -227,45 +251,8 @@ def collect_hn(cfg: dict, days: int, min_points: int) -> tuple[list[dict], list[
             "story_text": item.get("text") or "",
             "matched_keywords": [],
         })
-    print(f"  HN Top Stories: {len(items)} 条候选", file=sys.stderr)
-
-    # ① 关键词预过滤 (小写子串匹配, 命中任一即通过)
-    keywords = h.get("pre_filter_keywords") or []
-    if keywords:
-        passed = _pre_filter(items, keywords)
-        print(f"  关键词预过滤: {len(items)} → {len(passed)} 条通过", file=sys.stderr)
-    else:
-        for item in items:
-            item["pre_filter_passed"] = True
-        passed = items
-
-    semantic = h.get("semantic_filter", {})
-    if not semantic.get("enabled", False) or not items:
-        return items, items
-
-    # ② MiniLM 对全部候选打分排序 (候选文件保留完整数据供人工审查)
-    top_k = int(semantic.get("top_k", 10))
-    min_score = float(semantic.get("min_score", 0.0))
-    ranked = rank_records(
-        items,
-        top_k=len(items),
-        model_name=semantic.get("model", "sentence-transformers/all-MiniLM-L6-v2"),
-        query=semantic.get("query") or DEFAULT_QUERY,
-    )
-
-    # ③ 入选 = 通过关键词 + 分数 >= min_score, 按分数取前 top_k
-    selected = [
-        item for item in ranked
-        if item["pre_filter_passed"] and item["minilm_score"] >= min_score
-    ][:top_k]
-    selected_ids = {id(item) for item in selected}
-    for item in ranked:
-        item["minilm_relevant"] = id(item) in selected_ids
-        item["classification"] = (
-            "llm_related" if item["minilm_relevant"] else "other"
-        )
-    print(f"  MiniLM 排序: {len(passed)} 条通过预过滤 → 入选 {len(selected)} 条", file=sys.stderr)
-    return selected, ranked
+    print(f"  HN Top Stories: 取前 {len(items)} 条（不做关键词/语义过滤）", file=sys.stderr)
+    return items, items
 
 
 # ───────────────────────── Reddit ─────────────────────────
@@ -484,16 +471,19 @@ def main() -> None:
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     RAW_DIR.mkdir(parents=True, exist_ok=True)
 
-    print("→ GitHub 新建项目榜 + 存量活跃榜")
-    github_new, github_active = collect_github(cfg)
-    print(f"  新建 {len(github_new)} 条, 存量活跃 {len(github_active)} 条")
+    print("→ GitHub 新建项目榜")
+    github_new = collect_github(cfg)
+    print(f"  新建 {len(github_new)} 条")
+
+    print("→ GitHub Trending (daily)")
+    github_trending = collect_github_trending(cfg)
+    print(f"  {len(github_trending)} 条")
 
     # Harness Release sources are temporarily disabled in config.yaml.
 
-    print(f"→ HN 高分帖（回溯 {args.days} 天, ≥{cfg['hn']['daily_min_points']} 分）")
-    hn_items, hn_ranked = collect_hn(cfg, days=args.days, min_points=cfg["hn"]["daily_min_points"])
+    print(f"→ HN Top {cfg['hn'].get('limit', 20)}（回溯 {args.days} 天, 不做关键词/语义过滤）")
+    hn_items, hn_ranked = collect_hn(cfg, days=args.days, limit=int(cfg["hn"].get("limit", 20)))
     print(f"  {len(hn_items)} 条")
-    # 完整候选（含 MiniLM 分数/排名）落盘, 供人工检查召回质量
     candidates_out = RAW_DIR / f"{today}.hn_candidates.json"
     candidates_out.write_text(
         json.dumps(hn_ranked, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -507,11 +497,11 @@ def main() -> None:
     reddit_items = collect_reddit(cfg)
     print(f"  {len(reddit_items)} 条")
 
-    raw = {"date": today, "github_new": github_new, "github_active": github_active,
+    raw = {"date": today, "github_new": github_new, "github_trending": github_trending,
            "hf_papers": hf_items, "hn": hn_items, "reddit": reddit_items}
     out = RAW_DIR / f"{today}.json"
     out.write_text(json.dumps(raw, ensure_ascii=False, indent=2), encoding="utf-8")
-    total = len(github_new) + len(github_active) + len(hf_items) + len(hn_items) + len(reddit_items)
+    total = len(github_new) + len(github_trending) + len(hf_items) + len(hn_items) + len(reddit_items)
     print(f"\n✓ {total} 条快照 → {out.relative_to(ROOT)}")
 
 

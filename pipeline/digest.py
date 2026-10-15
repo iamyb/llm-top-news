@@ -29,21 +29,13 @@ from datetime import datetime, timedelta, timezone
 from difflib import SequenceMatcher
 from pathlib import Path
 
-import yaml
-
 ROOT = Path(__file__).resolve().parent.parent
 RAW_DIR = ROOT / "data" / "raw"
 LOG_DIR = ROOT / "log"
 PROCESSED_FILE = ROOT / "data" / "processed_dates.json"
 SUMMARY_CACHE = ROOT / "data" / "summary_cache.json"
-CONFIG_FILE = ROOT / "config.yaml"
 
 SIMILARITY_THRESHOLD = 0.75  # 标题归一化后判同题的相似度下限
-
-
-def load_config() -> dict:
-    with open(CONFIG_FILE, encoding="utf-8") as f:
-        return yaml.safe_load(f)
 
 
 def load_dotenv() -> None:
@@ -135,7 +127,7 @@ def _norm_title(title: str) -> str:
 
 def _match_key(item: dict) -> str:
     """GitHub 用 repo 短名参与匹配（'vllm-project/vllm' → 'vllm'）, 其余用标题。"""
-    if item["source"] == "github":
+    if item["source"].startswith("github_"):
         return item["full_name"].split("/")[-1]
     return item.get("title") or ""
 
@@ -226,7 +218,8 @@ def render_github(stories: list[dict], source: str, heading: str, top_n: int = 1
             continue
         shown += 1
         lang = f" · `{item['language']}`" if item.get("language") else ""
-        lines.append(f"### {shown}. [{item['full_name']}]({item['url']}) — ⭐ {item['stars']}{lang}")
+        today = f" (+{item['stars_today']} today)" if item.get("stars_today") else ""
+        lines.append(f"### {shown}. [{item['full_name']}]({item['url']}) — ⭐ {item['stars']}{today}{lang}")
         if item.get("description"):
             label = f"GitHub repo {item['full_name']} 的描述"
             lines.append(f"> {llm_summarize(item['description'], label)}")
@@ -312,7 +305,7 @@ def render_cross_source(stories: list[dict], mode: str = "daily") -> list[str]:
         src = " × ".join(s["sources"])
         lines.append(f"### {shown}. {s['title']}  `[{src}]`")
         for item in s["items"]:
-            if item["source"] == "github":
+            if item["source"].startswith("github_"):
                 lines.append(f"  - GitHub: [{item['full_name']}]({item['url']}) ⭐{item['stars']}")
             elif item["source"] == "hf_papers":
                 lines.append(f"  - HF Papers: [{item['title']}]({item['url']}) 👍{item['upvotes']}")
@@ -337,17 +330,18 @@ def render(mode: str, raw: dict, stories: list[dict]) -> str:
         title = f"# LLM Top News 周报 · {iso[0]}-W{iso[1]:02d}"
     lines = [title, ""]
     if mode == "weekly":
-        top = next((s for s in stories if any(i["source"] == "github" for i in s["items"])), None)
-        if top:
-            item = next(i for i in top["items"] if i["source"] == "github")
+        gh_items = [i for s in stories for i in s["items"]
+                    if i["source"].startswith("github_") and i.get("stars")]
+        if gh_items:
+            item = max(gh_items, key=lambda i: i["stars"])
             lines.append(f"**本周 star 王**: [{item['full_name']}]({item['url']}) ⭐ {item['stars']}")
             lines.append("")
     lines += render_cross_source(stories, mode)
+    lines += render_github(stories, "github_trending", "GitHub Trending 榜")
     lines += render_github(stories, "github_new", "GitHub 新建项目榜")
-    lines += render_github(stories, "github_active", "GitHub 存量活跃榜")
-    lines += render_hf_papers(stories)
     lines += render_reddit(stories)
     lines += render_hn(stories)
+    lines += render_hf_papers(stories)
     lines.append("---")
     lines.append("*llm-top-news 自动生成, 人工终审后发布。*")
     return "\n".join(lines) + "\n"
@@ -369,17 +363,7 @@ def main() -> None:
         print(f"= {key} 已生成过, 跳过（如需重跑请从 data/processed_dates.json 删除该键）")
         return
 
-    # 周报用更高阈值: raw 采集时统一按 daily_min_points 过滤,
-    # 这里对 HN 段按 weekly_min_points 重新过滤（GitHub/Reddit 无分数阈值概念）
-    if args.mode == "weekly":
-        cfg = load_config()
-        min_pts = cfg["hn"].get("weekly_min_points", 100)
-        before = len(raw["hn"])
-        raw["hn"] = [it for it in raw["hn"] if (it.get("points") or 0) >= min_pts]
-        if before != len(raw["hn"]):
-            print(f"  ~ HN 周报阈值 ≥{min_pts} 分: {before} → {len(raw['hn'])} 条")
-
-    all_items = (raw.get("github_new", []) + raw.get("github_active", [])
+    all_items = (raw.get("github_new", []) + raw.get("github_trending", [])
                  + raw.get("github", []) + raw.get("hf_papers", [])
                  + raw.get("hn", []) + raw.get("reddit", []))
     stories = aggregate(all_items)
