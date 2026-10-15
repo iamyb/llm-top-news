@@ -1,14 +1,14 @@
 # llm-top-news
 
-Trending news aggregator for the LLM ecosystem: GitHub rising-star repos × high-scoring HN posts × Reddit hot posts, deduplicated across sources and ranked by heat.
+Trending news aggregator for the LLM ecosystem: GitHub Trending and new repos × Reddit hot posts × high-scoring HN posts × daily papers, deduplicated across sources and ranked by heat.
 
 ## Layout
 
 ```
 config.yaml             # keywords / thresholds / subreddits for all sources (core config)
 pipeline/
-  collect.py            # collection: GitHub Search + HN Top Stories/MiniLM + Reddit top → data/raw/YYYY-MM-DD.json
-  semantic_filter.py    # local MiniLM semantic ranking
+  collect.py            # collection: GitHub Search/Trending + HN Top Stories + Reddit top → data/raw/YYYY-MM-DD.json
+  semantic_filter.py    # optional standalone semantic-ranking tool
   digest.py             # aggregation: cross-source dedup + 🔥 markers + LLM summaries → log/daily/ or log/weekly/
   site.py               # static site generator → site/ (GitHub Pages)
 data/                   # raw snapshots & state
@@ -35,11 +35,14 @@ python pipeline/site.py                 # rebuild the static site
 
 HN pulls Top Stories by rank and keeps the top `hn.limit` (20 by default) — no keyword pre-filter or semantic ranking. A time filter (lookback days) avoids stale posts when merging weekly. The candidate list is saved to `data/raw/YYYY-MM-DD.hn_candidates.json`.
 
+The display order is GitHub Trending, GitHub New, Reddit, Hacker News, then HF Papers. GitHub Trending is scraped from the daily GitHub Trending page; set `github.proxy` locally when GitHub is not directly reachable.
+
 ## Data sources
 
 | Source | Method | Notes |
 |---|---|---|
-| GitHub | Search API: 10 topics, querying newly created and recently active repos separately (~20 requests), sorted by stars | "New" and "active" boards are shown separately |
+| GitHub New | Search API: configured topics, querying recently created repos and sorting by stars | New repositories, controlled by `github.lookback_days` and `github.limit` |
+| GitHub Trending | Daily GitHub Trending HTML page, sorted by stars gained today | Daily trending repositories, controlled by `github.trending_limit`; set `GITHUB_PROXY` locally when needed |
 | HN | Firebase Top Stories by rank | top 20 by default (`hn.limit`); no keyword/semantic filtering |
 | Reddit | `r/<sub>/top/.rss?t=day` via proxy, no OAuth needed | 5 subreddits by default (LocalLLaMA, LLMDevs, LocalLLM, Singularity, StableDiffusion); edit the list in `config.yaml`; a proxy is required where reddit.com is blocked |
 | HF Papers | `huggingface.co/api/daily_papers`, sorted by upvotes | daily AI paper picks, top 15 by default (`hf_papers.limit`) |
