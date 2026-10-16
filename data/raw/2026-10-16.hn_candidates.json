@@ -1,0 +1,222 @@
+[
+  {
+    "source": "hn",
+    "title": "Tesla Roadster",
+    "points": 59,
+    "num_comments": 36,
+    "url": "https://www.tesla.com/roadster",
+    "hn_url": "https://news.ycombinator.com/item?id=50112657",
+    "created_at": "2026-10-16T01:32:45+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Muse Spark Open",
+    "points": 615,
+    "num_comments": 355,
+    "url": "https://research.meta.ai/blog/muse-spark-open",
+    "hn_url": "https://news.ycombinator.com/item?id=50107379",
+    "created_at": "2026-10-15T17:47:39+00:00",
+    "story_text": "<a href=\"https:&#x2F;&#x2F;dev.meta.ai&#x2F;resources&#x2F;blog&#x2F;build-with-muse-spark-open\" rel=\"nofollow\">https:&#x2F;&#x2F;dev.meta.ai&#x2F;resources&#x2F;blog&#x2F;build-with-muse-spark-ope...</a><p><a href=\"https:&#x2F;&#x2F;huggingface.co&#x2F;meta-models&#x2F;Muse-Spark-Open-816B-A42B\" rel=\"nofollow\">https:&#x2F;&#x2F;huggingface.co&#x2F;meta-models&#x2F;Muse-Spark-Open-816B-A42B</a><p><a href=\"https:&#x2F;&#x2F;9to5mac.com&#x2F;2026&#x2F;10&#x2F;15&#x2F;meta-launches-new-muse-spark-open-model-optimized-to-run-on-mac-studio&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;9to5mac.com&#x2F;2026&#x2F;10&#x2F;15&#x2F;meta-launches-new-muse-spark-...</a>",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "RPKI now protects 70% of internet routes",
+    "points": 27,
+    "num_comments": 4,
+    "url": "https://ipinfo.io/blog/rpki-protects-70-internet-routes",
+    "hn_url": "https://news.ycombinator.com/item?id=50112330",
+    "created_at": "2026-10-16T00:52:35+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "What I Self-Host",
+    "points": 268,
+    "num_comments": 170,
+    "url": "https://viceconsole.fyi/blog/2026/10/10/what-i-self-host/",
+    "hn_url": "https://news.ycombinator.com/item?id=50109715",
+    "created_at": "2026-10-15T20:23:25+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Neural networks are clean",
+    "points": 503,
+    "num_comments": 198,
+    "url": "https://already-clean.goodfire.com/",
+    "hn_url": "https://news.ycombinator.com/item?id=50105647",
+    "created_at": "2026-10-15T16:04:01+00:00",
+    "story_text": "<a href=\"https:&#x2F;&#x2F;twitter.com&#x2F;nickcammarata&#x2F;status&#x2F;2110757819427574056\" rel=\"nofollow\">https:&#x2F;&#x2F;twitter.com&#x2F;nickcammarata&#x2F;status&#x2F;2110757819427574056</a>",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Business accounts will consent to Meta scraping their websites Starting Oct. 30",
+    "points": 29,
+    "num_comments": 3,
+    "url": "https://www.niemanlab.org/2026/10/metas-new-commercial-terms-will-allow-the-scraping-of-news-sites-legal-experts-say/",
+    "hn_url": "https://news.ycombinator.com/item?id=50111852",
+    "created_at": "2026-10-15T23:37:42+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Someone on Torrent Sites Kept Fucking with My Sonarr",
+    "points": 234,
+    "num_comments": 105,
+    "url": "https://thereallo.dev/blog/someone-on-torrent-sites-kept-fucking-with-my-sonarr-setup",
+    "hn_url": "https://news.ycombinator.com/item?id=50108872",
+    "created_at": "2026-10-15T19:21:38+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Wayland desktop for Linux with skeuomorphic design",
+    "points": 505,
+    "num_comments": 201,
+    "url": "https://github.com/fyzugx/DEsk",
+    "hn_url": "https://news.ycombinator.com/item?id=50103338",
+    "created_at": "2026-10-15T13:23:44+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "BeBox is a Haiku application that emulates Be Inc.'s BeBox",
+    "points": 21,
+    "num_comments": 7,
+    "url": "https://github.com/johnrash/bebox",
+    "hn_url": "https://news.ycombinator.com/item?id=50111742",
+    "created_at": "2026-10-15T23:22:53+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Jev meets the Trolley Problem",
+    "points": 307,
+    "num_comments": 149,
+    "url": "https://zachlandes.com/trolley-problem/",
+    "hn_url": "https://news.ycombinator.com/item?id=50106023",
+    "created_at": "2026-10-15T16:24:52+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "AdFection: Targeted ads turned into a pipeline for zero-click mercenary spyware",
+    "points": 393,
+    "num_comments": 557,
+    "url": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
+    "hn_url": "https://news.ycombinator.com/item?id=50101813",
+    "created_at": "2026-10-15T10:43:36+00:00",
+    "story_text": "<a href=\"https:&#x2F;&#x2F;www.theguardian.com&#x2F;technology&#x2F;2026&#x2F;oct&#x2F;15&#x2F;israeli-firm-digital-ads-enabling-installation-of-zero-click-spyware-researchers-say\" rel=\"nofollow\">https:&#x2F;&#x2F;www.theguardian.com&#x2F;technology&#x2F;2026&#x2F;oct&#x2F;15&#x2F;israeli-f...</a><p><a href=\"https:&#x2F;&#x2F;www.theverge.com&#x2F;tech&#x2F;1011956&#x2F;discover-tech-zero-click-ads-spyware\" rel=\"nofollow\">https:&#x2F;&#x2F;www.theverge.com&#x2F;tech&#x2F;1011956&#x2F;discover-tech-zero-cli...</a>",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "New Withings Users Must Pay $99/Year for Apple Health Syncing",
+    "points": 161,
+    "num_comments": 128,
+    "url": "https://support.withings.com/hc/en-us/community/posts/51887047154577-Unacceptable-Apple-Health-Sync-is-now-behind-a-99-year-paywall-for-new-accounts",
+    "hn_url": "https://news.ycombinator.com/item?id=50109375",
+    "created_at": "2026-10-15T19:55:49+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Krea 3 – An image model built for editing at scale",
+    "points": 250,
+    "num_comments": 83,
+    "url": "https://www.krea.ai/krea-3",
+    "hn_url": "https://news.ycombinator.com/item?id=50105648",
+    "created_at": "2026-10-15T16:04:05+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Celebrating 70 Years of Fortran",
+    "points": 218,
+    "num_comments": 95,
+    "url": "https://fortran-lang.org/news/2026/09-15-Fortran-birthday/",
+    "hn_url": "https://news.ycombinator.com/item?id=50104726",
+    "created_at": "2026-10-15T15:03:17+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "E Ink Kaleido 4",
+    "points": 131,
+    "num_comments": 75,
+    "url": "https://www.eink.com/news/detail/EInk-Launches-Latest-Version-of-Color-ePaper-Platform-E-Ink-Kaleido-4",
+    "hn_url": "https://news.ycombinator.com/item?id=50108229",
+    "created_at": "2026-10-15T18:38:16+00:00",
+    "story_text": "<a href=\"https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20261015180401&#x2F;https:&#x2F;&#x2F;www.eink.com&#x2F;news&#x2F;detail&#x2F;EInk-Launches-Latest-Version-of-Color-ePaper-Platform-E-Ink-Kaleido-4\" rel=\"nofollow\">https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20261015180401&#x2F;https:&#x2F;&#x2F;www.eink....</a>",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Libreboot 26.10 \"Ominous Olive\" released with UEFI, Chromebook support",
+    "points": 253,
+    "num_comments": 153,
+    "url": "https://libreboot.org/news/libreboot2610.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50102923",
+    "created_at": "2026-10-15T12:52:16+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "U.K. Sanctions Cryptomus for RU Money Laundering",
+    "points": 16,
+    "num_comments": 3,
+    "url": "https://krebsonsecurity.com/2026/10/u-k-sanctions-cryptomus-for-ru-money-laundering/",
+    "hn_url": "https://news.ycombinator.com/item?id=50111708",
+    "created_at": "2026-10-15T23:17:50+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Using AI to reverse engineer hardware",
+    "points": 113,
+    "num_comments": 111,
+    "url": "https://blogs.gnome.org/uraeus/2026/10/15/aiandreverseengineerhardware/",
+    "hn_url": "https://news.ycombinator.com/item?id=50104299",
+    "created_at": "2026-10-15T14:35:15+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Show HN: Unfenced – Land for sale that borders public land",
+    "points": 258,
+    "num_comments": 183,
+    "url": "https://unfenced.land/",
+    "hn_url": "https://news.ycombinator.com/item?id=50102247",
+    "created_at": "2026-10-15T11:38:57+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "An Apology",
+    "points": 110,
+    "num_comments": 123,
+    "url": "https://www.elevationlab.com/blogs/news/an-apology",
+    "hn_url": "https://news.ycombinator.com/item?id=50099121",
+    "created_at": "2026-10-15T04:23:27+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  }
+]
