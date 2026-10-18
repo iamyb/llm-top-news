@@ -1,0 +1,222 @@
+[
+  {
+    "source": "hn",
+    "title": "DeepSeek-v4.1-Flash-1017",
+    "points": 699,
+    "num_comments": 588,
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "hn_url": "https://news.ycombinator.com/item?id=50129045",
+    "created_at": "2026-10-17T08:21:25+00:00",
+    "story_text": "<a href=\"https:&#x2F;&#x2F;api-docs.deepseek.com&#x2F;news&#x2F;news261017&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;api-docs.deepseek.com&#x2F;news&#x2F;news261017&#x2F;</a><p><a href=\"https:&#x2F;&#x2F;openrouter.ai&#x2F;deepseek&#x2F;deepseek-v4.1-flash-1017\" rel=\"nofollow\">https:&#x2F;&#x2F;openrouter.ai&#x2F;deepseek&#x2F;deepseek-v4.1-flash-1017</a>",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Pele – Mermaid diagrams as themeable SVG",
+    "points": 233,
+    "num_comments": 26,
+    "url": "https://pele.run/",
+    "hn_url": "https://news.ycombinator.com/item?id=50132193",
+    "created_at": "2026-10-17T15:55:09+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Making chicken transparent using Dorito dust",
+    "points": 255,
+    "num_comments": 66,
+    "url": "https://chillphysicsenjoyer.substack.com/p/making-chicken-transparent-using",
+    "hn_url": "https://news.ycombinator.com/item?id=50131213",
+    "created_at": "2026-10-17T13:55:28+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Gold is now the top U.S. export",
+    "points": 234,
+    "num_comments": 120,
+    "url": "https://www.numismaticnews.net/gold-now-top-u-s-export",
+    "hn_url": "https://news.ycombinator.com/item?id=50132870",
+    "created_at": "2026-10-17T17:06:07+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "NY announces game ownership bill requiring ownership rather than licensing",
+    "points": 27,
+    "num_comments": 10,
+    "url": "https://www.tomshardware.com/video-games/new-york-rep-announces-game-ownership-bill-that-would-require-consumer-ownership-rather-than-sale-of-licenses-would-also-require-publishers-to-keep-the-game-functional-after-support-ends",
+    "hn_url": "https://news.ycombinator.com/item?id=50136536",
+    "created_at": "2026-10-18T00:14:22+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Chrome and Edge are removing XSLT: what breaks and what does not",
+    "points": 85,
+    "num_comments": 82,
+    "url": "https://doctor-seo.net/en/blog/news/chrome-edge-removing-xslt/",
+    "hn_url": "https://news.ycombinator.com/item?id=50134617",
+    "created_at": "2026-10-17T20:07:33+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Source code of the Estonian online voting system",
+    "points": 167,
+    "num_comments": 137,
+    "url": "https://github.com/valimised/ivxv",
+    "hn_url": "https://news.ycombinator.com/item?id=50127586",
+    "created_at": "2026-10-17T03:18:39+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Show HN: High-quality duck audio synthesizer",
+    "points": 85,
+    "num_comments": 24,
+    "url": "https://celphase.github.io/duck-pond/",
+    "hn_url": "https://news.ycombinator.com/item?id=50131006",
+    "created_at": "2026-10-17T13:28:46+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Solar surpasses nuclear power globally for first time",
+    "points": 481,
+    "num_comments": 305,
+    "url": "https://www.pv-magazine.com/2026/09/29/solar-surpasses-nuclear-power-globally-for-first-time/",
+    "hn_url": "https://news.ycombinator.com/item?id=50131256",
+    "created_at": "2026-10-17T14:01:01+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "I Became a Citizen of Japan",
+    "points": 148,
+    "num_comments": 68,
+    "url": "https://www.derekwessman.com/blog-1/natural",
+    "hn_url": "https://news.ycombinator.com/item?id=50133150",
+    "created_at": "2026-10-17T17:36:17+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Codex Desktop continuously generates Crashpad pending dumps",
+    "points": 69,
+    "num_comments": 30,
+    "url": "https://github.com/openai/codex/issues/25921",
+    "hn_url": "https://news.ycombinator.com/item?id=50133231",
+    "created_at": "2026-10-17T17:45:08+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "A skeptic's first contact with Kubernetes (2024)",
+    "points": 85,
+    "num_comments": 45,
+    "url": "https://blog.davidv.dev/posts/first-contact-with-k8s/",
+    "hn_url": "https://news.ycombinator.com/item?id=50127572",
+    "created_at": "2026-10-17T03:16:25+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Show HN: Esp32sim – Run ESP32 firmware in the browser",
+    "points": 124,
+    "num_comments": 11,
+    "url": "https://github.com/mikroverk/esp32sim",
+    "hn_url": "https://news.ycombinator.com/item?id=50131189",
+    "created_at": "2026-10-17T13:51:08+00:00",
+    "story_text": "Hi HN,<p>I’ve been working on esp32sim, an open-source ESP32 emulator that runs in the browser.<p>The fun part of the demo is that there is no ESP32 involved — the firmware is executing in the emulator.<p>The goal is to make ESP32 software easier to experiment with, test and simulate without always needing physical hardware connected.<p>Source:\n<a href=\"https:&#x2F;&#x2F;github.com&#x2F;mikroverk&#x2F;esp32sim\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;mikroverk&#x2F;esp32sim</a><p>I made a short video showing it in action:\n<a href=\"https:&#x2F;&#x2F;youtu.be&#x2F;waoWFilTWEc\" rel=\"nofollow\">https:&#x2F;&#x2F;youtu.be&#x2F;waoWFilTWEc</a><p>I’m particularly interested in feedback from embedded developers: what would an emulator like this need to support before you’d actually use it for development, testing or CI?",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "JDK 28",
+    "points": 60,
+    "num_comments": 26,
+    "url": "https://openjdk.org/projects/jdk/28/",
+    "hn_url": "https://news.ycombinator.com/item?id=50135379",
+    "created_at": "2026-10-17T21:37:07+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "OpenCode Hacked: User credentials leaked",
+    "points": 772,
+    "num_comments": 134,
+    "url": "https://twitter.com/opencode/status/2111516673953935833",
+    "hn_url": "https://news.ycombinator.com/item?id=50133401",
+    "created_at": "2026-10-17T18:01:41+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Show HN: Llmspeed – feel how fast a local LLM runs before you buy the hardware",
+    "points": 251,
+    "num_comments": 77,
+    "url": "https://llmspeed.dev/",
+    "hn_url": "https://news.ycombinator.com/item?id=50127979",
+    "created_at": "2026-10-17T04:36:53+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "The future of programming (1982)",
+    "points": 57,
+    "num_comments": 15,
+    "url": "https://dl.acm.org/doi/10.1145/358453.358459",
+    "hn_url": "https://news.ycombinator.com/item?id=50130079",
+    "created_at": "2026-10-17T11:20:52+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Microsoft and CMU team up to train early career software engineers",
+    "points": 58,
+    "num_comments": 71,
+    "url": "https://www.cs.cmu.edu/news/2026/microsoft-cmu-praise",
+    "hn_url": "https://news.ycombinator.com/item?id=50133830",
+    "created_at": "2026-10-17T18:45:07+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Development statistics for the 7.2 kernel",
+    "points": 123,
+    "num_comments": 104,
+    "url": "https://lwn.net/Articles/1088776/",
+    "hn_url": "https://news.ycombinator.com/item?id=50132950",
+    "created_at": "2026-10-17T17:14:12+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "The math that OpenAI keeps for itself",
+    "points": 15,
+    "num_comments": 6,
+    "url": "https://newsletter.danielpaleka.com/p/the-math-that-openai-keeps-for-itself",
+    "hn_url": "https://news.ycombinator.com/item?id=50134211",
+    "created_at": "2026-10-17T19:22:52+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  }
+]
