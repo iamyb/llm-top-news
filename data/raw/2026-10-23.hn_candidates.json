@@ -1,0 +1,222 @@
+[
+  {
+    "source": "hn",
+    "title": "Docker is weird",
+    "points": 128,
+    "num_comments": 56,
+    "url": "https://codeandcake.dev/posts/2026-10-22-docker-is-weird",
+    "hn_url": "https://news.ycombinator.com/item?id=50202681",
+    "created_at": "2026-10-22T23:45:56+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "LLMs are making formal software verification feasible at a much larger scale",
+    "points": 121,
+    "num_comments": 61,
+    "url": "https://www.anthropic.com/research/formal-verification",
+    "hn_url": "https://news.ycombinator.com/item?id=50202217",
+    "created_at": "2026-10-22T22:54:43+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Quad9 (DNS Resolver) to Exit France",
+    "points": 1011,
+    "num_comments": 365,
+    "url": "https://quad9.net/news/blog/au-revoir-france/",
+    "hn_url": "https://news.ycombinator.com/item?id=50195959",
+    "created_at": "2026-10-22T14:32:38+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "The foolishness of \"natural language programming\" (1978)",
+    "points": 26,
+    "num_comments": 20,
+    "url": "https://www.cs.utexas.edu/~EWD/transcriptions/EWD06xx/EWD667.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50203161",
+    "created_at": "2026-10-23T00:52:01+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
+    "points": 310,
+    "num_comments": 162,
+    "url": "https://github.com/NVIDIA/OpenShell",
+    "hn_url": "https://news.ycombinator.com/item?id=50198675",
+    "created_at": "2026-10-22T17:44:06+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Woman faces six years in prison over Cash App account she never opened",
+    "points": 506,
+    "num_comments": 529,
+    "url": "https://www.techspot.com/news/114296-woman-spends-three-nights-jail-faces-six-years.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50194833",
+    "created_at": "2026-10-22T13:11:00+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Every AI model has the same \"controversial\" take on humans",
+    "points": 248,
+    "num_comments": 311,
+    "url": "https://www.modelcompare.ai/blog/ai-models-controversial-take-on-humans",
+    "hn_url": "https://news.ycombinator.com/item?id=50197313",
+    "created_at": "2026-10-22T16:08:00+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "AI compute is the new oil–and needs a new market",
+    "points": 21,
+    "num_comments": 11,
+    "url": "https://www.economist.com/finance-and-economics/2026/10/22/ai-compute-is-the-new-oil-and-needs-a-new-market",
+    "hn_url": "https://news.ycombinator.com/item?id=50202671",
+    "created_at": "2026-10-22T23:45:16+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Getting ready to operate GNU Taler in Germany",
+    "points": 228,
+    "num_comments": 85,
+    "url": "https://www.taler.net/en/news/2026-13.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50197404",
+    "created_at": "2026-10-22T16:14:31+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Run full iOS 16.5 firmware on Android Devices",
+    "points": 328,
+    "num_comments": 125,
+    "url": "https://github.com/oosexgang/hackios-xnu-kernel",
+    "hn_url": "https://news.ycombinator.com/item?id=50196718",
+    "created_at": "2026-10-22T15:26:22+00:00",
+    "story_text": "<a href=\"https:&#x2F;&#x2F;hackios-web.vercel.app&#x2F;en\" rel=\"nofollow\">https:&#x2F;&#x2F;hackios-web.vercel.app&#x2F;en</a>",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Jailbreaking the Switch 2",
+    "points": 728,
+    "num_comments": 253,
+    "url": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",
+    "hn_url": "https://news.ycombinator.com/item?id=50192536",
+    "created_at": "2026-10-22T08:01:52+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Hedra is a 3D open world game I wrote from scratch while in highschool",
+    "points": 138,
+    "num_comments": 29,
+    "url": "https://github.com/maxilevi/project-hedra/tree/pre-ai",
+    "hn_url": "https://news.ycombinator.com/item?id=50199389",
+    "created_at": "2026-10-22T18:44:36+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Mapping the Northern Sky",
+    "points": 16,
+    "num_comments": 4,
+    "url": "https://www.maps.com/star-map-charts-stars-and-constellations-of-northern-hemisphere/",
+    "hn_url": "https://news.ycombinator.com/item?id=50202766",
+    "created_at": "2026-10-22T23:56:39+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "eMudhra to exit global SSL/TLS certificate business",
+    "points": 939,
+    "num_comments": 634,
+    "url": "https://emudhra.com/en/press-release/emudhra-to-exit-global-ssl-tls-certificate-business",
+    "hn_url": "https://news.ycombinator.com/item?id=50195110",
+    "created_at": "2026-10-22T13:33:39+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Tell HN: I unknowingly broke the PHP RCE embargo. I am sorry.",
+    "points": 388,
+    "num_comments": 161,
+    "url": "https://news.ycombinator.com/item?id=50193416",
+    "hn_url": "https://news.ycombinator.com/item?id=50193416",
+    "created_at": "2026-10-22T10:11:44+00:00",
+    "story_text": "I posted here about the then-upcoming PHP RCEs related to CVE-2026-109618 &amp; CVE-2026-109619. I appreciate this has had considerable knock-on effects with the schedule for co-ordinated disclosure, and created additional workload.<p>I am truly sorry. I take full responsibility for my actions.<p>It was not remotely my intention to cause any of the subsequent side effects.<p>At the time of posting, I didn&#x27;t know about any embargo. My contact had told me there was no embargo, and her contact had told her the same thing.<p>As someone who follows the 4-weekly PHP release cycle and compiles it from source, my intention was to alert others in a similar position to be aware of the importance&#x2F;urgency of the updates.<p>That clearly backfired in a pretty wild fashion. I have learned my lesson.",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Jank – The native Clojure dialect with seamless C++ interop",
+    "points": 9,
+    "num_comments": 1,
+    "url": "https://jank-lang.org/",
+    "hn_url": "https://news.ycombinator.com/item?id=50202762",
+    "created_at": "2026-10-22T23:56:36+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Xbox wants you to pay 24 to 40 cents per hour to stream games you bought",
+    "points": 211,
+    "num_comments": 205,
+    "url": "https://arstechnica.com/gaming/2026/10/xbox-wants-you-to-pay-24-to-40-cents-per-hour-to-stream-games-you-already-bought/",
+    "hn_url": "https://news.ycombinator.com/item?id=50194009",
+    "created_at": "2026-10-22T11:42:03+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "AI and the Enclosure of the Scientific Commons",
+    "points": 115,
+    "num_comments": 69,
+    "url": "https://arxiv.org/abs/2610.27251",
+    "hn_url": "https://news.ycombinator.com/item?id=50199230",
+    "created_at": "2026-10-22T18:28:16+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Railpass",
+    "points": 47,
+    "num_comments": 14,
+    "url": "https://train.samismith.com/",
+    "hn_url": "https://news.ycombinator.com/item?id=50201414",
+    "created_at": "2026-10-22T21:38:32+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Faster than earcut: triangulating 3.7M map polygons in 489 ms",
+    "points": 204,
+    "num_comments": 38,
+    "url": "https://globus.software/blog/2026/10/16/cutting-map-polygons/",
+    "hn_url": "https://news.ycombinator.com/item?id=50193170",
+    "created_at": "2026-10-22T09:31:18+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  }
+]
