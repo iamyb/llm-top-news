@@ -1,0 +1,222 @@
+[
+  {
+    "source": "hn",
+    "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
+    "points": 730,
+    "num_comments": 459,
+    "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+    "hn_url": "https://news.ycombinator.com/item?id=50212065",
+    "created_at": "2026-10-23T16:59:08+00:00",
+    "story_text": "<a href=\"https:&#x2F;&#x2F;www.kimi.com&#x2F;code&#x2F;docs&#x2F;en&#x2F;kimi-code&#x2F;models.html\" rel=\"nofollow\">https:&#x2F;&#x2F;www.kimi.com&#x2F;code&#x2F;docs&#x2F;en&#x2F;kimi-code&#x2F;models.html</a><p><a href=\"https:&#x2F;&#x2F;artificialanalysis.ai&#x2F;models&#x2F;kimi-k3-1-pro\" rel=\"nofollow\">https:&#x2F;&#x2F;artificialanalysis.ai&#x2F;models&#x2F;kimi-k3-1-pro</a><p><a href=\"https:&#x2F;&#x2F;www.modelcompare.ai&#x2F;blog&#x2F;china-open-source-ai\" rel=\"nofollow\">https:&#x2F;&#x2F;www.modelcompare.ai&#x2F;blog&#x2F;china-open-source-ai</a>",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Evolving Threat: http2shell is an RCE in node, Python, and more",
+    "points": 81,
+    "num_comments": 32,
+    "url": "https://nitter.click/AikidoSecurity/status/2113759110625906950?__galadriel=lPmlGl9id4oAd5UeBwMhlYKArHyr6lR2IDGujPwB5HV2kQ1aLoPWFd5A9sGuzNcmrp8fUso8qygmHcKTDZ8MNHWqQ3bDJcycV87xp_0VypzQLYj6O_RRHlZuQqj33oASGY2YLSoAiMjeOZN40h7Stf8AG7DPrGZbAPVKUXy36HoMudRbvwF3_r2uYNmfJMhpKzywQDM6Ab8",
+    "hn_url": "https://news.ycombinator.com/item?id=50216791",
+    "created_at": "2026-10-23T23:30:17+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Apple Music 404 Not Found",
+    "points": 596,
+    "num_comments": 193,
+    "url": "https://music.apple.com/this-url-doesnt-exist",
+    "hn_url": "https://news.ycombinator.com/item?id=50207910",
+    "created_at": "2026-10-23T12:28:47+00:00",
+    "story_text": "<a href=\"https:&#x2F;&#x2F;www.macrumors.com&#x2F;2026&#x2F;10&#x2F;23&#x2F;apple-music-has-a-hidden-ipod-you-can-play-with&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.macrumors.com&#x2F;2026&#x2F;10&#x2F;23&#x2F;apple-music-has-a-hidde...</a>",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "CVE Tracker",
+    "points": 109,
+    "num_comments": 39,
+    "url": "https://cve.0xosprey.com/",
+    "hn_url": "https://news.ycombinator.com/item?id=50215530",
+    "created_at": "2026-10-23T21:21:47+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Dessa: the most authentic full-duplex speech model ever built",
+    "points": 237,
+    "num_comments": 100,
+    "url": "https://block.xyz/dessa",
+    "hn_url": "https://news.ycombinator.com/item?id=50213925",
+    "created_at": "2026-10-23T19:09:54+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Today, we hacked what we'd set out to hack: the iPhone",
+    "points": 749,
+    "num_comments": 509,
+    "url": "https://blog.calif.io/p/iphone",
+    "hn_url": "https://news.ycombinator.com/item?id=50211474",
+    "created_at": "2026-10-23T16:21:50+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Show HN: Corgi, a helpful {agent, terminal} multiplexer",
+    "points": 38,
+    "num_comments": 5,
+    "url": "https://corgi.computer/",
+    "hn_url": "https://news.ycombinator.com/item?id=50214373",
+    "created_at": "2026-10-23T19:46:38+00:00",
+    "story_text": "Hey everyone,<p>Inspired by Herdr, I&#x27;ve built an agent multiplexer that I&#x27;ve been using as my daily driver for a few weeks now.<p>I think I improved on the concept in a few ways, focusing on the ergonomics I always wished I had:<p>I show you what the agents are up to, along with a running feed of their activity.\nThere&#x27;s also a simple shortcut (F1) to go to the next unread agent.<p>I use multiple accounts, so I&#x27;ve added unified launcher for Codex&#x2F;Claude Code&#x2F;Pi.\nTheres some careful ergonomics there: fast search and resume over sessions, inline usage tracking etc.<p>Many small quality of life improvements to the terminal experience:\n- Links can be copied with a click, so no need to drag-select over many lines\n- cmd+v just pastes images (even on SSH)\n- images have a thumbnail preview.\n- Built-in CPU&#x2F;Memory&#x2F;GPU usage tracking, broken down by workspace<p>I assume you have access to cheap inference (Luna&#x2F;Haiku&#x2F;etc).\nIt just reuses the agents to organize things for you: what is this http link? what is this worktree about? what is each agent doing? \nIt&#x27;s small but it made my environment feel more cozy.<p>On a personal note, I&#x27;ve been on a frustrating sick leave for a while now.\nI created Corgi to challenge myself, and see if I can go back.\nThe answer is more mixed than I had hoped, but I am happy with the result and thankful for the experience.<p>I hope you like it! a few friends &amp; myself have been using it for a few weeks and it&#x27;s been pretty nice.\nThere&#x27;s still a lot to improve and some rough edges, so feedback would be greatly appreciated.<p>Thank you :)",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Now Google says it might use your Gmail and Google Photos data to target ads",
+    "points": 282,
+    "num_comments": 149,
+    "url": "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update",
+    "hn_url": "https://news.ycombinator.com/item?id=50214218",
+    "created_at": "2026-10-23T19:34:15+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Air Purifiers as White Noise Machines",
+    "points": 64,
+    "num_comments": 96,
+    "url": "https://www.jefftk.com/p/air-purifiers-as-white-noise-machines",
+    "hn_url": "https://news.ycombinator.com/item?id=50212507",
+    "created_at": "2026-10-23T17:28:36+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Rune 1.3: adds TypeScript, a Helix editor, Kitty graphics and OSC-7501",
+    "points": 40,
+    "num_comments": 9,
+    "url": "https://rune.build/blog/rune-1-3-release",
+    "hn_url": "https://news.ycombinator.com/item?id=50214325",
+    "created_at": "2026-10-23T19:42:01+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "No Source Code? No Problem",
+    "points": 34,
+    "num_comments": 30,
+    "url": "https://queue.acm.org/doi/10.1145/945131.945155",
+    "hn_url": "https://news.ycombinator.com/item?id=50214994",
+    "created_at": "2026-10-23T20:38:06+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "A whirlwind tour of systemd-nspawn containers (2025)",
+    "points": 35,
+    "num_comments": 7,
+    "url": "https://quantum5.ca/2025/03/22/whirlwind-tour-of-systemd-nspawn-containers/",
+    "hn_url": "https://news.ycombinator.com/item?id=50214983",
+    "created_at": "2026-10-23T20:37:12+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Mark Zuckerberg Pushed Meta to Shield Him from California's Proposed Wealth Tax",
+    "points": 8,
+    "num_comments": 7,
+    "url": "https://www.nytimes.com/2026/10/21/technology/mark-zuckerberg-meta-california-wealth-tax.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50217587",
+    "created_at": "2026-10-24T01:35:49+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Securing our frontier model training environment",
+    "points": 75,
+    "num_comments": 93,
+    "url": "https://openai.com/index/securing-our-frontier-model-training-environment/",
+    "hn_url": "https://news.ycombinator.com/item?id=50214416",
+    "created_at": "2026-10-23T19:50:56+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "DNS: A Replacement for Finger",
+    "points": 24,
+    "num_comments": 19,
+    "url": "https://altchan.org/sh/42",
+    "hn_url": "https://news.ycombinator.com/item?id=50213791",
+    "created_at": "2026-10-23T19:00:04+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Animations for System Builders",
+    "points": 35,
+    "num_comments": 3,
+    "url": "https://brooker.co.za/blog/2026/10/23/animations.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50212124",
+    "created_at": "2026-10-23T17:02:24+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Reforming English Spelling",
+    "points": 26,
+    "num_comments": 81,
+    "url": "https://blog.oup.com/2026/10/reforming-english-spelling/",
+    "hn_url": "https://news.ycombinator.com/item?id=50211084",
+    "created_at": "2026-10-23T15:56:06+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Show HN: Swurf – Swipe through the real web",
+    "points": 59,
+    "num_comments": 29,
+    "url": "https://swurf.org/",
+    "hn_url": "https://news.ycombinator.com/item?id=50205320",
+    "created_at": "2026-10-23T06:54:52+00:00",
+    "story_text": "Hello HN,<p>Swurf allows you to swipe through the real web one page after another. It learns what you like and doesn’t show you the same page twice. The idea came naturally: there’s a seemingly infinite amount of high quality blog posts, random topic rabbit holes, and trending or cool sites that exist which the average person simply will never load on their browser. Swurf solves that by allowing you to rapidly traverse a constantly growing and learning feed of sites that it thinks you’d want to view. Quickly sift through endless pages and find things you like - effortlessly.<p>One of the core drivers for making this project was the desire for real content. The project started as a simple tool for myself to find new and interesting things to learn and read about. Hours spent scrolling on my phone - while it still has its place - is increasingly losing its sense of reward. It’s genuinely hard to put into words exactly how swurfin’ feels but it’s almost refreshing in a sense. I encourage you to try it out and provide feedback. At this time there are no accounts and you can jump in and start swurfin’ immediately. There is a three dot menu button on the bottom right which allows you to submit links, save links, control adult content, and search similar topics. One of the things that’s great about Swurf is that its almost like a group browsing session (though entirely private) where everyone else who is spending time hunting down great reads or solid sites is helping massage the feed for you and you for them - all within your own set of interests.<p>Enjoy and please ask any questions you have as theres plenty of room to grow.",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "German court calls Google aerial imagery 'spying'",
+    "points": 35,
+    "num_comments": 18,
+    "url": "https://www.courthousenews.com/german-court-calls-google-aerial-imagery-spying/",
+    "hn_url": "https://news.ycombinator.com/item?id=50216142",
+    "created_at": "2026-10-23T22:18:49+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "I turned my TV into a Game Boy Color with a Pokemon town as my home screen",
+    "points": 65,
+    "num_comments": 25,
+    "url": "https://twitter.com/robbietilton/status/2111936458923851923",
+    "hn_url": "https://news.ycombinator.com/item?id=50212668",
+    "created_at": "2026-10-23T17:40:22+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  }
+]
