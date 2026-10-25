@@ -1,0 +1,222 @@
+[
+  {
+    "source": "hn",
+    "title": "America Has Lost 200k of Jobs in Media, Film and the Arts. How Much Is AI?",
+    "points": 160,
+    "num_comments": 131,
+    "url": "https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class",
+    "hn_url": "https://news.ycombinator.com/item?id=50226419",
+    "created_at": "2026-10-24T23:11:54+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Roku developer repositories moved from GitHub to GitLab",
+    "points": 266,
+    "num_comments": 175,
+    "url": "https://blog.roku.com/developer/gitlab-move",
+    "hn_url": "https://news.ycombinator.com/item?id=50222622",
+    "created_at": "2026-10-24T16:06:26+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "The Goose Programming Language",
+    "points": 240,
+    "num_comments": 166,
+    "url": "https://aardappel.github.io/goose/",
+    "hn_url": "https://news.ycombinator.com/item?id=50224100",
+    "created_at": "2026-10-24T19:06:55+00:00",
+    "story_text": "<a href=\"https:&#x2F;&#x2F;twitter.com&#x2F;ID_AA_Carmack&#x2F;status&#x2F;2113704269274636568\" rel=\"nofollow\">https:&#x2F;&#x2F;twitter.com&#x2F;ID_AA_Carmack&#x2F;status&#x2F;2113704269274636568</a>",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Listen and read USA nuclear forces Emergency Action Messages, heard on 11175 kHz",
+    "points": 117,
+    "num_comments": 77,
+    "url": "https://missileer.watch",
+    "hn_url": "https://news.ycombinator.com/item?id=50224422",
+    "created_at": "2026-10-24T19:43:27+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "We should be more ambitious with the software we build",
+    "points": 165,
+    "num_comments": 126,
+    "url": "https://danluu.com/ambitious/",
+    "hn_url": "https://news.ycombinator.com/item?id=50225695",
+    "created_at": "2026-10-24T21:47:31+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Why Gopher in 2026?",
+    "points": 22,
+    "num_comments": 7,
+    "url": "https://gopher.muffinlabs.com/sdf.org/users/nervtoji/phlog/001.txt",
+    "hn_url": "https://news.ycombinator.com/item?id=50226577",
+    "created_at": "2026-10-24T23:33:19+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Small Programs and Languages",
+    "points": 39,
+    "num_comments": 1,
+    "url": "https://ratfactor.com/cards/pl-small",
+    "hn_url": "https://news.ycombinator.com/item?id=50225674",
+    "created_at": "2026-10-24T21:44:23+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "SpeedCrunch 1.1",
+    "points": 78,
+    "num_comments": 10,
+    "url": "https://www.speedcrunch.org/",
+    "hn_url": "https://news.ycombinator.com/item?id=50224210",
+    "created_at": "2026-10-24T19:19:43+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Show HN: Steal My Bitcoin",
+    "points": 405,
+    "num_comments": 246,
+    "url": "https://stealmybitcoin.com/",
+    "hn_url": "https://news.ycombinator.com/item?id=50224916",
+    "created_at": "2026-10-24T20:30:31+00:00",
+    "story_text": "Made this because I&#x27;m curious if anyone out there has figured out how to actually use this PHP RCE we spent the last few days panicking over. Have fun!",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "The Importance of Limitations for Creativity and Learning",
+    "points": 27,
+    "num_comments": 6,
+    "url": "https://ratfactor.com/cards/limitations",
+    "hn_url": "https://news.ycombinator.com/item?id=50225663",
+    "created_at": "2026-10-24T21:42:47+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "FreeDNS",
+    "points": 250,
+    "num_comments": 64,
+    "url": "https://freedns.afraid.org/",
+    "hn_url": "https://news.ycombinator.com/item?id=50222133",
+    "created_at": "2026-10-24T15:20:01+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "I don't understand quantum physics (2018)",
+    "points": 282,
+    "num_comments": 215,
+    "url": "https://www.southampton.ac.uk/~doug/quantum_physics/index.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50219666",
+    "created_at": "2026-10-24T09:53:26+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "FindMyWeb: Apple Find My, reverse enginiered",
+    "points": 10,
+    "num_comments": 2,
+    "url": "https://codeberg.org/Misom/FindMyWeb",
+    "hn_url": "https://news.ycombinator.com/item?id=50226646",
+    "created_at": "2026-10-24T23:42:52+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "The St. Helena 5 pence coin shows Jonathan, a roughly 190 year old tortoise",
+    "points": 95,
+    "num_comments": 31,
+    "url": "https://de.numista.com/9866",
+    "hn_url": "https://news.ycombinator.com/item?id=50222927",
+    "created_at": "2026-10-24T16:41:55+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Neural chip decodes interactions between brain regions",
+    "points": 94,
+    "num_comments": 31,
+    "url": "https://actu.epfl.ch/news/neural-chip-decodes-interactions-between-brain-r-2/",
+    "hn_url": "https://news.ycombinator.com/item?id=50222525",
+    "created_at": "2026-10-24T15:57:17+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Node2Shell evolves to HTTP2Shell, blast radius affects many HTTP libs and apps",
+    "points": 278,
+    "num_comments": 139,
+    "url": "https://www.aikido.dev/blog/python-packages-vulnerable-node2shell-brotli-cve-2026-111497",
+    "hn_url": "https://news.ycombinator.com/item?id=50219177",
+    "created_at": "2026-10-24T08:06:39+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "\"Musk\" Documentary Pulled from Almost Every One of 472 Theaters After One Week",
+    "points": 14,
+    "num_comments": 1,
+    "url": "https://www.showbiz411.com/2026/10/23/controversial-musk-documentary-pulled-from-almost-every-one-of-472-theaters-after-one-week-by-newly-sold-bleecker-street-films",
+    "hn_url": "https://news.ycombinator.com/item?id=50227403",
+    "created_at": "2026-10-25T01:40:01+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Bbtree: Fastest Ordered Map",
+    "points": 54,
+    "num_comments": 6,
+    "url": "https://bbtree.xiangpeng.systems/post/",
+    "hn_url": "https://news.ycombinator.com/item?id=50223777",
+    "created_at": "2026-10-24T18:22:14+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "GPU-unlock: FP/BF16 instruction issue rate on Nvidia 3000's cards",
+    "points": 191,
+    "num_comments": 61,
+    "url": "https://github.com/Zagitta/gpu-unlock",
+    "hn_url": "https://news.ycombinator.com/item?id=50219700",
+    "created_at": "2026-10-24T09:58:27+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Google has officially turned these Nest thermostats back into dumb thermostats",
+    "points": 40,
+    "num_comments": 32,
+    "url": "https://www.makeuseof.com/google-nest-thermostats-unsupported/",
+    "hn_url": "https://news.ycombinator.com/item?id=50226434",
+    "created_at": "2026-10-24T23:14:30+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  }
+]
