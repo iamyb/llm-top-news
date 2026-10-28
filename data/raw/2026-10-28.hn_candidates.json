@@ -1,0 +1,222 @@
+[
+  {
+    "source": "hn",
+    "title": "Genie 4",
+    "points": 758,
+    "num_comments": 450,
+    "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+    "hn_url": "https://news.ycombinator.com/item?id=50261319",
+    "created_at": "2026-10-27T16:06:01+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Ghostty 1.4",
+    "points": 806,
+    "num_comments": 243,
+    "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
+    "hn_url": "https://news.ycombinator.com/item?id=50261998",
+    "created_at": "2026-10-27T16:51:22+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Git for US Legislation",
+    "points": 15,
+    "num_comments": 2,
+    "url": "https://lexifina.com/blog/git-for-the-us-code",
+    "hn_url": "https://news.ycombinator.com/item?id=50268380",
+    "created_at": "2026-10-28T01:47:50+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Early progress on accelerating drug development with Claude",
+    "points": 144,
+    "num_comments": 127,
+    "url": "https://www.anthropic.com/research/early-progress-drug-development",
+    "hn_url": "https://news.ycombinator.com/item?id=50265609",
+    "created_at": "2026-10-27T20:50:42+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Tailscale SSH: Investigation and remediation update",
+    "points": 205,
+    "num_comments": 113,
+    "url": "https://tailscale.com/ssh-investigation-update",
+    "hn_url": "https://news.ycombinator.com/item?id=50264857",
+    "created_at": "2026-10-27T19:55:21+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
+    "points": 204,
+    "num_comments": 108,
+    "url": "https://www.brangus.io/survival-llm",
+    "hn_url": "https://news.ycombinator.com/item?id=50264853",
+    "created_at": "2026-10-27T19:55:06+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Raspberry Pi Zero 3W and Pi 4 Model A spotted in device trees",
+    "points": 107,
+    "num_comments": 42,
+    "url": "https://bret.dk/raspberry-pi-zero-3-w-pi-4-model-a/",
+    "hn_url": "https://news.ycombinator.com/item?id=50265594",
+    "created_at": "2026-10-27T20:48:49+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "New 14‑inch MacBook Pro with M6",
+    "points": 293,
+    "num_comments": 371,
+    "url": "https://www.apple.com/in/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/",
+    "hn_url": "https://news.ycombinator.com/item?id=50261352",
+    "created_at": "2026-10-27T16:08:32+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Python's experimental JIT to be removed",
+    "points": 453,
+    "num_comments": 238,
+    "url": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/",
+    "hn_url": "https://news.ycombinator.com/item?id=50257419",
+    "created_at": "2026-10-27T11:17:57+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "New iMac with M6",
+    "points": 314,
+    "num_comments": 383,
+    "url": "https://www.apple.com/imac/",
+    "hn_url": "https://news.ycombinator.com/item?id=50258538",
+    "created_at": "2026-10-27T13:02:02+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Classification of Finite Simple Groups Formalized in Lean",
+    "points": 176,
+    "num_comments": 44,
+    "url": "https://cfsg.axiommath.ai/",
+    "hn_url": "https://news.ycombinator.com/item?id=50261647",
+    "created_at": "2026-10-27T16:29:02+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Radio-tagged Monarch butterflies",
+    "points": 35,
+    "num_comments": 10,
+    "url": "https://news.vt.edu/articles/2026/10/cmi-monarchs.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50262982",
+    "created_at": "2026-10-27T17:48:15+00:00",
+    "story_text": "<a href=\"https:&#x2F;&#x2F;celltracktech.com&#x2F;pages&#x2F;blumorpho\" rel=\"nofollow\">https:&#x2F;&#x2F;celltracktech.com&#x2F;pages&#x2F;blumorpho</a><p><a href=\"https:&#x2F;&#x2F;monarchresearch.org&#x2F;news-and-events&#x2F;monarch-research-launches-blumorpho-tagging-study\" rel=\"nofollow\">https:&#x2F;&#x2F;monarchresearch.org&#x2F;news-and-events&#x2F;monarch-research...</a><p><a href=\"https:&#x2F;&#x2F;monarchwatch.org&#x2F;radiotag&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;monarchwatch.org&#x2F;radiotag&#x2F;</a><p><a href=\"https:&#x2F;&#x2F;swmonarchs.org&#x2F;ProjectMonarch.php\" rel=\"nofollow\">https:&#x2F;&#x2F;swmonarchs.org&#x2F;ProjectMonarch.php</a><p><a href=\"https:&#x2F;&#x2F;blog.cwf-fcf.org&#x2F;index.php&#x2F;en&#x2F;tiny-tracking-tags-for-big-monarch-journeys&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;blog.cwf-fcf.org&#x2F;index.php&#x2F;en&#x2F;tiny-tracking-tags-for...</a>",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Reviewers rarely talk about reliability. Owners bring it up twice as often",
+    "points": 65,
+    "num_comments": 66,
+    "url": "https://www.bettascore.ai/research/reliability-reviewers-vs-owners",
+    "hn_url": "https://news.ycombinator.com/item?id=50266780",
+    "created_at": "2026-10-27T22:31:15+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Hex Raises $100M",
+    "points": 53,
+    "num_comments": 34,
+    "url": "https://hex.tech/blog/hex-new-era/",
+    "hn_url": "https://news.ycombinator.com/item?id=50265413",
+    "created_at": "2026-10-27T20:36:38+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "US Government is hiding a secret court ruling about how it spies on Americans",
+    "points": 805,
+    "num_comments": 293,
+    "url": "https://www.wired.com/story/the-us-government-is-hiding-a-secret-court-ruling-about-how-it-spies-on-americans/",
+    "hn_url": "https://news.ycombinator.com/item?id=50259604",
+    "created_at": "2026-10-27T14:06:42+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Introducing LFM3: Every Modality for Specialized Intelligence",
+    "points": 124,
+    "num_comments": 51,
+    "url": "https://www.liquid.ai/blog/lfm3",
+    "hn_url": "https://news.ycombinator.com/item?id=50262229",
+    "created_at": "2026-10-27T17:04:50+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Four Months of Zig",
+    "points": 79,
+    "num_comments": 49,
+    "url": "https://gracefulliberty.com/articles/four-months-of-zig/",
+    "hn_url": "https://news.ycombinator.com/item?id=50265128",
+    "created_at": "2026-10-27T20:13:27+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Moxnox 1.0: NT-Like, POSIX-Compatible OS Running Atop Btrfs",
+    "points": 15,
+    "num_comments": 3,
+    "url": "https://github.com/maharmstone/moxnox",
+    "hn_url": "https://news.ycombinator.com/item?id=50267569",
+    "created_at": "2026-10-27T23:53:41+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Expanding our partnership with GSA to bring Claude to all levels of government",
+    "points": 25,
+    "num_comments": 13,
+    "url": "https://www.anthropic.com/news/expanding-partnership-gsa",
+    "hn_url": "https://news.ycombinator.com/item?id=50266701",
+    "created_at": "2026-10-27T22:23:37+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Three TLS Bugs in GoAhead",
+    "points": 61,
+    "num_comments": 14,
+    "url": "https://foxio.io/blog/choose-your-backend-three-tls-bugs-in-goahead",
+    "hn_url": "https://news.ycombinator.com/item?id=50263701",
+    "created_at": "2026-10-27T18:33:48+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  }
+]
