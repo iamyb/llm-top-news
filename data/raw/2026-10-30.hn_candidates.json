@@ -1,0 +1,222 @@
+[
+  {
+    "source": "hn",
+    "title": "Binance-hacker-1029 – $5.6B stolen from Binance",
+    "points": 538,
+    "num_comments": 302,
+    "url": "https://arkm.com/explorer/entity/21a94755-f604-45e5-9501-6542e23005e8",
+    "hn_url": "https://news.ycombinator.com/item?id=50296470",
+    "created_at": "2026-10-29T21:38:59+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "We're releasing the weights of Mistral Large 4",
+    "points": 1141,
+    "num_comments": 324,
+    "url": "https://mistral.ai/news/mistral-large-4-oss/",
+    "hn_url": "https://news.ycombinator.com/item?id=50289418",
+    "created_at": "2026-10-29T14:13:21+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "We ran AI agent swarms in Minecraft and Mindustry",
+    "points": 102,
+    "num_comments": 37,
+    "url": "https://labs.ycombinator.com/projects/games/index.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50296486",
+    "created_at": "2026-10-29T21:40:28+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "The Great American Rascal: Tom Sawyer at 150",
+    "points": 23,
+    "num_comments": 5,
+    "url": "https://claremontreviewofbooks.com/the-great-american-rascal/",
+    "hn_url": "https://news.ycombinator.com/item?id=50296947",
+    "created_at": "2026-10-29T22:14:23+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "A tiny world model running games on a Raspberry Pi Pico 2 W",
+    "points": 82,
+    "num_comments": 7,
+    "url": "https://github.com/SheepSeb/tinyworldformer",
+    "hn_url": "https://news.ycombinator.com/item?id=50295450",
+    "created_at": "2026-10-29T20:32:28+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "A Pig, the State, and War: Porco Rosso (Kurenai No Buta) (2014)",
+    "points": 24,
+    "num_comments": 1,
+    "url": "https://journal.animationstudies.org/article/id/66/",
+    "hn_url": "https://news.ycombinator.com/item?id=50297089",
+    "created_at": "2026-10-29T22:26:38+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "H.264 Is Magic (2016)",
+    "points": 305,
+    "num_comments": 118,
+    "url": "https://sidbala.com/h-264-is-magic/",
+    "hn_url": "https://news.ycombinator.com/item?id=50291054",
+    "created_at": "2026-10-29T15:53:03+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "El Niño Is Flooding California's Coasts with the Highest Tides to Come",
+    "points": 38,
+    "num_comments": 5,
+    "url": "https://gizmodo.com/el-nino-is-already-flooding-californias-coasts-and-the-years-highest-tides-havent-arrived-2000832574",
+    "hn_url": "https://news.ycombinator.com/item?id=50296585",
+    "created_at": "2026-10-29T21:48:35+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Patrick Stewart has died",
+    "points": 2177,
+    "num_comments": 438,
+    "url": "https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50294702",
+    "created_at": "2026-10-29T19:41:39+00:00",
+    "story_text": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;y4Egm\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;y4Egm</a><p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Patrick_Stewart\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Patrick_Stewart</a>",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Show HN: Auto Dismiss Mac OS \"Allow <app> to find devices on local networks?\"",
+    "points": 87,
+    "num_comments": 67,
+    "url": "https://github.com/johncassil/dontallow",
+    "hn_url": "https://news.ycombinator.com/item?id=50294506",
+    "created_at": "2026-10-29T19:27:44+00:00",
+    "story_text": "This popup has been a constant gripe of mine for years.  I almost NEVER want to allow this permission and there is no system setting to disable it globally and prevent the popup from interrupting your typing, etc.  This tiny swift app I built will autoclose it in 1&#x2F;4th of a second and leave behind a little notification that it did so.  Would love to hear feedback!",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Show HN: I Turned DOOM into a Transformer",
+    "points": 7,
+    "num_comments": 1,
+    "url": "https://github.com/mottopanikeiku/doomformer",
+    "hn_url": "https://news.ycombinator.com/item?id=50297697",
+    "created_at": "2026-10-29T23:25:46+00:00",
+    "story_text": "Instead of trying to run DOOM on things, I have instead decided to use DOOM (many, many, many doom games actually) to create a transformer. For a lot of the math required I essentially had to use DOOM game mechanics and voodoo dolls (DOOM is turing complete btw) and exchange them with the actual operations, essentially creating an alternative to NumPy (a 65000x slower one). Thus, I am proud to present DOOMFORMER. Here are a list of things DOOMFORMER can do :<p>It can classify MNIST digits, even if you write these digits on the map!<p>It can talk(kinda)<p>You can use it to make decisions, so, it can play DOOM. Yes! You can play DOOM with thousands of DOOM games now! The marine&#x27;s mind can be controlled by DOOM, playing on a map generated by DOOMFORMER. Truly, the possibilities are endless, and even larger-scale training of DOOMFORMER could be done on a measly T4.<p>If anyone would like to help me scale this up and make crazier things, I&#x27;d love to work together.",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Sylphide OS: a general-purpose OS for microcontroller-based computers",
+    "points": 27,
+    "num_comments": 5,
+    "url": "https://projects.freehackers.org/sylphide-os/",
+    "hn_url": "https://news.ycombinator.com/item?id=50295868",
+    "created_at": "2026-10-29T20:59:55+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Proton goes all in on using AI",
+    "points": 25,
+    "num_comments": 7,
+    "url": "https://convo.casa/@b/117525936178835007",
+    "hn_url": "https://news.ycombinator.com/item?id=50296602",
+    "created_at": "2026-10-29T21:49:28+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "LLM Voice",
+    "points": 321,
+    "num_comments": 164,
+    "url": "https://martinfowler.com/bliki/LLM-Voice.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50290177",
+    "created_at": "2026-10-29T14:57:55+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "DoorDash to acquire Instacart",
+    "points": 401,
+    "num_comments": 587,
+    "url": "https://about.doordash.com/en-us/news/doordash-to-acquire-instacart",
+    "hn_url": "https://news.ycombinator.com/item?id=50287919",
+    "created_at": "2026-10-29T12:33:05+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "ElementaryUI – Swift, in the Browser",
+    "points": 42,
+    "num_comments": 8,
+    "url": "https://elementary.codes",
+    "hn_url": "https://news.ycombinator.com/item?id=50295821",
+    "created_at": "2026-10-29T20:56:39+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Chained PHP2Shell exploit roots 25 servers, including US Government servers",
+    "points": 272,
+    "num_comments": 135,
+    "url": "https://dreamgroup.com/blog/chained-php2shell-exploit-roots-25-servers",
+    "hn_url": "https://news.ycombinator.com/item?id=50286987",
+    "created_at": "2026-10-29T10:42:41+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Claude Duet is the first personal-assistant-type harness that feels useful",
+    "points": 91,
+    "num_comments": 70,
+    "url": "https://fig.blue/posts/duet-is-the-future/",
+    "hn_url": "https://news.ycombinator.com/item?id=50292727",
+    "created_at": "2026-10-29T17:24:25+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "The importance of communities around software",
+    "points": 94,
+    "num_comments": 87,
+    "url": "https://lumi.codeberg.page/blog/software-community.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50294507",
+    "created_at": "2026-10-29T19:27:47+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "IgE disruptor for food allergy with Claude-enabled antibody design [pdf]",
+    "points": 33,
+    "num_comments": 21,
+    "url": "https://divergencelabs.com/publications/ige-preprint.pdf",
+    "hn_url": "https://news.ycombinator.com/item?id=50294486",
+    "created_at": "2026-10-29T19:25:48+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  }
+]
