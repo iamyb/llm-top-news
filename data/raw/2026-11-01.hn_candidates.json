@@ -1,0 +1,222 @@
+[
+  {
+    "source": "hn",
+    "title": "HackerTube: YouTube built from videos recommended by HN",
+    "points": 539,
+    "num_comments": 199,
+    "url": "https://karpathy.bearblog.dev/hacker-tube/",
+    "hn_url": "https://news.ycombinator.com/item?id=50319510",
+    "created_at": "2026-10-31T19:56:53+00:00",
+    "story_text": "YouTube-style UI over 6,454 videos sourced from 39,834 HN comments since 2007.<p><a href=\"https:&#x2F;&#x2F;hackertube.org&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;hackertube.org&#x2F;</a>",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8",
+    "points": 275,
+    "num_comments": 135,
+    "url": "https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf",
+    "hn_url": "https://news.ycombinator.com/item?id=50319143",
+    "created_at": "2026-10-31T19:16:30+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "An Italian farmer found some unknown seeds in his attic and planted them",
+    "points": 55,
+    "num_comments": 14,
+    "url": "https://www.smithsonianmag.com/science-nature/italian-farmer-found-unknown-seeds-attic-with-nothing-lose-planted-them-result-biblical-180989644/",
+    "hn_url": "https://news.ycombinator.com/item?id=50320963",
+    "created_at": "2026-10-31T22:41:06+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "When Electric Cars Were for Women",
+    "points": 15,
+    "num_comments": 2,
+    "url": "https://spectrum.ieee.org/early-electric-vehicles",
+    "hn_url": "https://news.ycombinator.com/item?id=50321130",
+    "created_at": "2026-10-31T23:08:12+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "It's the Memory Latency, Stupid",
+    "points": 104,
+    "num_comments": 34,
+    "url": "https://pivotlake.io/blog/its-the-memory-latency-stupid/",
+    "hn_url": "https://news.ycombinator.com/item?id=50318720",
+    "created_at": "2026-10-31T18:38:16+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "With 86% of the words, you might understand only 38% of an anime's lines",
+    "points": 50,
+    "num_comments": 33,
+    "url": "https://learnfromx.com/research/anime-word-coverage-vs-lines-understood",
+    "hn_url": "https://news.ycombinator.com/item?id=50320028",
+    "created_at": "2026-10-31T20:46:39+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench Hard",
+    "points": 20,
+    "num_comments": 5,
+    "url": "https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve",
+    "hn_url": "https://news.ycombinator.com/item?id=50320995",
+    "created_at": "2026-10-31T22:46:12+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "First response from the Project Suncatcher prototype satellite",
+    "points": 13,
+    "num_comments": 5,
+    "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-satellite-response/",
+    "hn_url": "https://news.ycombinator.com/item?id=50313051",
+    "created_at": "2026-10-31T03:54:00+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "The Duty of a Scholar",
+    "points": 77,
+    "num_comments": 26,
+    "url": "https://www.daemonology.net/blog/2026-10-31-The-Duty-of-a-Scholar.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50319061",
+    "created_at": "2026-10-31T19:07:36+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Surviving \"The Graduate\"",
+    "points": 44,
+    "num_comments": 11,
+    "url": "https://www.newyorker.com/culture/the-weekend-essay/dustin-hoffman-on-surviving-the-graduate",
+    "hn_url": "https://news.ycombinator.com/item?id=50319563",
+    "created_at": "2026-10-31T20:02:06+00:00",
+    "story_text": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;Eqn1F\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;Eqn1F</a>",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Molly (Signal fork) has not been updated since 3 months and is vulnerable",
+    "points": 292,
+    "num_comments": 172,
+    "url": "https://piefed.world/post/1503394",
+    "hn_url": "https://news.ycombinator.com/item?id=50314666",
+    "created_at": "2026-10-31T10:23:41+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Altoids Project",
+    "points": 4,
+    "num_comments": 0,
+    "url": "https://uvdn7.github.io/altoids-project/",
+    "hn_url": "https://news.ycombinator.com/item?id=50321048",
+    "created_at": "2026-10-31T22:54:55+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Jepsen: ParticleDB 1.1.4",
+    "points": 175,
+    "num_comments": 95,
+    "url": "https://jepsen.io/analyses/particledb-1.1.4",
+    "hn_url": "https://news.ycombinator.com/item?id=50316100",
+    "created_at": "2026-10-31T13:39:52+00:00",
+    "story_text": "<a href=\"https:&#x2F;&#x2F;github.com&#x2F;jepsen-io&#x2F;particledb\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;jepsen-io&#x2F;particledb</a>",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Show HN: NES Contra (1987) port (ASM –> C and then C –> WebAssembly)",
+    "points": 35,
+    "num_comments": 23,
+    "url": "https://epoyraz.github.io/nes-contra-us/",
+    "hn_url": "https://news.ycombinator.com/item?id=50319169",
+    "created_at": "2026-10-31T19:18:48+00:00",
+    "story_text": "Based on vermiceli&#x27;s annotated disassembly of Contra: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;vermiceli&#x2F;nes-contra-us\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;vermiceli&#x2F;nes-contra-us</a>. Thanks for the great work.<p>I ported it in two steps. First to C: the game logic is translated routine by routine from the 6502 assembly, and checked frame by frame against the original in the Mesen emulator. Then the C code to WebAssembly so it runs in the browser.<p>The cherry on top: online multiplayer, so two players can play co-op over the internet.<p>Source: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;epoyraz&#x2F;nes-contra-us\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;epoyraz&#x2F;nes-contra-us</a>",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Do the math: How we took over ChatGPT accounts",
+    "points": 297,
+    "num_comments": 144,
+    "url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
+    "hn_url": "https://news.ycombinator.com/item?id=50314699",
+    "created_at": "2026-10-31T10:30:11+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Show HN: A language model that lives in a boot sector",
+    "points": 46,
+    "num_comments": 0,
+    "url": "https://github.com/kerlenton/bootgpt",
+    "hn_url": "https://news.ycombinator.com/item?id=50315782",
+    "created_at": "2026-10-31T12:58:29+00:00",
+    "story_text": "All the ideas came from the boot sector demo scene where people had been writing chess and BASIC games in 512 bytes, even a C compiler. I wondered what one can do using a neural network instead of a program and generating boot logs for non-existent hardware was something fun to try.<p>Entire inference engine is 510 bytes of MBR, weights, vocab, and strings reside in the sectors following MBR. Small char-level neural network was trained on dmesg generated by machine, so machine produces Linux boot messages infinitely.<p>train.py performs precisely the same integer arithmetic operations as the asm code does and thus produces an output identical character-by-character to the one produced by QEMU. The difference analysis revealed my favorite bug. The characters at the beginning matched those generated by the simulator, but then the output diverged. I retrieved the hidden layer via QEMU’s debug port and compared the neurons&#x27; values with those of the simulator, one neuron at a time. Only the value of the first neuron was correct. The activation involves idiv, and idiv stores its remainder in edx. The pointer to the biases table was stored in edx, which resulted in the first neuron being biased correctly and the following ones using garbage. Now the bias&#x27; address is determined from the loop counter, and no pointers have to survive the division. Another bug I found simply by looking at the code before I did my first run-through: the BIOS print routine zeros out bx, but bx contains the predicted character number. This explains the push and pop of bx surrounding the print.<p>sectorllm is the most similar to my project, as it runs an actual 5-layer llama2 with attention mechanism in just 1.2K of assembly code. It is the trade-off in the opposite direction, as my engine needs to fit into one sector and therefore my network has just one hidden layer of int8 operations for dreaming the dmesg.",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Anthropic blocks users for anything touching training larger models",
+    "points": 153,
+    "num_comments": 54,
+    "url": "https://twitter.com/jiahaoshao1/status/2116475922190922088",
+    "hn_url": "https://news.ycombinator.com/item?id=50319358",
+    "created_at": "2026-10-31T19:39:19+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Distributed Proofreaders",
+    "points": 21,
+    "num_comments": 1,
+    "url": "https://www.pgdp.net/c/",
+    "hn_url": "https://news.ycombinator.com/item?id=50320137",
+    "created_at": "2026-10-31T20:56:12+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Switch Lowering in GCC",
+    "points": 196,
+    "num_comments": 38,
+    "url": "https://xoranth.net/gcc-switch/",
+    "hn_url": "https://news.ycombinator.com/item?id=50314085",
+    "created_at": "2026-10-31T08:02:26+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Digital minimalism",
+    "points": 302,
+    "num_comments": 223,
+    "url": "https://vitalik.eth.limo/general/2026/10/31/digital_minimalism.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50313661",
+    "created_at": "2026-10-31T06:16:36+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  }
+]
