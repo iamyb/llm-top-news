@@ -1,0 +1,222 @@
+[
+  {
+    "source": "hn",
+    "title": "Show HN: HackerBooks – HackerTube, but for books mentioned on HN",
+    "points": 984,
+    "num_comments": 188,
+    "url": "https://hackerbooks.org",
+    "hn_url": "https://news.ycombinator.com/item?id=50326821",
+    "created_at": "2026-11-01T15:58:28+00:00",
+    "story_text": "Saw Karpathy&#x27;s HackerTube and wanted the same thing for books. So I had Claude build one (Opus 5.5).<p>It&#x27;s ~16.5k books that at least two different HN commenters brought up, from 2007 till now. Each book links back to the comments that mentioned it. Data is downloadable from the about page.<p>To be clear: Claude wrote almost all of it, including the data pipeline and the site. I mostly steered and made calls, bought the domain name, etc.<p>It counts mentions, so it&#x27;s not perfect (praising a book and trashing it both count). If your favourite book is missing or matched to the wrong thing, tell me.",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "AI Can Write More of the Code. We Still Have to Engineer the System",
+    "points": 26,
+    "num_comments": 8,
+    "url": "https://picon.dev/en/publications/ai-assisted-engineering/",
+    "hn_url": "https://news.ycombinator.com/item?id=50331998",
+    "created_at": "2026-11-02T01:35:02+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "F/OSS Comics #13: BSD Unix, Part 3 – The Beginning of BSD Unix",
+    "points": 8,
+    "num_comments": 0,
+    "url": "https://fosscomics.com/posts/13.%20BSD%20Unix%20Part%203%20-%20The%20Beginning%20of%20BSD%20Unix/",
+    "hn_url": "https://news.ycombinator.com/item?id=50332163",
+    "created_at": "2026-11-02T01:59:38+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "OccupySaaS",
+    "points": 71,
+    "num_comments": 44,
+    "url": "https://occupysaas.com/",
+    "hn_url": "https://news.ycombinator.com/item?id=50331402",
+    "created_at": "2026-11-02T00:17:27+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Ask HN: Which TV do you recommend for privacy?",
+    "points": 165,
+    "num_comments": 328,
+    "url": "https://news.ycombinator.com/item?id=50328896",
+    "hn_url": "https://news.ycombinator.com/item?id=50328896",
+    "created_at": "2026-11-01T19:35:27+00:00",
+    "story_text": "I haven’t owned a TV in years and would like one that respects my privacy. Are there any TV’s which do this well? I am looking for something in the 60”to 80”range and would like a 4k display with at least 60hz display. I don’t mind paying a premium.<p>I have heard good things about Apple TV as a better alternative to most smart TV native apps. Would some TV’s pair better with this than others for privacy? I don’t want the TV doing anything other than being the display for Apple TV.<p>I am curious what success others have had.",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Show HN: OmniDiff – Opensource, super fast, content aware Git difftool, in Rust",
+    "points": 174,
+    "num_comments": 42,
+    "url": "https://github.com/ivankovic/omnidiff",
+    "hn_url": "https://news.ycombinator.com/item?id=50325253",
+    "created_at": "2026-11-01T13:02:30+00:00",
+    "story_text": "I have been researching what the ultimate diff tool would look like, based on actual diffs in open source repositories.<p>OmniDiff can diff: code (25 languages), config, images, PDFs, archives, cursors, fonts...<p>It&#x27;s fast. It can diff C++ files of tens of thousands of lines in under 100ms, on a 2023 ThinkPad T14s.<p>It&#x27;s open source. AGPLv3.<p>It&#x27;s based on real diffs. I looked at the 7400 repositories that are listed in Gentoo packages, sampled 2000 diffs and solved them manually to get a good understanding of what is needed, before putting together the diff pipelines for each content type. Incidentally, this also forms the basis of the CI pipeline, so the robustness of the codebase is quite high.<p>I&#x27;m still developing it. It&#x27;s v0.3.0 at this time. But I have been using it daily as my git difftool for months now, and it works well.<p>AI Disclosure: Yes, I do use AI. No, I do not vibecode.",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Mathematics has changed. Let's act like it",
+    "points": 233,
+    "num_comments": 258,
+    "url": "https://terrytao.wordpress.com/2026/11/01/mathematics-has-changed-lets-act-like-it/",
+    "hn_url": "https://news.ycombinator.com/item?id=50328251",
+    "created_at": "2026-11-01T18:28:42+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Proving and improving the Platonic Representation Hypothesis with JEPAs",
+    "points": 116,
+    "num_comments": 63,
+    "url": "https://arxiv.org/abs/2610.39302",
+    "hn_url": "https://news.ycombinator.com/item?id=50325454",
+    "created_at": "2026-11-01T13:24:49+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "AI fan wikis riddled with errors are muddying the waters of games culture",
+    "points": 12,
+    "num_comments": 3,
+    "url": "https://www.eurogamer.net/ai-fan-wikis-errors-complicating-games-culture",
+    "hn_url": "https://news.ycombinator.com/item?id=50332086",
+    "created_at": "2026-11-02T01:47:07+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Lenovo's 'encrypted' fingerprint USB is just an unencrypted SD card in a case",
+    "points": 410,
+    "num_comments": 148,
+    "url": "https://www.reddit.com/r/technology/comments/1xl2pr3/lenovos_encrypted_fingerprint_usb_drive_is_just/",
+    "hn_url": "https://news.ycombinator.com/item?id=50326099",
+    "created_at": "2026-11-01T14:34:43+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "The AI cost of JavaScript frameworks",
+    "points": 311,
+    "num_comments": 231,
+    "url": "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/",
+    "hn_url": "https://news.ycombinator.com/item?id=50323088",
+    "created_at": "2026-11-01T06:06:19+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "AI delivers 'zero financial payoff' to most companies, Apollo economist says",
+    "points": 194,
+    "num_comments": 167,
+    "url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
+    "hn_url": "https://news.ycombinator.com/item?id=50330456",
+    "created_at": "2026-11-01T22:10:45+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Novellas with Groff",
+    "points": 113,
+    "num_comments": 49,
+    "url": "https://movq.de/blog/postings/2026-10-31/0/POSTING-en.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50325694",
+    "created_at": "2026-11-01T13:51:41+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Seoul Viosys begins production of rare-earth-free white light emitter",
+    "points": 143,
+    "num_comments": 36,
+    "url": "https://www.semiconductor-today.com/news_items/2026/oct/seoul-291026.shtml",
+    "hn_url": "https://news.ycombinator.com/item?id=50327058",
+    "created_at": "2026-11-01T16:23:26+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Domain hacks with unusual Unicode characters (2018)",
+    "points": 58,
+    "num_comments": 47,
+    "url": "https://shkspr.mobi/blog/2018/11/domain-hacks-with-unusual-unicode-characters/",
+    "hn_url": "https://news.ycombinator.com/item?id=50324371",
+    "created_at": "2026-11-01T10:44:20+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Frontier Airlines Likely Breached",
+    "points": 183,
+    "num_comments": 73,
+    "url": "https://www.reddit.com/r/frontierairlines/comments/1xl20e8/psa_email_scam/",
+    "hn_url": "https://news.ycombinator.com/item?id=50327266",
+    "created_at": "2026-11-01T16:46:33+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Patrick Stewart taught us what good men do with power",
+    "points": 386,
+    "num_comments": 274,
+    "url": "https://www.vox.com/politics/508526/patrick-stewart-jean-luc-picard-star-trek-liberalism",
+    "hn_url": "https://news.ycombinator.com/item?id=50327650",
+    "created_at": "2026-11-01T17:28:16+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Landline phones will switch off across Britland in 100 days, no extensions",
+    "points": 136,
+    "num_comments": 115,
+    "url": "https://www.theregister.com/networks/2026/11/01/landline-phones-will-switch-off-across-britland-in-100-days-no-extensions-openreach/5306673",
+    "hn_url": "https://news.ycombinator.com/item?id=50326609",
+    "created_at": "2026-11-01T15:33:49+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "The Megadonors Who Have Poured $1.2B into the Midterms",
+    "points": 8,
+    "num_comments": 0,
+    "url": "https://www.nytimes.com/interactive/2026/08/28/us/politics/billionaire-midterms-donors.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50331158",
+    "created_at": "2026-11-01T23:46:59+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "U.S. workers took home their smallest share of capital since at least 1947",
+    "points": 225,
+    "num_comments": 122,
+    "url": "https://fortune.com/article/why-did-us-workers-just-take-home-smallest-share-of-capital-since-1947-lowest-ever-recorded/",
+    "hn_url": "https://news.ycombinator.com/item?id=50330939",
+    "created_at": "2026-11-01T23:20:31+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  }
+]
