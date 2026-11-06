@@ -1,0 +1,222 @@
+[
+  {
+    "source": "hn",
+    "title": "Claude Code sends your email address to websites",
+    "points": 662,
+    "num_comments": 228,
+    "url": "https://github.com/anthropics/claude-code/issues/107757",
+    "hn_url": "https://news.ycombinator.com/item?id=50385272",
+    "created_at": "2026-11-05T22:17:15+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "sshole",
+    "points": 2410,
+    "num_comments": 592,
+    "url": "https://sshhole.com",
+    "hn_url": "https://news.ycombinator.com/item?id=50378228",
+    "created_at": "2026-11-05T12:19:02+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "MS Paint Remote Code Execution Vulnerability",
+    "points": 369,
+    "num_comments": 137,
+    "url": "https://www.cve.org/CVERecord?id=CVE-2026-83844",
+    "hn_url": "https://news.ycombinator.com/item?id=50384233",
+    "created_at": "2026-11-05T20:43:42+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Nvidia Kubernetes Engine (NVKE)",
+    "points": 9,
+    "num_comments": 0,
+    "url": "https://github.com/dsx-ai-factory/nvke",
+    "hn_url": "https://news.ycombinator.com/item?id=50387738",
+    "created_at": "2026-11-06T03:16:26+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Inkling 2 Small",
+    "points": 99,
+    "num_comments": 44,
+    "url": "https://thinkingmachines.ai/news/inkling-2-small/",
+    "hn_url": "https://news.ycombinator.com/item?id=50386338",
+    "created_at": "2026-11-06T00:00:24+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Alpine Linux Security Advisory: OpenSSH-server password authentication bypass",
+    "points": 610,
+    "num_comments": 128,
+    "url": "https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/",
+    "hn_url": "https://news.ycombinator.com/item?id=50379704",
+    "created_at": "2026-11-05T14:44:20+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Closed AI models dominate the price-performance frontier",
+    "points": 9,
+    "num_comments": 0,
+    "url": "https://village.dev/blog/closed-ai-models-now-dominate-the-price-performance-frontier/",
+    "hn_url": "https://news.ycombinator.com/item?id=50387546",
+    "created_at": "2026-11-06T02:49:56+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "The Hackintosh Reborn",
+    "points": 237,
+    "num_comments": 110,
+    "url": "https://www.naut.ca/blog/2026/11/05/the-hackintosh-reborn-with-ai/",
+    "hn_url": "https://news.ycombinator.com/item?id=50383057",
+    "created_at": "2026-11-05T19:08:22+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Window Sweaters",
+    "points": 268,
+    "num_comments": 86,
+    "url": "https://github.com/saragordic/window-sweaters",
+    "hn_url": "https://news.ycombinator.com/item?id=50381383",
+    "created_at": "2026-11-05T16:50:14+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Show HN: Firenook – Firebase emulators in Rust: 40× faster writes, 10× less RAM",
+    "points": 59,
+    "num_comments": 13,
+    "url": "https://firenook.dev/",
+    "hn_url": "https://news.ycombinator.com/item?id=50378643",
+    "created_at": "2026-11-05T13:07:29+00:00",
+    "story_text": "Hi HN, we have been developing with Firebase for a long time, and the only way Firebase developers can build apps without directly costing them is using the official Firebase Emulator Suite.<p>However, the issue with this suite is, it&#x27;s dependent and running on Java with a old Console UI (not updated in years), that was not built to support tons and millions of data and has pretty bad developer experience. For a long time, we were hitting Out of Memory on even high specs laptop while developing and the worst part is while this happens all the persists data keep getting lost.<p>We were honestly frustrated with this, and thought what if we built the Firebase Emulator Suite the right way, as it always should have been.<p>Introducing Firenook, a faster drop-in replacement for Firebase Emulator Suite for Firebase developers. It&#x27;s 40x faster writes and needs 10x less RAM to run it. We took the right approach of first building it Rust as a single engine, so that there will be no Java dependencies and built from scratch a new Console UI using modern web stacks.<p>The result is, now we were able to run 2 millions datas loaded to Firenook with only taking around 2GB ram compared to 22GB of the official suite. Things are way faster and rebuilt Console UI gives best developer experience from logging Firebase Functions, to editing Firestore documents in JSON and many more.<p>We developed this throughly for around 2 months now and ran this internally for a month before we decided it&#x27;s time to release it to public so that other devs can make use of Firenook and also contribute it to make it better.<p>Firenook is still new and I&#x27;m sure it misses things. So please try it our on your project and let us if there are any issues.<p>Thank you.",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Castration extends life span in mice",
+    "points": 6,
+    "num_comments": 4,
+    "url": "https://www.science.org/content/article/castration-extends-life-span-surprising-way-mouse-study-suggests",
+    "hn_url": "https://news.ycombinator.com/item?id=50387470",
+    "created_at": "2026-11-06T02:38:29+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Claude was faster and cheaper. We took the scenic route anyway",
+    "points": 10,
+    "num_comments": 0,
+    "url": "https://blog.grainulation.org/verify-then-vote/",
+    "hn_url": "https://news.ycombinator.com/item?id=50387623",
+    "created_at": "2026-11-06T02:59:39+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "MoofTCP – A modern replacement for MacTCP on 68k Macs",
+    "points": 18,
+    "num_comments": 10,
+    "url": "https://github.com/matthewmrichter/mooftcp",
+    "hn_url": "https://news.ycombinator.com/item?id=50386789",
+    "created_at": "2026-11-06T00:54:15+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Launch HN: Rivet (YC W23) – Scale and Orchestrate Agents on S3",
+    "points": 81,
+    "num_comments": 44,
+    "url": "https://github.com/rivet-dev/rivet",
+    "hn_url": "https://news.ycombinator.com/item?id=50381687",
+    "created_at": "2026-11-05T17:17:42+00:00",
+    "story_text": "Hey HN, this is Nathan and Nicholas from Rivet (<a href=\"https:&#x2F;&#x2F;rivet.dev\">https:&#x2F;&#x2F;rivet.dev</a>) – a fast, high-density, and scalable orchestrator for agentic workloads using the actor model. Rather than running a heavyweight sandbox per agent, each agent gets a lightweight actor backed by S3.<p>Actors provide a long-lived process for long agent turns, in-memory state for context, a WebSocket server for multiplayer, durable SQLite storage backed by S3, and hibernation when idle.<p>It&#x27;s a similar model to Cloudflare Durable Objects, but it’s open source and self-hostable.<p>Here’s a video walkthrough: <a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=3Ev6I7DOV9c\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=3Ev6I7DOV9c</a><p>When we went through YC in 2023, we were building infrastructure for multiplayer games like Diep and Krunker. This involved heavily optimizing high-throughput matchmaking, real-time player messages, and blitz scaling. Through that process, we spent a lot of time on workloads where Postgres couldn&#x27;t keep up with our throughput. We started out by hacking together Lua scripts on top of Redis, but this became too cumbersome to maintain and upgrade. This led us to extend our game server orchestrator to support what we call Rivet Actors today: many lightweight workers with in-memory state and durable storage. By using actors, we were able to serve tens of millions of monthly active users.<p>As agents grew in popularity, it became clear that running agents in sandboxes is inefficient. Sandboxes are expensive, mostly idle, and slow to start. Developers started using actors because they are far more memory efficient (72 KB baseline for actors vs 512 MB for a minimal sandbox) and fast to start (4.9 ms p99 for actors vs 1.7 s p99 for sandboxes).<p>For example, Amp is using Rivet to orchestrate multiplayer agents. They originally tried to build on Cloudflare Durable Objects, but couldn’t launch because of the platform’s limitations and unresponsive support. They migrated to Rivet Actors in a weekend and deploy on-prem. Rivet’s flexible architecture lets them adapt it to their own use cases without being constrained by a framework or the memory, storage, and runtime limits of Cloudflare Durable Objects.<p>Under the hood, Rivet is backed by S3 while maintaining SSD speeds.<p>Why S3? Previously, Rivet ran on FoundationDB. However, we were surprised to find that companies are storing orders of magnitude more data on Rivet Actors than in Postgres, such as large session transcripts, agent artifacts, and full POSIX filesystems. As their data grew, they had to start paying for SSDs that sat mostly idle with old transcripts. This led us to double down on S3 as our primary storage medium without sacrificing performance. This choice means that data stored on Rivet is 10× cheaper than on EBS gp3 while maintaining SSD speeds.<p>It’s not as simple as writing data straight to S3. Lots of PUTs for tiny blobs of data are slow and expensive. Instead, we use an SSD tier to optimize speed and cost:<p>When you write data to an actor’s SQLite database, the write is acknowledged once SSDs in 2 of 3 availability zones have it. Then, the data is batched to S3 in the background. This means that S3 is never on the write path, which lowers latency and cost. When reading data or waking an actor, Rivet reads from SSDs if already cached and falls back to S3 if not. SSD caches can be tuned to meet your needs, giving you configurable tiered storage for your actors.<p>This architecture lets Rivet provide 1.07 ms durable writes (3 AZ, p99), 1.36 ms reads (p99), and 138 ms reads from object storage (p99).<p>We’ve spent a lot of time making sure that Rivet can run wherever you need it. Self-hosting requires deploying a single Rust binary with S3 as the only dependency, Rivet Cloud lets you deploy dedicated clusters on AWS or GCP in any region, and BYOC lets us deploy Rivet to your VPC without having to operate it yourself. Rivet also runs identically in local dev as in production, since Rivet is a lightweight binary that runs anywhere<p>Rivet Actors can be written in TypeScript or Rust. Out of the box, they support agents (Pi Durable), workflows, real-time, multiplayer, running AI-generated code, Durable Streams, and integrations with tools like Vercel’s Eve and Turso. See all of our available guides, or point your agent at them: <a href=\"https:&#x2F;&#x2F;rivet.dev&#x2F;docs&#x2F;#guides\">https:&#x2F;&#x2F;rivet.dev&#x2F;docs&#x2F;#guides</a><p>Try it out now, by reading our quickstart guides (<a href=\"https:&#x2F;&#x2F;rivet.dev&#x2F;docs&#x2F;\">https:&#x2F;&#x2F;rivet.dev&#x2F;docs&#x2F;</a>) or ask your agent: “Run npx skills add rivet-dev&#x2F;skills, then build a multiplayer chat agent and run it locally.”<p>We’d love to get feedback on your experience with Rivet! We’re deeply invested in making Rivet an easy-to-self-host, flexible, and efficient way to run agentic workloads.<p>GitHub: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;rivet-dev&#x2F;rivet\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;rivet-dev&#x2F;rivet</a><p>Architecture: <a href=\"https:&#x2F;&#x2F;rivet.dev&#x2F;docs&#x2F;architecture&#x2F;\">https:&#x2F;&#x2F;rivet.dev&#x2F;docs&#x2F;architecture&#x2F;</a><p>Benchmarks: <a href=\"https:&#x2F;&#x2F;rivet.dev&#x2F;docs&#x2F;benchmarking&#x2F;\">https:&#x2F;&#x2F;rivet.dev&#x2F;docs&#x2F;benchmarking&#x2F;</a><p>Self-hosting: <a href=\"https:&#x2F;&#x2F;rivet.dev&#x2F;docs&#x2F;deploy&#x2F;self-host&#x2F;\">https:&#x2F;&#x2F;rivet.dev&#x2F;docs&#x2F;deploy&#x2F;self-host&#x2F;</a>",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Cuban: Facebook knowingly runs AI deepfake scam ads; docs say $16B fraud revenue",
+    "points": 164,
+    "num_comments": 76,
+    "url": "https://finance.yahoo.com/technology/ai/articles/mark-cuban-says-facebook-knowingly-213000020.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50385870",
+    "created_at": "2026-11-05T23:09:57+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Goodbye from Salon",
+    "points": 486,
+    "num_comments": 174,
+    "url": "https://www.salon.com/2026/11/05/goodbye-from-salon/",
+    "hn_url": "https://news.ycombinator.com/item?id=50383739",
+    "created_at": "2026-11-05T20:03:29+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Brazilian Credit Guarantor Fund Data Breach Affecting PII and Payout Data",
+    "points": 27,
+    "num_comments": 5,
+    "url": "https://www.fgc.org.br/comunicado",
+    "hn_url": "https://news.ycombinator.com/item?id=50386104",
+    "created_at": "2026-11-05T23:32:36+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "September in Servo: <progress>, rounded rectangles, and more",
+    "points": 200,
+    "num_comments": 48,
+    "url": "https://servo.org/blog/2026/11/05/september-in-servo/",
+    "hn_url": "https://news.ycombinator.com/item?id=50379576",
+    "created_at": "2026-11-05T14:34:18+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Download your favourite YouTube videos",
+    "points": 293,
+    "num_comments": 135,
+    "url": "https://criminallyvulgar.dev/you-should-absolutely-download-your-favourite-youtube-videos/",
+    "hn_url": "https://news.ycombinator.com/item?id=50378571",
+    "created_at": "2026-11-05T13:00:11+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Introducing Pangram Image 1.0",
+    "points": 76,
+    "num_comments": 31,
+    "url": "https://www.pangram.com/blog/introducing-pangram-image-1-0",
+    "hn_url": "https://news.ycombinator.com/item?id=50383294",
+    "created_at": "2026-11-05T19:27:52+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  }
+]
