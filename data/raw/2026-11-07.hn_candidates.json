@@ -1,0 +1,222 @@
+[
+  {
+    "source": "hn",
+    "title": "Libghostty 1.0",
+    "points": 289,
+    "num_comments": 45,
+    "url": "https://mitchellh.com/writing/libghostty-1-0",
+    "hn_url": "https://news.ycombinator.com/item?id=50399933",
+    "created_at": "2026-11-06T23:30:52+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
+    "points": 364,
+    "num_comments": 83,
+    "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
+    "hn_url": "https://news.ycombinator.com/item?id=50397429",
+    "created_at": "2026-11-06T19:48:51+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "I Toured Unitree's Factory. I'm More Bullish on the West",
+    "points": 42,
+    "num_comments": 27,
+    "url": "https://josef.cn/blog/unitree",
+    "hn_url": "https://news.ycombinator.com/item?id=50400597",
+    "created_at": "2026-11-07T01:05:16+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Tesla to wind down Cybertruck production",
+    "points": 883,
+    "num_comments": 1741,
+    "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
+    "hn_url": "https://news.ycombinator.com/item?id=50391456",
+    "created_at": "2026-11-06T12:13:51+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Firecracker VM Escape: PwnEscape Part 2",
+    "points": 184,
+    "num_comments": 83,
+    "url": "https://pwn.ai/blog/firecracker-escape",
+    "hn_url": "https://news.ycombinator.com/item?id=50397219",
+    "created_at": "2026-11-06T19:33:38+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
+    "points": 291,
+    "num_comments": 235,
+    "url": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/",
+    "hn_url": "https://news.ycombinator.com/item?id=50388001",
+    "created_at": "2026-11-06T04:00:28+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "RealPage rent-pricing case wraps with nearly $360M to renters",
+    "points": 39,
+    "num_comments": 11,
+    "url": "https://www.multifamilydive.com/news/realpage-rent-pricing-case-360m-renters/873553/",
+    "hn_url": "https://news.ycombinator.com/item?id=50399991",
+    "created_at": "2026-11-06T23:37:19+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "AI is dramatically accelerating AI research",
+    "points": 222,
+    "num_comments": 166,
+    "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
+    "hn_url": "https://news.ycombinator.com/item?id=50397994",
+    "created_at": "2026-11-06T20:27:23+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "First steps in bare-metal programming using UEFI",
+    "points": 199,
+    "num_comments": 36,
+    "url": "https://kevinboone.me/efitest_index.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50394855",
+    "created_at": "2026-11-06T16:50:29+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Sodium-ion batteries approach cost parity with LFP",
+    "points": 142,
+    "num_comments": 64,
+    "url": "https://www.pv-magazine.com/2026/11/06/sodium-ion-batteries-approach-cost-parity-with-lfp-with-70-gwh-covered-by-supply-agreements/",
+    "hn_url": "https://news.ycombinator.com/item?id=50399657",
+    "created_at": "2026-11-06T23:00:46+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Restaurant Delivery Payment-Skimming Campaign",
+    "points": 100,
+    "num_comments": 47,
+    "url": "https://www.infohawk.com/news/2026-11-05-scamwich-restaurant-skimming",
+    "hn_url": "https://news.ycombinator.com/item?id=50397017",
+    "created_at": "2026-11-06T19:19:27+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Google has acquired Crusoe's data center site in southeast Wyoming",
+    "points": 45,
+    "num_comments": 8,
+    "url": "https://www.crusoe.ai/resources/newsroom/crusoe-wyoming-data-center-campus-update",
+    "hn_url": "https://news.ycombinator.com/item?id=50397711",
+    "created_at": "2026-11-06T20:09:14+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Devvm.dev: One VM for every project",
+    "points": 126,
+    "num_comments": 53,
+    "url": "https://devvm.dev/",
+    "hn_url": "https://news.ycombinator.com/item?id=50395450",
+    "created_at": "2026-11-06T17:30:22+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "GitHub's new Git storage architecture",
+    "points": 80,
+    "num_comments": 13,
+    "url": "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/",
+    "hn_url": "https://news.ycombinator.com/item?id=50397099",
+    "created_at": "2026-11-06T19:24:21+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Gemini Omni 1.2 Flash",
+    "points": 302,
+    "num_comments": 220,
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+    "hn_url": "https://news.ycombinator.com/item?id=50392118",
+    "created_at": "2026-11-06T13:35:27+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "ChatGPT silently passes data between connectors and the bounty wants an ID card",
+    "points": 83,
+    "num_comments": 35,
+    "url": "https://community.openai.com/t/security-follow-up-tool-call-silently-routed-to-a-different-connector/1413053",
+    "hn_url": "https://news.ycombinator.com/item?id=50399569",
+    "created_at": "2026-11-06T22:50:43+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Replit rebuilt its sandbox engine with microVMs",
+    "points": 73,
+    "num_comments": 22,
+    "url": "https://frontier.replit.com/sandbox-engine-microvms-part-1/",
+    "hn_url": "https://news.ycombinator.com/item?id=50396834",
+    "created_at": "2026-11-06T19:06:10+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Memorilla: Latent Semantic Memory for LLMs",
+    "points": 92,
+    "num_comments": 8,
+    "url": "https://arxiv.org/abs/2610.21375",
+    "hn_url": "https://news.ycombinator.com/item?id=50395919",
+    "created_at": "2026-11-06T18:03:33+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Anthropic IPO buyers see valuation as low as $1.1T",
+    "points": 249,
+    "num_comments": 506,
+    "url": "https://www.bloomberg.com/news/articles/2026-11-06/anthropic-ipo-valuation-expectations-pressured-after-ai-rout",
+    "hn_url": "https://news.ycombinator.com/item?id=50394906",
+    "created_at": "2026-11-06T16:54:36+00:00",
+    "story_text": "<a href=\"https:&#x2F;&#x2F;epyhia.com&#x2F;anthropic-ipo-valuation-talks-drop-to-1-3-trillion-as-major-investors\" rel=\"nofollow\">https:&#x2F;&#x2F;epyhia.com&#x2F;anthropic-ipo-valuation-talks-drop-to-1-3...</a>",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Chomsky and the two cultures of statistical learning (2011)",
+    "points": 105,
+    "num_comments": 88,
+    "url": "https://www.norvig.com/chomsky.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50389570",
+    "created_at": "2026-11-06T08:18:36+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  }
+]
