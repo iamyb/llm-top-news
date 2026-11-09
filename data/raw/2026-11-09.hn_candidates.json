@@ -1,0 +1,222 @@
+[
+  {
+    "source": "hn",
+    "title": "KetchUp – Open-source SketchUp alternative built with Rust and WebGPU",
+    "points": 256,
+    "num_comments": 73,
+    "url": "https://ketchup3d.github.io/app/",
+    "hn_url": "https://news.ycombinator.com/item?id=50418176",
+    "created_at": "2026-11-08T22:35:35+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Unlocking any car from X brand in most of the world",
+    "points": 105,
+    "num_comments": 32,
+    "url": "https://shubs.io/unlocking-any-car-from-x-brand-in-most-of-the-world/",
+    "hn_url": "https://news.ycombinator.com/item?id=50419215",
+    "created_at": "2026-11-09T00:10:50+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Chimera Vocal Synth",
+    "points": 118,
+    "num_comments": 16,
+    "url": "https://chimera-vocal-synth.vercel.app/",
+    "hn_url": "https://news.ycombinator.com/item?id=50418182",
+    "created_at": "2026-11-08T22:36:03+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Dux: Free, open-source Wayland desktop shell with file manager and theming",
+    "points": 214,
+    "num_comments": 65,
+    "url": "https://duxlabs.dev/",
+    "hn_url": "https://news.ycombinator.com/item?id=50416053",
+    "created_at": "2026-11-08T19:08:51+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Outlook.com Is Quietly Rejecting Email from Domains Without DMARC",
+    "points": 273,
+    "num_comments": 197,
+    "url": "https://mailroute.net/blog/outlook-rejecting-email-without-dmarc",
+    "hn_url": "https://news.ycombinator.com/item?id=50416158",
+    "created_at": "2026-11-08T19:20:32+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Ask HN: What are you working on? (November 2026)",
+    "points": 150,
+    "num_comments": 525,
+    "url": "https://news.ycombinator.com/item?id=50417407",
+    "hn_url": "https://news.ycombinator.com/item?id=50417407",
+    "created_at": "2026-11-08T21:20:20+00:00",
+    "story_text": "What are you working on? What have you been curious about lately?",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Herb Sutter: When a language's creator and its owners strongly disagree [pdf]",
+    "points": 83,
+    "num_comments": 63,
+    "url": "https://isocpp.org/files/papers/P4454R0.pdf",
+    "hn_url": "https://news.ycombinator.com/item?id=50418818",
+    "created_at": "2026-11-08T23:28:01+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "The Web Is More Than Enough, by Paul Ford",
+    "points": 91,
+    "num_comments": 50,
+    "url": "https://ftrain.com/aboard-the-web-is-more-than-enough",
+    "hn_url": "https://news.ycombinator.com/item?id=50416456",
+    "created_at": "2026-11-08T19:48:32+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Goldman Sachs is pulling Claude Code from its bankers and traders",
+    "points": 637,
+    "num_comments": 364,
+    "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
+    "hn_url": "https://news.ycombinator.com/item?id=50415628",
+    "created_at": "2026-11-08T18:16:07+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
+    "points": 376,
+    "num_comments": 162,
+    "url": "https://github.com/synchopate/llama-modchip",
+    "hn_url": "https://news.ycombinator.com/item?id=50411961",
+    "created_at": "2026-11-08T10:22:04+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Writing as a thinking tool",
+    "points": 295,
+    "num_comments": 83,
+    "url": "http://muratbuffalo.blogspot.com/2026/11/writing-as-thinking-tool.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50412067",
+    "created_at": "2026-11-08T10:41:52+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "RIP, Harvest",
+    "points": 4,
+    "num_comments": 0,
+    "url": "https://aphyr.com/posts/427-rip-harvest",
+    "hn_url": "https://news.ycombinator.com/item?id=50420035",
+    "created_at": "2026-11-09T01:58:21+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Playing with the STM32MP2",
+    "points": 44,
+    "num_comments": 30,
+    "url": "https://serd.es/2026/11/08/playing-with-stm32mp2.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50416014",
+    "created_at": "2026-11-08T19:04:07+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "How I Fight AI Brain Fry",
+    "points": 169,
+    "num_comments": 135,
+    "url": "https://sergeykuhne.com/blog/fighting-ai-brain-fry",
+    "hn_url": "https://news.ycombinator.com/item?id=50416363",
+    "created_at": "2026-11-08T19:37:42+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Goodbye Claude, hello Pi",
+    "points": 708,
+    "num_comments": 439,
+    "url": "https://caleb.software/posts/claude-to-pi.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50410107",
+    "created_at": "2026-11-08T03:11:48+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "I'm not a fan of Deno's security model (2024)",
+    "points": 89,
+    "num_comments": 45,
+    "url": "https://goldstein.lol/posts/deno-security/",
+    "hn_url": "https://news.ycombinator.com/item?id=50413769",
+    "created_at": "2026-11-08T14:42:38+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Nvidia Board of Directors Is Investigating Jensen Huang",
+    "points": 418,
+    "num_comments": 309,
+    "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors",
+    "hn_url": "https://news.ycombinator.com/item?id=50416801",
+    "created_at": "2026-11-08T20:26:43+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "A Little Snitch for Windows",
+    "points": 99,
+    "num_comments": 47,
+    "url": "https://packethound.app/",
+    "hn_url": "https://news.ycombinator.com/item?id=50415135",
+    "created_at": "2026-11-08T17:16:07+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Nvidia CEO Jensen Huang's letter to staff about affair",
+    "points": 393,
+    "num_comments": 420,
+    "url": "https://www.axios.com/2026/11/08/nvidia-ceo-jensen-huang-affair-email-to-company",
+    "hn_url": "https://news.ycombinator.com/item?id=50418016",
+    "created_at": "2026-11-08T22:20:09+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Starship Flight 15 on 11/13 plans to catch both booster and ship",
+    "points": 100,
+    "num_comments": 62,
+    "url": "https://www.spacex.com/launches/starship-flight-15",
+    "hn_url": "https://news.ycombinator.com/item?id=50416471",
+    "created_at": "2026-11-08T19:49:46+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  }
+]
