@@ -1,0 +1,222 @@
+[
+  {
+    "source": "hn",
+    "title": "After 7 months, Glasswing overwelms maintainers with underwhelming findings",
+    "points": 301,
+    "num_comments": 132,
+    "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
+    "hn_url": "https://news.ycombinator.com/item?id=50447074",
+    "created_at": "2026-11-10T22:17:56+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "A great old-timey game-programming hack (2013)",
+    "points": 33,
+    "num_comments": 5,
+    "url": "https://blog.moertel.com/posts/2013-12-14-great-old-timey-game-programming-hack.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50448921",
+    "created_at": "2026-11-11T01:56:31+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": ".name Grandfathered",
+    "points": 712,
+    "num_comments": 168,
+    "url": "https://neil.fraser.name/news/2026/11/10/",
+    "hn_url": "https://news.ycombinator.com/item?id=50442736",
+    "created_at": "2026-11-10T16:37:44+00:00",
+    "story_text": "Previously: <i>.name Termination</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49550772\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49550772</a> - Sept 2026 (547 comments)",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Scion is back and is going to sell a kei truck in America",
+    "points": 358,
+    "num_comments": 264,
+    "url": "https://www.theautopian.com/scion-is-back-and-its-going-to-sell-a-freaking-kei-truck-in-america/",
+    "hn_url": "https://news.ycombinator.com/item?id=50445401",
+    "created_at": "2026-11-10T19:50:46+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Smart home devices should work without the internet",
+    "points": 751,
+    "num_comments": 269,
+    "url": "https://docodethatmatters.com/home-automation-overnight-success/",
+    "hn_url": "https://news.ycombinator.com/item?id=50441707",
+    "created_at": "2026-11-10T15:25:20+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Six Math Essentials by Terence Tao",
+    "points": 151,
+    "num_comments": 27,
+    "url": "https://teorth.github.io/tao-web/six-math-essentials.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50446246",
+    "created_at": "2026-11-10T20:58:44+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Starlink Mini 2",
+    "points": 287,
+    "num_comments": 293,
+    "url": "https://starlink.com/mini-2",
+    "hn_url": "https://news.ycombinator.com/item?id=50444129",
+    "created_at": "2026-11-10T18:22:32+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Synaptics patent claims stop work on DisplayLink drivers",
+    "points": 320,
+    "num_comments": 179,
+    "url": "https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/",
+    "hn_url": "https://news.ycombinator.com/item?id=50443824",
+    "created_at": "2026-11-10T18:02:02+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Val Town is winding down",
+    "points": 317,
+    "num_comments": 84,
+    "url": "https://blog.val.town/winding-down",
+    "hn_url": "https://news.ycombinator.com/item?id=50443427",
+    "created_at": "2026-11-10T17:31:14+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "AlphaProof Code",
+    "points": 585,
+    "num_comments": 178,
+    "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+    "hn_url": "https://news.ycombinator.com/item?id=50439193",
+    "created_at": "2026-11-10T12:11:12+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives",
+    "points": 278,
+    "num_comments": 86,
+    "url": "https://github.com/GoogleChrome/modern-web-guidance",
+    "hn_url": "https://news.ycombinator.com/item?id=50443812",
+    "created_at": "2026-11-10T18:01:15+00:00",
+    "story_text": "Browsers natively handle a lot of what used to take 50 lines of JS (or a dependency): `CSS.highlights` for text range highlighting without &lt;span&gt;s everywhere, `&lt;dialog&gt;` and showModal() give you backdrops and ideal focus management, `field-sizing` to auto-grow textareas as the user types.. (Something yesterday&#x27;s ftrain post touched on [0])<p>Models know about some of these by name, but consistently won&#x27;t default to using the platform-native solution and instead prefer the incumbent &lt;div&gt;+JS based pattern.  We started an effort in Chrome to supplement coding agents with this key domain knowledge and we&#x27;re shipping our 1.0 today, in collaboration with Firefox, MDN, and Edge.<p>200+ guides (~1.7MB) of curated, hand-crafted implementation best-practices from web experts, updated as the web evolves.  (Open source, obv, so.. we&#x27;ll welcome your bikeshedding ;) Readable versions here: [1]<p>I&#x27;ve spent the last 9 months obsessing over how to ship this as an agent skill + (Agentic RAG) CLI without blowing up your context window. (Or cedeing activation mechanics to MCP dynamic tool search). The skill description is minmaxed for activating on relevant frontend tasks. The RAG work I&#x27;m pretty proud of… originally a 500mb native stack down to a ~7MB pure-JS package, ~10ms search on your CPU.<p>We just introduced a deterministic &#x27;legacy-scan&#x27; (trained on 30k github repos) to identify old &#x27;n dusted patterns that your agent can modernize. (92% avg precision on held-out repos.)<p>People make a lot of claims about what coding agents are good&#x2F;bad at. We wanted receipts, so we invested heavily in eval infra [2] to help us hill-climb, but also to identify when knowledge is common enough we can prune our guides. (Ofc, some of the things we thought AI didn&#x27;t know turned out to be wrong :)  We run codex&#x2F;claude&#x2F;agy against 200 tasks without the skill and then with.. In total ~1,700 playwright&#x2F;AST-based assertions. Agents go from 55% pass unguided to 92% guided.<p>Try it out:<p><pre><code>    DISABLE_TELEMETRY=1 npx modern-web-guidance@latest install\n    DISABLE_TELEMETRY=1 npx modern-web-guidance@latest search &quot;animate dialog modal&quot;\n    DISABLE_TELEMETRY=1 npx modern-web-guidance@latest legacy-scan .&#x2F;src\n</code></pre>\nIf you spot something wrong or weird, give us a holler!<p>Longer write-up on the 1.0:  <a href=\"https:&#x2F;&#x2F;developer.chrome.com&#x2F;blog&#x2F;modern-web-guidance-v1\" rel=\"nofollow\">https:&#x2F;&#x2F;developer.chrome.com&#x2F;blog&#x2F;modern-web-guidance-v1</a><p>---<p>0: <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50416456\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50416456</a><p>1: <a href=\"https:&#x2F;&#x2F;developer.chrome.com&#x2F;docs&#x2F;modern-web-guidance&#x2F;guides\" rel=\"nofollow\">https:&#x2F;&#x2F;developer.chrome.com&#x2F;docs&#x2F;modern-web-guidance&#x2F;guides</a><p>2: <a href=\"https:&#x2F;&#x2F;googlechrome.github.io&#x2F;modern-web-guidance-src&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;googlechrome.github.io&#x2F;modern-web-guidance-src&#x2F;</a>",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "LLMs Play Zachtronics' TIS-100",
+    "points": 16,
+    "num_comments": 1,
+    "url": "https://tis-100.wincon.dev/",
+    "hn_url": "https://news.ycombinator.com/item?id=50448340",
+    "created_at": "2026-11-11T00:37:05+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Hooked on Tuna",
+    "points": 5,
+    "num_comments": 0,
+    "url": "https://blue-continuum.com/hooked-on-tuna",
+    "hn_url": "https://news.ycombinator.com/item?id=50449080",
+    "created_at": "2026-11-11T02:23:25+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "What objective is reasoning solving?",
+    "points": 113,
+    "num_comments": 51,
+    "url": "https://alexwang.ai/posts/reasoning-as-pathfinding/",
+    "hn_url": "https://news.ycombinator.com/item?id=50445013",
+    "created_at": "2026-11-10T19:25:14+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "AMD's Zen 6 Family: Feeding the Beast",
+    "points": 193,
+    "num_comments": 73,
+    "url": "https://chipsandcheese.com/p/amds-zen-6-family-feeding-the-beast",
+    "hn_url": "https://news.ycombinator.com/item?id=50443090",
+    "created_at": "2026-11-10T17:02:32+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "AI is an information gateway. Audiences still don't want it making their news",
+    "points": 16,
+    "num_comments": 6,
+    "url": "https://www.niemanlab.org/2026/11/ai-is-becoming-an-information-gateway-audiences-still-dont-want-it-making-their-news/",
+    "hn_url": "https://news.ycombinator.com/item?id=50448174",
+    "created_at": "2026-11-11T00:15:33+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "$30M Raised to Redo the CPU",
+    "points": 40,
+    "num_comments": 30,
+    "url": "https://tendrils.co/blog/2026-11-10/30m-raised",
+    "hn_url": "https://news.ycombinator.com/item?id=50447036",
+    "created_at": "2026-11-10T22:14:03+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Research taste in history: the importance of learning Babylonian math",
+    "points": 18,
+    "num_comments": 1,
+    "url": "https://resobscura.substack.com/p/research-taste-in-history-the-importance",
+    "hn_url": "https://news.ycombinator.com/item?id=50445279",
+    "created_at": "2026-11-10T19:42:44+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Ableton Live 13",
+    "points": 285,
+    "num_comments": 304,
+    "url": "https://www.ableton.com/en/live/",
+    "hn_url": "https://news.ycombinator.com/item?id=50439695",
+    "created_at": "2026-11-10T12:58:04+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "A comprehensive study of how fingerprintable users are",
+    "points": 78,
+    "num_comments": 37,
+    "url": "https://fingerprinting.study/",
+    "hn_url": "https://news.ycombinator.com/item?id=50444684",
+    "created_at": "2026-11-10T19:03:54+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  }
+]
