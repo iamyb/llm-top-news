@@ -1,0 +1,222 @@
+[
+  {
+    "source": "hn",
+    "title": "93% of paint splatters are valid Perl programs (2019)",
+    "points": 250,
+    "num_comments": 36,
+    "url": "https://www.mcmillen.dev/sigbovik/",
+    "hn_url": "https://news.ycombinator.com/item?id=50459745",
+    "created_at": "2026-11-11T22:34:23+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Tim Peters has died",
+    "points": 975,
+    "num_comments": 105,
+    "url": "https://discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028",
+    "hn_url": "https://news.ycombinator.com/item?id=50450488",
+    "created_at": "2026-11-11T07:03:17+00:00",
+    "story_text": "<a href=\"https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;Python&#x2F;s&#x2F;2Cm5dBcvQw\" rel=\"nofollow\">https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;Python&#x2F;s&#x2F;2Cm5dBcvQw</a>",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "AWS emulator",
+    "points": 745,
+    "num_comments": 227,
+    "url": "https://github.com/aws/aws-emulator",
+    "hn_url": "https://news.ycombinator.com/item?id=50456631",
+    "created_at": "2026-11-11T18:21:38+00:00",
+    "story_text": "<a href=\"https:&#x2F;&#x2F;www.aboutamazon.com&#x2F;news&#x2F;aws&#x2F;how-autonomous-ai-agents-built-aws-emulator\" rel=\"nofollow\">https:&#x2F;&#x2F;www.aboutamazon.com&#x2F;news&#x2F;aws&#x2F;how-autonomous-ai-agent...</a><p><a href=\"https:&#x2F;&#x2F;www.allthingsdistributed.com&#x2F;2026&#x2F;11&#x2F;aws-emulator-and-the-engineers-job-when-agents-write-the-code.html\" rel=\"nofollow\">https:&#x2F;&#x2F;www.allthingsdistributed.com&#x2F;2026&#x2F;11&#x2F;aws-emulator-an...</a>",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Critical RCE Vulnerability in Apache HTTP Server",
+    "points": 44,
+    "num_comments": 22,
+    "url": "https://www.wiz.io/blog/cve-2026-119618-rce-apache-http-server-vulnerability",
+    "hn_url": "https://news.ycombinator.com/item?id=50462177",
+    "created_at": "2026-11-12T02:11:11+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Nvidia is preparing to oust Jensen Huang",
+    "points": 704,
+    "num_comments": 981,
+    "url": "https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad",
+    "hn_url": "https://news.ycombinator.com/item?id=50459703",
+    "created_at": "2026-11-11T22:31:06+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Lock Your GitHub Actions",
+    "points": 175,
+    "num_comments": 33,
+    "url": "https://hugovk.dev/blog/2026/lock-github-actions/",
+    "hn_url": "https://news.ycombinator.com/item?id=50459485",
+    "created_at": "2026-11-11T22:16:41+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
+    "points": 461,
+    "num_comments": 444,
+    "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+    "hn_url": "https://news.ycombinator.com/item?id=50458900",
+    "created_at": "2026-11-11T21:24:35+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
+    "points": 442,
+    "num_comments": 225,
+    "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
+    "hn_url": "https://news.ycombinator.com/item?id=50455394",
+    "created_at": "2026-11-11T16:38:44+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Gemini Decisions API",
+    "points": 321,
+    "num_comments": 100,
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+    "hn_url": "https://news.ycombinator.com/item?id=50456791",
+    "created_at": "2026-11-11T18:32:42+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "A general purpose Apple Silicon layer for x86-64 PCs",
+    "points": 78,
+    "num_comments": 31,
+    "url": "https://github.com/tylertms/Stela",
+    "hn_url": "https://news.ycombinator.com/item?id=50460154",
+    "created_at": "2026-11-11T23:02:38+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Emacs in the Age of Magic",
+    "points": 168,
+    "num_comments": 60,
+    "url": "https://commandlinesystems.com/magic.txt",
+    "hn_url": "https://news.ycombinator.com/item?id=50458208",
+    "created_at": "2026-11-11T20:26:32+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "The Utah Teapot",
+    "points": 101,
+    "num_comments": 24,
+    "url": "https://graphics.cs.utah.edu/teapot/",
+    "hn_url": "https://news.ycombinator.com/item?id=50457618",
+    "created_at": "2026-11-11T19:45:10+00:00",
+    "story_text": "<a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=k-23LgrFcvs\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=k-23LgrFcvs</a>",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Lean Grimoire",
+    "points": 12,
+    "num_comments": 2,
+    "url": "https://terrytao.wordpress.com/2026/11/11/lean-grimoire/",
+    "hn_url": "https://news.ycombinator.com/item?id=50462375",
+    "created_at": "2026-11-12T02:36:48+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Show HN: I recreated Papers Please but you're deciding which YC startups to fund",
+    "points": 198,
+    "num_comments": 78,
+    "url": "https://termsheetplease.com/",
+    "hn_url": "https://news.ycombinator.com/item?id=50457230",
+    "created_at": "2026-11-11T19:12:16+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "My AI agents found an unmapped Maya site?",
+    "points": 949,
+    "num_comments": 343,
+    "url": "https://pietromiotti.com/latest/maya-site",
+    "hn_url": "https://news.ycombinator.com/item?id=50452455",
+    "created_at": "2026-11-11T12:05:22+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Hyper-Realistic Sand with WebGL2",
+    "points": 336,
+    "num_comments": 66,
+    "url": "https://av.github.io/safe-sand/",
+    "hn_url": "https://news.ycombinator.com/item?id=50453288",
+    "created_at": "2026-11-11T13:39:29+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Faster Retrieval for Better, More Efficient RAG",
+    "points": 174,
+    "num_comments": 32,
+    "url": "https://machinelearning.apple.com/research/faster-retrieval",
+    "hn_url": "https://news.ycombinator.com/item?id=50455633",
+    "created_at": "2026-11-11T16:57:45+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Show HN: Yogurt – Free, private, open-source alternative to Granola",
+    "points": 203,
+    "num_comments": 90,
+    "url": "https://github.com/FrigadeHQ/yogurt",
+    "hn_url": "https://news.ycombinator.com/item?id=50454625",
+    "created_at": "2026-11-11T15:33:06+00:00",
+    "story_text": "Hey HN, I’m Eric and I want to share an OSS project that I’ve been building in my free time. Yogurt is a free, MIT licensed desktop app that uses on-device AI models to transcribe, summarize, and chat with your meetings.<p>Here&#x27;s a quick demo video: <a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=BFfbXAwRq98\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=BFfbXAwRq98</a><p>Similar to Granola, Yogurt runs in the background and does not join your calls. But unlike Granola, Yogurt is open-source, free to use, and private. Your meeting transcripts, call recordings, and summaries never leave your computer.<p>As small OSS models have gotten faster and more powerful, Yogurt seemed like a pretty obvious win for privacy and cost conscious folks. You do not need a frontier model to summarize meeting notes or answer questions about them. And if you want to make your notes available to a frontier model, you can just share it with Anthropic, OpenAI, etc. directly via Yogurt’s local MCP server. There’s no need to use a paid cloud service as a middleman.<p>I tried some of the most popular OSS note taking tools, and most were missing features like calendar integration, MCP server, etc. or required you to connect or create an account. And more than that, they didn’t feel polished enough for it to be something I actually wanted to use daily, and so I built Yogurt to scratch that itch. I spent a lot of time fine-tuning every UI interaction&#x2F;animation and optimizing the model calls to get the most out of your hardware + make it snappy.<p>To support Windows&#x2F;Mac&#x2F;Linux, I decided to go with Electron. I use whisper.cpp for transcription and Apple’s on-device SpeechAnalyzer if your system supports it. For call summaries and questions, I use a local open weight LLM that automatically gets downloaded and set up based on what your hardware can handle without your cooling fans firing off like crazy (this part uses llama.cpp).<p>I’ve spent a lot of time working on details like echo detection&#x2F;reduction, global&#x2F;folder&#x2F;local level search respectively, and auto-end recordings. Hope this is useful for any of you who have held out on using AI note tools for privacy or cost reasons, or for folks using cloud tools who want to switch to something free and open source that still feels great to use.<p>Would love to hear what you think about the onboarding and note taking experience :)",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Jensen Huang said to have had relationship with executive who reports to him",
+    "points": 299,
+    "num_comments": 338,
+    "url": "https://www.nytimes.com/2026/11/11/technology/jensen-huang-nvidia-affair.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50459321",
+    "created_at": "2026-11-11T22:03:58+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Huawei releases MACaQ, its internal quantizer for local inference",
+    "points": 72,
+    "num_comments": 23,
+    "url": "https://github.com/huawei-csl/MACaQ",
+    "hn_url": "https://news.ycombinator.com/item?id=50458166",
+    "created_at": "2026-11-11T20:23:57+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  }
+]
