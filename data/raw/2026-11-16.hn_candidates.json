@@ -1,0 +1,222 @@
+[
+  {
+    "source": "hn",
+    "title": "Universal XSS in uBlock Origin from website-driven element picker",
+    "points": 73,
+    "num_comments": 9,
+    "url": "https://iter.ca/post/ubo-uxss/",
+    "hn_url": "https://news.ycombinator.com/item?id=50513160",
+    "created_at": "2026-11-16T02:04:48+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Old Bitly links are being hijacked",
+    "points": 199,
+    "num_comments": 106,
+    "url": "https://ransomnews.com/burger-king-tweet-bitly-link-hijack-2026/",
+    "hn_url": "https://news.ycombinator.com/item?id=50511395",
+    "created_at": "2026-11-15T22:11:43+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Coles hit by a cybersecurity incident",
+    "points": 56,
+    "num_comments": 32,
+    "url": "https://www.colesgroup.com.au/updates/",
+    "hn_url": "https://news.ycombinator.com/item?id=50512824",
+    "created_at": "2026-11-16T01:14:35+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "What's Next for Nvidia?",
+    "points": 91,
+    "num_comments": 103,
+    "url": "https://steveblank.com/2026/11/15/whats-next-for-nvidia/",
+    "hn_url": "https://news.ycombinator.com/item?id=50512235",
+    "created_at": "2026-11-15T23:55:55+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Qwen4-Max",
+    "points": 82,
+    "num_comments": 12,
+    "url": "https://qwen.ai/blog?id=qwen4-max",
+    "hn_url": "https://news.ycombinator.com/item?id=50513215",
+    "created_at": "2026-11-16T02:14:44+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Preserving 30 years of Salon journalism",
+    "points": 87,
+    "num_comments": 24,
+    "url": "https://blog.archive.org/2026/11/12/preserving-30-years-of-salon-journalism/",
+    "hn_url": "https://news.ycombinator.com/item?id=50511806",
+    "created_at": "2026-11-15T23:00:11+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Tor Project Issues Rapid-Response DoS-Defense Fix Amid Sustained DDoS Attack",
+    "points": 53,
+    "num_comments": 7,
+    "url": "https://forum.torproject.org/t/security-release-0-4-9-17/22454",
+    "hn_url": "https://news.ycombinator.com/item?id=50512441",
+    "created_at": "2026-11-16T00:21:54+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Protomaps: Self-hosting map tiles has gotten cheap and easy",
+    "points": 203,
+    "num_comments": 46,
+    "url": "https://bruceroettgers.eu/blog/protomaps/",
+    "hn_url": "https://news.ycombinator.com/item?id=50509837",
+    "created_at": "2026-11-15T19:26:22+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "A short explainer on how El Niño works [video]",
+    "points": 188,
+    "num_comments": 84,
+    "url": "https://www.youtube.com/watch?v=7_JF3etiAv8",
+    "hn_url": "https://news.ycombinator.com/item?id=50509308",
+    "created_at": "2026-11-15T18:23:21+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Crows make decisions faster than we can",
+    "points": 184,
+    "num_comments": 137,
+    "url": "https://www.nytimes.com/2026/11/15/science/birdbrain-crows-birds-research-decision.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50509023",
+    "created_at": "2026-11-15T17:53:31+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "The MacBook Pro's OLED PWM problem",
+    "points": 430,
+    "num_comments": 241,
+    "url": "https://macanorak.com/the-macbook-pros-oled-pwm-problem-when-a-better-display-becomes-worse-to-use/",
+    "hn_url": "https://news.ycombinator.com/item?id=50506719",
+    "created_at": "2026-11-15T13:15:22+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Handwriting, as a Font",
+    "points": 152,
+    "num_comments": 39,
+    "url": "https://ductus.sorenblank.com",
+    "hn_url": "https://news.ycombinator.com/item?id=50509972",
+    "created_at": "2026-11-15T19:42:13+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "WebGL Flight Simulator with seed generated terrain",
+    "points": 98,
+    "num_comments": 12,
+    "url": "https://baron.by.dai.studio/",
+    "hn_url": "https://news.ycombinator.com/item?id=50510296",
+    "created_at": "2026-11-15T20:20:05+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Mini.nvim Is Now on Tangled",
+    "points": 38,
+    "num_comments": 11,
+    "url": "https://tangled.org/nvim-mini.org/mini.nvim",
+    "hn_url": "https://news.ycombinator.com/item?id=50512231",
+    "created_at": "2026-11-15T23:55:41+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Things That Turbo Pascal Is Smaller Than (2011)",
+    "points": 209,
+    "num_comments": 112,
+    "url": "https://prog21.dadgum.com/116.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50506894",
+    "created_at": "2026-11-15T13:44:16+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Show HN: The Last Complication, a Zachtronics-style watchmaking puzzle game",
+    "points": 55,
+    "num_comments": 7,
+    "url": "https://lastcomplication.com/",
+    "hn_url": "https://news.ycombinator.com/item?id=50511718",
+    "created_at": "2026-11-15T22:48:52+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Microsoft 365 outage leads to chlorine gas poisoning of 15 hotel guests",
+    "points": 425,
+    "num_comments": 190,
+    "url": "https://www1.wdr.de/nrw/rheinland/rhein-erft-kreis/technischer-defekt-chlor-phantasialand-100.html",
+    "hn_url": "https://news.ycombinator.com/item?id=50509411",
+    "created_at": "2026-11-15T18:36:10+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Understanding Positional Embeddings in Modern LLMs",
+    "points": 215,
+    "num_comments": 27,
+    "url": "https://magazine.sebastianraschka.com/p/understanding-positional-embeddings",
+    "hn_url": "https://news.ycombinator.com/item?id=50506376",
+    "created_at": "2026-11-15T12:14:06+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Eclipse Mosquitto – An open source MQTT broker",
+    "points": 70,
+    "num_comments": 28,
+    "url": "https://github.com/eclipse-mosquitto/mosquitto",
+    "hn_url": "https://news.ycombinator.com/item?id=50509416",
+    "created_at": "2026-11-15T18:36:40+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Emacs Is My Browser",
+    "points": 184,
+    "num_comments": 103,
+    "url": "https://joshblais.com/blog/emacs-as-my-browser/",
+    "hn_url": "https://news.ycombinator.com/item?id=50507553",
+    "created_at": "2026-11-15T15:21:21+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  }
+]
