@@ -1,0 +1,222 @@
+[
+  {
+    "source": "hn",
+    "title": "Gemini 4 Neon",
+    "points": 588,
+    "num_comments": 528,
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+    "hn_url": "https://news.ycombinator.com/item?id=50552424",
+    "created_at": "2026-11-18T21:34:07+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Unauthenticated remote code execution in Nginx",
+    "points": 1225,
+    "num_comments": 538,
+    "url": "https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities",
+    "hn_url": "https://news.ycombinator.com/item?id=50547374",
+    "created_at": "2026-11-18T15:19:55+00:00",
+    "story_text": "<a href=\"https:&#x2F;&#x2F;www.cve.org&#x2F;CVERecord?id=CVE-2026-123633\" rel=\"nofollow\">https:&#x2F;&#x2F;www.cve.org&#x2F;CVERecord?id=CVE-2026-123633</a><p><a href=\"https:&#x2F;&#x2F;www.cve.org&#x2F;CVERecord?id=CVE-2026-123007\" rel=\"nofollow\">https:&#x2F;&#x2F;www.cve.org&#x2F;CVERecord?id=CVE-2026-123007</a>",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Gemini 4 Neon looks like an Opus 5.5 competitor",
+    "points": 152,
+    "num_comments": 55,
+    "url": "https://micjm.com/blog/gemini-4-neon-looks-like-a-top-model/",
+    "hn_url": "https://news.ycombinator.com/item?id=50554374",
+    "created_at": "2026-11-19T00:29:45+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Multiple vulnerabilities in Regexp and String case conversion",
+    "points": 139,
+    "num_comments": 43,
+    "url": "https://www.ruby-lang.org/en/news/2026/11/18/multiple-vulnerabilities-in-regexp-and-string/",
+    "hn_url": "https://news.ycombinator.com/item?id=50554038",
+    "created_at": "2026-11-18T23:52:50+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Unreal Tournament 2004 in the Browser",
+    "points": 68,
+    "num_comments": 28,
+    "url": "https://ut2004.dev/",
+    "hn_url": "https://news.ycombinator.com/item?id=50554935",
+    "created_at": "2026-11-19T01:29:29+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Seven new models at scalable price-performance",
+    "points": 480,
+    "num_comments": 329,
+    "url": "https://microsoft.ai/news/microsoft-ignite-2026/",
+    "hn_url": "https://news.ycombinator.com/item?id=50548021",
+    "created_at": "2026-11-18T16:08:24+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "AI agents ask better questions than KPMG accountants in audit trial",
+    "points": 407,
+    "num_comments": 175,
+    "url": "https://europeanbusinessmagazine.com/ai-agents-better-questions-kpmg/",
+    "hn_url": "https://news.ycombinator.com/item?id=50547777",
+    "created_at": "2026-11-18T15:49:34+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "DNS resolvers are the wrong place to fight piracy",
+    "points": 631,
+    "num_comments": 238,
+    "url": "https://techstackups.com/articles/quad9-leaves-france-dns-blocking/",
+    "hn_url": "https://news.ycombinator.com/item?id=50545958",
+    "created_at": "2026-11-18T13:18:02+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Inside Deutsche Bank",
+    "points": 591,
+    "num_comments": 200,
+    "url": "https://www.inside-db.com/",
+    "hn_url": "https://news.ycombinator.com/item?id=50547620",
+    "created_at": "2026-11-18T15:38:33+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "LLM assisted reverse engineering",
+    "points": 112,
+    "num_comments": 30,
+    "url": "https://www.slowchronicle.com/posts/llm-assisted-reverse-engineering",
+    "hn_url": "https://news.ycombinator.com/item?id=50553225",
+    "created_at": "2026-11-18T22:29:13+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "DaisyRose-27B",
+    "points": 162,
+    "num_comments": 47,
+    "url": "https://www.radixark.com/blog/daisyrose-27b",
+    "hn_url": "https://news.ycombinator.com/item?id=50551046",
+    "created_at": "2026-11-18T19:39:16+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Mosquitoes are Ladakh's latest tourists",
+    "points": 10,
+    "num_comments": 0,
+    "url": "https://ruralindiaonline.org/article/mosquitoes-are-ladakh-s-latest-tourists",
+    "hn_url": "https://news.ycombinator.com/item?id=50542441",
+    "created_at": "2026-11-18T06:08:25+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Genie 4 is now available",
+    "points": 209,
+    "num_comments": 146,
+    "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/",
+    "hn_url": "https://news.ycombinator.com/item?id=50550415",
+    "created_at": "2026-11-18T18:49:51+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Advancing chip design with OpenAI models",
+    "points": 175,
+    "num_comments": 113,
+    "url": "https://openai.com/index/advancing-chip-design-with-our-models/",
+    "hn_url": "https://news.ycombinator.com/item?id=50549493",
+    "created_at": "2026-11-18T17:45:47+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "The Cambridge Dictionary has named ‘human’ as the Word of the Year 2026",
+    "points": 249,
+    "num_comments": 174,
+    "url": "https://www.cam.ac.uk/news/cambridge-dictionary-reveals-word-of-the-year-2026",
+    "hn_url": "https://news.ycombinator.com/item?id=50546914",
+    "created_at": "2026-11-18T14:43:52+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "We need smart people who give a shit",
+    "points": 329,
+    "num_comments": 176,
+    "url": "https://violetpixel.com/blog/2026-11-17-we-need-smart-people-who-give-a-shit/",
+    "hn_url": "https://news.ycombinator.com/item?id=50554045",
+    "created_at": "2026-11-18T23:53:49+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Previous-Token Prediction Based LLM Inversion for Prompt Reconstruction",
+    "points": 25,
+    "num_comments": 5,
+    "url": "https://arxiv.org/abs/2607.29378",
+    "hn_url": "https://news.ycombinator.com/item?id=50554908",
+    "created_at": "2026-11-19T01:27:02+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Show HN: ExitPath – Open-source ways out of Slack, Notion and Microsoft 365",
+    "points": 182,
+    "num_comments": 54,
+    "url": "https://exitpath-ruddy.vercel.app/",
+    "hn_url": "https://news.ycombinator.com/item?id=50547980",
+    "created_at": "2026-11-18T16:04:43+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "FailTrace – Reproduce a failed GitHub Actions run locally from its URL",
+    "points": 14,
+    "num_comments": 1,
+    "url": "https://github.com/Ri4dH/failtrace",
+    "hn_url": "https://news.ycombinator.com/item?id=50554941",
+    "created_at": "2026-11-19T01:30:43+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Palo Alto Networks to Acquire Applied Compute for $4.5B",
+    "points": 32,
+    "num_comments": 5,
+    "url": "https://investors.paloaltonetworks.com/news-releases/news-release-details/palo-alto-networks-acquire-applied-compute-bringing-secure-open",
+    "hn_url": "https://news.ycombinator.com/item?id=50554009",
+    "created_at": "2026-11-18T23:49:13+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  }
+]
