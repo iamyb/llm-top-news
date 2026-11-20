@@ -1,0 +1,222 @@
+[
+  {
+    "source": "hn",
+    "title": "Gemini 4 Neon is the new #1 on the Models Engineering Index",
+    "points": 265,
+    "num_comments": 160,
+    "url": "https://git-aarvin.github.io/mei/",
+    "hn_url": "https://news.ycombinator.com/item?id=50568130",
+    "created_at": "2026-11-19T23:35:35+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Anthropic’s Nasdaq debut",
+    "points": 1004,
+    "num_comments": 1958,
+    "url": "https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/",
+    "hn_url": "https://news.ycombinator.com/item?id=50562754",
+    "created_at": "2026-11-19T17:02:40+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Pancreatic cancer halted by virus injection in three patients",
+    "points": 670,
+    "num_comments": 105,
+    "url": "https://www.newscientist.com/article/2528235-pancreatic-cancer-halted-by-virus-injection-in-three-patients/",
+    "hn_url": "https://news.ycombinator.com/item?id=50563066",
+    "created_at": "2026-11-19T17:25:33+00:00",
+    "story_text": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;2Et0x\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;2Et0x</a>",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "OpenSSL: Buffer overflow in EVP_EncodeBlock() (CVE-2026-121481, CVSS 9.8)",
+    "points": 64,
+    "num_comments": 35,
+    "url": "https://github.com/openssl/openssl/pull/33652",
+    "hn_url": "https://news.ycombinator.com/item?id=50569226",
+    "created_at": "2026-11-20T02:01:09+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "What Comes After AGI?",
+    "points": 22,
+    "num_comments": 35,
+    "url": "https://institute.deepmind.com/essays/what-comes-after-agi/",
+    "hn_url": "https://news.ycombinator.com/item?id=50569519",
+    "created_at": "2026-11-20T02:44:13+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Vint Cerf on why TCP/IP was never patented",
+    "points": 50,
+    "num_comments": 9,
+    "url": "https://seremot.com/p/vint-cerf-on-why-tcpip-was-never",
+    "hn_url": "https://news.ycombinator.com/item?id=50568861",
+    "created_at": "2026-11-20T01:06:12+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Claude solves two open problems in the physics of black holes",
+    "points": 431,
+    "num_comments": 197,
+    "url": "https://www.anthropic.com/research/claude-black-hole-physics",
+    "hn_url": "https://news.ycombinator.com/item?id=50563148",
+    "created_at": "2026-11-19T17:30:44+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Postgres 19 Repack: Faster, Built-In Table Bloat Cleanup",
+    "points": 13,
+    "num_comments": 0,
+    "url": "https://www.snowflake.com/en/blog/engineering/postgres-19-repack-table-bloat/",
+    "hn_url": "https://news.ycombinator.com/item?id=50569516",
+    "created_at": "2026-11-20T02:43:49+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "The 98% Slot Machine: How Paid Advertising Became an Extraction Tax",
+    "points": 232,
+    "num_comments": 124,
+    "url": "https://globalcommercegraph.com/writing/the-ninety-eight-percent-slot-machine",
+    "hn_url": "https://news.ycombinator.com/item?id=50564159",
+    "created_at": "2026-11-19T18:35:17+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Launch HN: Onlook (YC W25) – An open-source developer tool for designers",
+    "points": 96,
+    "num_comments": 69,
+    "url": "https://github.com/onlook-dev/onlook/",
+    "hn_url": "https://news.ycombinator.com/item?id=50562320",
+    "created_at": "2026-11-19T16:34:04+00:00",
+    "story_text": "Hey HN, I&#x27;m Daniel, founder of Onlook (<a href=\"https:&#x2F;&#x2F;github.com&#x2F;onlook-dev&#x2F;onlook\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;onlook-dev&#x2F;onlook</a> and onlook.com).<p>Onlook is a desktop app that puts a canvas on top of your real codebase, letting you design directly in code with the agent you already use. Over 25,000 designers and developers have supported the project, 100+ have contributed, and it&#x27;s been the #1 trending repo in the world twice. We just rebuilt the entire product as an agentic design tool, and open-sourced it to the community.<p>Here’s a demo video: (<a href=\"https:&#x2F;&#x2F;youtu.be&#x2F;BogcYWf4siM\" rel=\"nofollow\">https:&#x2F;&#x2F;youtu.be&#x2F;BogcYWf4siM</a>)<p>If you&#x27;re an engineer, traditional engineering tools are largely built for convergence, whereas designers tend to explore and diverge on ideas. Onlook gives designers a familiar canvas while managing all of the dev processes that get between them and making mind-blowing designs in code. Designers can work on a multiple simultaneous worktrees that run on the real app locally, and every change lands as a PR you can review or throw away, so there aren’t mockups to rebuild.<p>We built Onlook because we believe there needs to be a developer tool that works the way designers do.<p>More and more, designers are expected to work in code. Designers think by seeing, drafting, arranging variations, using references, and remixing ideas. That’s why the canvas has been the signature feature of design tools because it genuinely is useful for how messy the creative process is. Most of the challenge of using engineering tools for design work is that the first half of starting a project often takes mental bandwidth in of itself (What branch am I on? What page was that last exploration on?) and the second half is constrained by configuring your coded design to present itself (prompting design tools on top of what you’ve built or making temporary navigation for that specific state).<p>Some of you may remember our earlier Show HNs (July 2024: <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=40904862\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=40904862</a>, August 2024: <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=41390449\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=41390449</a>, May 2025: <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=44127653\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=44127653</a>). Since then, we built a web version (too early), then a Storybook-native build (a mistake). We noticed that our desktop product from July 2024 was still getting hundreds of downloads a month despite zero promotion, so we decided to rebuild it for the new era of designers working in code.<p>How it works…<p>Onlook shines at exploring tons of ideas at once. Ask it to lay out every flow in your product, show every state of a component, or riff on ten versions of one screen. Your designs all show up side by side on an infinite canvas, with each frame as a real webview running your actual app with real data. Not as a mockup, but the real deal.<p>When we built this editor, we had an epiphany that it could be a new kind of IDE for design. Design tools used to be limited to a proprietary setup or closed schema, but now you can push and pull the medium of code to get whatever result you want, so why not give agents an infinite canvas of browsers and see what they do? It turns out, the agents can figure out how to better present coded work by adjusting the urls of browser frames and arranging and resizing them on the canvas.<p>The concept is simple, but it requires a lot of product thinking. For example, because all of the frames on the canvas share a single browser session, and Chromium only allows six connections per host per session, ten frames of the same app end up fighting over limited connections. So, we had to plan around that, and there are still tons of things we need to do to make the canvas ultra performant.<p>Onlook is an Electron app where you can import a repo from GitHub or upload a local folder. Then, Onlook creates a git worktree, starts your dev server, and has the agent sort out missing dependencies or other requirements. You never open a terminal and everything the agent does is a normal git diff that can go to GitHub as a PR. We inject a small script into each frame that draws selection outlines and reads the page, so that way you can click an element, say &quot;make this a card layout,&quot; and the agent knows exactly what &quot;this&quot; is.<p>This time we didn&#x27;t build our own agent. Onlook runs Claude Code or Codex on your own subscription, and we turn whatever the agent emits into one typed event log and draw the UI from that in our own chat interface. On top of that we give the agent a bespoke set of design-specific tools, from arranging frames on the canvas, to making suggestions, to generating multiple iterations of a selection – which is especially useful because the agent decides how to get the app into a state that you need based on your prompt.<p>We also have our own Artifacts which are quick HTML sketches that live in the editor, but outside your repo. They’re almost like components in other design tools in that they can be carried and edited across every project but are detached from the project with no network access. As an example, you can ask the agent to turn your interface into an Artifact, and use it as a reference for another exploration, or download it as HTML and send it to a coworker as an interactive export of something you have in progress. I frequently go back to the artifacts I’ve made as visual snippets when I need new ideas or need to borrow something that’s already been built.<p>The desktop editor is free (you can download it from our website at onlook.com) and open source under Apache-2.0, and we&#x27;ll eventually offer a paid cloud product for teams.<p>We&#x27;d love to hear which repos work and which don&#x27;t, what you try to do on the canvas, and what&#x27;s missing. We’re so excited for this to be a new way for designers to work in code!<p>The Onlook team (Joel - thebrubaker and Kris - krisodd), and I will be here all day!",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Postgres 19 is out, and it's available on Neon and Databricks Lakebase",
+    "points": 28,
+    "num_comments": 9,
+    "url": "https://www.databricks.com/blog/postgresql-19-available-lakebase",
+    "hn_url": "https://news.ycombinator.com/item?id=50568643",
+    "created_at": "2026-11-20T00:37:31+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "RegExr: Temporarily Offline",
+    "points": 62,
+    "num_comments": 31,
+    "url": "https://regexr.com/",
+    "hn_url": "https://news.ycombinator.com/item?id=50567374",
+    "created_at": "2026-11-19T22:27:07+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Someone reported java4shell bug in September 2026",
+    "points": 391,
+    "num_comments": 106,
+    "url": "https://github.com/openjdk/jdk/pull/32781",
+    "hn_url": "https://news.ycombinator.com/item?id=50558906",
+    "created_at": "2026-11-19T11:47:03+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Show HN: Cornhole News – A Hacker News inspired site for news across the Midwest",
+    "points": 201,
+    "num_comments": 94,
+    "url": "https://cornholenews.news",
+    "hn_url": "https://news.ycombinator.com/item?id=50561515",
+    "created_at": "2026-11-19T15:38:32+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Should governments slow frontier AI? Jacob Coxon and Robin Hanson debate [video]",
+    "points": 90,
+    "num_comments": 163,
+    "url": "https://www.youtube.com/watch?v=lwfewYL7X0o",
+    "hn_url": "https://news.ycombinator.com/item?id=50564366",
+    "created_at": "2026-11-19T18:47:16+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Synology Security Advisory",
+    "points": 120,
+    "num_comments": 87,
+    "url": "https://www.synology.com/en-uk/security/advisory/Synology_SA_26_21",
+    "hn_url": "https://news.ycombinator.com/item?id=50567209",
+    "created_at": "2026-11-19T22:13:40+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "UK government forced to admit it issued Apple a secret encryption order",
+    "points": 566,
+    "num_comments": 258,
+    "url": "https://macanorak.com/uk-government-forced-to-admit-it-issued-apple-a-secret-encryption-order/",
+    "hn_url": "https://news.ycombinator.com/item?id=50562113",
+    "created_at": "2026-11-19T16:21:03+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Rebuilding my local voice assistant pipeline",
+    "points": 76,
+    "num_comments": 12,
+    "url": "https://blog.platypush.tech/article/Rewriting-my-voice-assistant-pipeline",
+    "hn_url": "https://news.ycombinator.com/item?id=50566261",
+    "created_at": "2026-11-19T20:57:14+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Visa, Mastercard and JPMorgan Customer Data Leaked by Hackers",
+    "points": 139,
+    "num_comments": 38,
+    "url": "https://www.wsj.com/finance/banking/visa-mastercard-and-jpmorgan-customer-data-leaked-by-hackers-3b5a0f87",
+    "hn_url": "https://news.ycombinator.com/item?id=50568082",
+    "created_at": "2026-11-19T23:32:11+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Making 8-page foldable zines from a single A4 sheet in the browser",
+    "points": 264,
+    "num_comments": 58,
+    "url": "https://krthr.co/paper-folds-and-whats-new-in-fanzines-app/",
+    "hn_url": "https://news.ycombinator.com/item?id=50559719",
+    "created_at": "2026-11-19T13:18:11+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  }
+]
