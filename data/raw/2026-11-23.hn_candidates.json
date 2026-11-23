@@ -1,0 +1,222 @@
+[
+  {
+    "source": "hn",
+    "title": "Free alternative TV network built from the Internet Archive's forgotten videos",
+    "points": 205,
+    "num_comments": 35,
+    "url": "https://spelunkr.tv",
+    "hn_url": "https://news.ycombinator.com/item?id=50606192",
+    "created_at": "2026-11-23T01:13:51+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Masullo on the Riemann Hypothesis",
+    "points": 97,
+    "num_comments": 30,
+    "url": "https://johncarlosbaez.wordpress.com/2026/11/22/masullo-on-the-riemann-hypothesis/",
+    "hn_url": "https://news.ycombinator.com/item?id=50598441",
+    "created_at": "2026-11-22T10:59:56+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth",
+    "points": 328,
+    "num_comments": 138,
+    "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
+    "hn_url": "https://news.ycombinator.com/item?id=50603845",
+    "created_at": "2026-11-22T21:01:16+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "The Birds of GTA 6: A Field Guide to Vice City and Leonida's Wildlife",
+    "points": 401,
+    "num_comments": 197,
+    "url": "https://www.audubon.org/magazine/birds-of-gta-6-field-guide-vice-city-wildlife",
+    "hn_url": "https://news.ycombinator.com/item?id=50602843",
+    "created_at": "2026-11-22T19:10:34+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "GL.iNet Security Notice 2026-11-20",
+    "points": 126,
+    "num_comments": 57,
+    "url": "https://www.gl-inet.com/en-us/blogs/blog/glinet-security-notice-2026-11-20",
+    "hn_url": "https://news.ycombinator.com/item?id=50604988",
+    "created_at": "2026-11-22T23:06:37+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "A miniature San Francisco with live buses, planes and boats",
+    "points": 181,
+    "num_comments": 80,
+    "url": "https://smallsf.com/",
+    "hn_url": "https://news.ycombinator.com/item?id=50603589",
+    "created_at": "2026-11-22T20:33:23+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "The Usefulness of Useless Knowledge [pdf] (1939)",
+    "points": 83,
+    "num_comments": 15,
+    "url": "https://www.ias.edu/sites/default/files/library/UsefulnessHarpers.pdf",
+    "hn_url": "https://news.ycombinator.com/item?id=50604472",
+    "created_at": "2026-11-22T22:10:58+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "The struggle for freedom: How BSD escaped AT&T licensing",
+    "points": 73,
+    "num_comments": 21,
+    "url": "https://fosscomics.com/posts/16.%20BSD%20Unix%20Part%206%20-%20The%20Struggle%20for%20Freedom/",
+    "hn_url": "https://news.ycombinator.com/item?id=50604123",
+    "created_at": "2026-11-22T21:33:12+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Perplexity and Intelligence",
+    "points": 522,
+    "num_comments": 357,
+    "url": "https://openai.com/index/perplexity-and-intelligence/",
+    "hn_url": "https://news.ycombinator.com/item?id=50601525",
+    "created_at": "2026-11-22T17:06:27+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Nyx, the Oldest Internet Service Provider",
+    "points": 113,
+    "num_comments": 13,
+    "url": "https://nyx.net/",
+    "hn_url": "https://news.ycombinator.com/item?id=50603465",
+    "created_at": "2026-11-22T20:15:59+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Assume People Are Not Interested in Your Blog Post",
+    "points": 97,
+    "num_comments": 50,
+    "url": "https://danielsada.tech/blog/assume-people-are-not-interested-in-your-blog-post/",
+    "hn_url": "https://news.ycombinator.com/item?id=50603143",
+    "created_at": "2026-11-22T19:41:30+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "What we learned operating auth for 1k APIs",
+    "points": 17,
+    "num_comments": 3,
+    "url": "https://nango.dev/blog/lessons-from-operating-api-auth-for-900-apis/",
+    "hn_url": "https://news.ycombinator.com/item?id=50606072",
+    "created_at": "2026-11-23T01:01:11+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Show HN: I built a game where you are an LLM's subagent",
+    "points": 286,
+    "num_comments": 67,
+    "url": "https://github.com/gulivan/worker755",
+    "hn_url": "https://news.ycombinator.com/item?id=50599762",
+    "created_at": "2026-11-22T13:56:58+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "What Happened to Silicon Valley?",
+    "points": 498,
+    "num_comments": 282,
+    "url": "https://www.oreilly.com/radar/what-happened-to-silicon-valley/",
+    "hn_url": "https://news.ycombinator.com/item?id=50602947",
+    "created_at": "2026-11-22T19:20:15+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "0rwx – A simple model of AI usage, inspired by Unix permissions",
+    "points": 29,
+    "num_comments": 6,
+    "url": "https://0rwx.com/",
+    "hn_url": "https://news.ycombinator.com/item?id=50605445",
+    "created_at": "2026-11-22T23:53:00+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Progress map for the Lean formalization of Alessandro Masullo's manuscript",
+    "points": 177,
+    "num_comments": 151,
+    "url": "https://claude.ai/artifact/CtQyX8qfYAF822bgHJHHE3",
+    "hn_url": "https://news.ycombinator.com/item?id=50605045",
+    "created_at": "2026-11-22T23:12:10+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Localcode, open source agentic coding on your Mac with one command",
+    "points": 37,
+    "num_comments": 13,
+    "url": "https://github.com/mjwsolo/localcode",
+    "hn_url": "https://news.ycombinator.com/item?id=50604540",
+    "created_at": "2026-11-22T22:18:48+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "I joined the NTP Pool, but not with my Stratum 1 Pi",
+    "points": 136,
+    "num_comments": 44,
+    "url": "https://www.jeffgeerling.com/blog/2026/i-joined-the-ntp-pool/",
+    "hn_url": "https://news.ycombinator.com/item?id=50600622",
+    "created_at": "2026-11-22T15:35:24+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Open Social Web Alliance",
+    "points": 231,
+    "num_comments": 223,
+    "url": "https://osw-alliance.net/en/",
+    "hn_url": "https://news.ycombinator.com/item?id=50600511",
+    "created_at": "2026-11-22T15:24:32+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  },
+  {
+    "source": "hn",
+    "title": "Harvard CS 2881R AI Safety",
+    "points": 55,
+    "num_comments": 7,
+    "url": "https://boazbk.github.io/mltheoryseminar/",
+    "hn_url": "https://news.ycombinator.com/item?id=50602153",
+    "created_at": "2026-11-22T18:01:54+00:00",
+    "story_text": "",
+    "matched_keywords": []
+  }
+]
